@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>2026冬・東京親子自由行 5天4夜(v2版)景點與飯店地圖</name>
+    <description>2026/11/28(六)～12/02(三)｜長榮航空 BR192(07:15-11:00) / BR191(12:15-15:05) 雙人總價 TWD 37,792｜東京5天4夜親子自由行 v2版（Day 1 東京大神宮＋神樂坂名店與橫丁、Day 2 浦安清瀧神社＋原宿貓街＋澀谷 PARCO 6F JUMP SHOP＋SHIBUYA 109、Day 3 池袋 PARCO B2F JUMP SHOP＋安利美特＋乙女街＋太陽城、Day 4 河口湖富士山＆下吉田日川時計店〔Day 2~4 可依天氣對調〕、Day 5 羽田機場返台）</description>
+
+    <!-- Styles -->
+    <Style id="hotelStyle">
+      <IconStyle>
+        <color>ff0000d6</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day1Style">
+      <IconStyle>
+        <color>ffb53f30</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/1.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day2Style">
+      <IconStyle>
+        <color>ff7b1fa2</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/2.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day3Style">
+      <IconStyle>
+        <color>ff8140ec</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/3.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day4Style">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/4.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day5Style">
+      <IconStyle>
+        <color>ff388e3c</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/5.png</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Folder>
+      <name>🏨 已訂妥住宿基地：APA 飯店〈秋葉原末廣町站前〉（4晚連住）</name>
+      <Placemark>
+        <name>✅ 已訂妥飯店：APA 飯店〈秋葉原末廣町站前〉（電器街）</name>
+        <description>アパホテル〈秋葉原末広町駅前〉（電気街）｜東京都千代田区外神田3-15-7｜2024年7月全新開幕！銀座線「末廣町站（1、3號出口）」步行1分鐘、JR「秋葉原站（電器街口）」步行6分鐘。11/28(六)～12/02(三) 4晚總價 ¥76,200（含稅，現地精算）。搭JR總武線2站(4分)直達飯田橋，銀座線一班車直達澀谷！</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7716,35.7029,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⭐ 首選飯店：JR九州飯店 Blossom 新宿</name>
+        <description>新宿南口步行3分鐘、Busta新宿旁，乾濕分離日式浴室。往河口湖、飯田橋神樂坂、澀谷、池袋皆直達！</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6983,35.6877,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店2：小田急世紀南悅酒店 (Hotel Century Southern Tower)</name>
+        <description>Busta新宿正對面，22~35樓高空景觀房，羽田利木津巴士直達門口。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7007,35.6873,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店3：新宿燦路都廣場大飯店 (Hotel Sunroute Plaza Shinjuku)</name>
+        <description>JR九州Blossom隔壁，高CP值穩健之選，利木津巴士直達門口。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6980,35.6872,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店4：三井花園飯店神宮外苑東京普米爾</name>
+        <description>JR千駄谷站步行5分鐘，附設男女大浴場，每房皆有陽台。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7145,35.6798,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚌 Busta 新宿（高速巴士總站 / JR 新宿站南口）</name>
+        <description>搭乘JR特急富士回遊號（1~3號車廂）、中央線、山手線、埼京線的核心樞紐。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7005,35.6885,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>♨️ 高CP值APA 1：APA飯店＆度假村〈西新宿五丁目站塔〉</name>
+        <description>雙床房約NT$3,500~4,800。附設免費露天大浴場「玄要之湯」，出站1分鐘、搭車4分鐘到新宿，近東京都廳免費光雕秀！</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6838,35.6897,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮 高CP值APA 2：APA飯店〈飯田橋站南〉</name>
+        <description>雙床房約NT$3,200~4,500。走路3分鐘就到東京大神宮與神樂坂！搭東西線22分鐘免轉車直達浦安清瀧神社，搭有樂町線9分鐘直達池袋。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7445,35.7005,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>♨️ 高CP值APA 3：APA飯店〈新宿御苑前〉</name>
+        <description>雙床房約NT$3,800~5,200。附設免費大浴場，走路10分鐘到Busta新宿，正對新宿御苑綠地，遠離歌舞伎町。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7095,35.6886,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 1：東京大神宮 ➔ 神樂坂 11 大名店與石板路橫丁慢遊</name>
+      <Placemark>
+        <name>⛩️ 東京大神宮（東京伊勢神宮・幸福鈴蘭御守）</name>
+        <description>東京都千代田区富士見2-4-1（飯田橋站步行5分鐘）。建議14:00-14:50陽光最美時段參拜（社務所08:00-19:00）。超人氣幸福鈴蘭御守、戀愛繪馬與神籤！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7470,35.7001,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚂 CANAL CAFE（神樂坂水岸電車咖啡廳）</name>
+        <description>飯田橋站西口外濠運河畔，可邊喝咖啡邊看JR總武線電車駛過河岸，日劇經典取景地。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7429,35.7013,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 不二家 Peko醬燒（神樂坂本店・全日本唯一）</name>
+        <description>神樂坂2-6（坡道入口），全日本唯一販售立體「牛奶妹Peko醬頭型大判燒（車輪餅）」的分店（旁有梅花亭ポルタ神樂坂店）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7418,35.7017,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮【必逛防漏】捉迷藏橫丁（かくれんぼ横丁）石板路</name>
+        <description>東京都新宿区神楽坂3-1。沿神樂坂通往上走還沒到善國寺前，由右手邊「神樂坂仲通り」轉入，即可走進江戶黑木板牆與歐洲石板路交織的秘密巷弄！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7408,35.7014,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮【必逛防漏】兵庫橫丁（冰庫橫丁・石板路）</name>
+        <description>東京都新宿区神楽坂4-2周辺。與捉迷藏橫丁相連的古老鵝卵石坡道與黑木塀老料亭街景，老辣妹影片中介紹的「冰庫橫丁」即為此處！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7403,35.7024,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 Le Bretagne 神樂坂店（ル・ブルターニュ・法式蕎麥可麗餅）</name>
+        <description>東京都新宿区神楽坂4-2（兵庫橫丁入口旁）。東京第一家正宗法國布列塔尼蕎麥可麗餅（Galette）專門店，營業至22:00（週一休），極適合當神樂坂法式晚餐或下午茶！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7401,35.7023,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🐯 善國寺（毘沙門天・石老虎）</name>
+        <description>東京都新宿区神楽坂5-36。神樂坂通中段核心地標，門口有罕見的「石老虎（狛虎）」。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7397,35.7022,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥐 PAUL 神樂坂店（法式百年烘焙咖啡館）</name>
+        <description>東京都新宿区神楽坂5-1-4（善國寺正對面）。充滿巴黎街角風情的法式麵包烘焙坊，推薦可頌與蝴蝶酥（平日開至21:00，週末至20:00）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7399,35.7020,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥩 大野屋牛肉店（必吃松阪牛/和牛炸肉餅）</name>
+        <description>東京都新宿区神楽坂6-8（營業10:30-19:00）。昭和11年創業精肉老店，必吃現炸松阪牛/黑毛和牛炸肉餅（メンチカツ）與可樂餅，冷掉也酥脆多汁！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7378,35.7035,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎁 神樂坂 梅花亭 本店（買貓咪最中＆和菓子伴手禮）</name>
+        <description>東京都新宿区神楽坂6-15（營業10:00-19:00，週三休）。昭和10年創立和菓子名店！必買超可愛立體貓咪造型「福來貓最中（福来猫もなか）」、檸檬大福與神樂坂石疊點心。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7366,35.7042,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍮 ACHO kagurazaka（神樂坂人氣布丁＆燒菓子伴手禮）</name>
+        <description>東京都新宿区矢来町103（平日11:00-19:00、週六日11:00-18:00，週二休）。古民宅改建的布丁與法式常溫磅蛋糕名店，⚠️週六日18:00打烊，請於17:35前抵達採買！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7327,35.7047,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🛍️ la kagū（AKOMEYA TOKYO in la kagū・隈研吾設計選物店）</name>
+        <description>東京都新宿区矢来町67（神樂坂站2號出口正對面，營業至20:00）。由新潮社舊倉庫改建、建築大師隈研吾設計的木造大階梯複合空間，販售精緻日本文具、雜貨、餐具與伴手禮。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7339,35.7048,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>☁️ Aux Merveilleux de Fred（巴黎雲朵蛋白霜甜點名店）</name>
+        <description>東京都新宿区矢来町107（神樂坂站旁、赤城神社入口斜對面，營業至20:00）。全亞洲唯一分店！必吃如雲朵般入口即化的法式蛋白霜奶油蛋糕（Merveilleux）與現烤巧克力布里歐麵包。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7343,35.7051,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 赤城神社（隈研吾設計玻璃神社・鬼太郎御守）</name>
+        <description>東京都新宿区赤城元町1-10（神樂坂坡頂）。建築大師隈研吾設計的現代玻璃帷幕神社，夜間點燈極美，社務所至19:00（有可愛的鬼太郎背心御守與大眼仔御守）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7346,35.7058,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 2（往前挪！）：浦安清瀧神社 ➔ 原宿 ➔ 貓街 ➔ 澀谷 PARCO 6F (JUMP SHOP) ➔ SHIBUYA 109</name>
+      <Placemark>
+        <name>⛩️ 1.【願望景點】千葉浦安・清瀧神社（海洋風海龜御守＆剪紙御朱印）</name>
+        <description>千葉県浦安市堀江4-1-5（地鐵東西線「浦安站」步行5分鐘，社務所09:00-16:30）。800年海神神社，必看浦島太郎與龍宮本殿木雕、登富士塚，收藏季節限定鏤空剪紙御朱印與海龜貝殼御守，順遊旁側「舊宇田川家住宅」。參拜完從浦安站搭東西線至大手町轉千代田線直達原宿！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.8973,35.6593,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 2. 原宿（竹下通／明治神宮前〈原宿〉站／表參道）</name>
+        <description>東京都渋谷区神宮前1丁目。從浦安搭東西線轉千代田線直達「明治神宮前〈原宿〉站」！逛竹下通青少女飾品雜貨、拍日系大頭貼、吃原宿可麗餅與午餐。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.7039,35.6715,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🐾 3. 貓街（キャットストリート / Cat Street・原宿往澀谷微下坡散步）</name>
+        <description>東京都渋谷区神宮前5丁目～6丁目（舊澀川遊步道）。從原宿往澀谷走是一路緩下坡，走起來超省力！沿途匯集潮流服飾、運動品牌旗艦店、古著店、NUMBER SUGAR焦糖牛奶糖、LUKE'S LOBSTER龍蝦堡與章魚燒，南端順接宮下公園（MIYASHITA PARK）。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.7064,35.6664,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⚡ 4. 澀谷 PARCO 6F（JUMP SHOP 澀谷店 ＆ 寶可夢中心 ＆ Nintendo TOKYO）</name>
+        <description>東京都渋谷区宇田川町15-1（營業11:00-21:00）。貓街走到底過宮下公園先到澀谷 PARCO！直上6樓動漫電玩聖地「CYBERSPACE SHIBUYA」，一次逛齊「JUMP SHOP 澀谷店」、Pokémon Center SHIBUYA、Nintendo TOKYO 與 CAPCOM STORE！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.6988,35.6620,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>👗 5.【願望景點】SHIBUYA 109（青少女流行服飾聖地・最後一站買衣服最省力）</name>
+        <description>東京都渋谷区道玄坂2-29-1（營業10:00-21:00）。從澀谷 PARCO 沿西班牙坂往下走4分鐘即達！B2F～8F集結上百家日本青少女最愛服飾與鞋包品牌，把最重的大袋冬衣戰利品留到最後一站買，買完下樓就是澀谷站，搭JR 7分鐘直達新宿！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.6987,35.6595,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 3（往前挪！）：池袋動漫與服飾全攻略（池袋 PARCO B2F JUMP SHOP ➔ 安利美特 ➔ 乙女街 ➔ 太陽城）</name>
+      <Placemark>
+        <name>⚡ 1. 池袋 PARCO 本館 B2F（JUMP SHOP 池袋PARCO店 ＆ 年輕女裝）</name>
+        <description>東京都豊島区南池袋1-28-2（池袋站東口出站直通，營業11:00-21:00）。直奔「池袋 PARCO 本館 B2F」逛「JUMP SHOP 池袋PARCO店」與同樓層的 CAPCOM STORE IKEBUKURO；1F～6F及旁邊 P'PARCO、LUMINE 則有超多年輕女生喜愛的日系服飾品牌！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7119,35.7303,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>📚 2. 安利美特池袋本店（Animate 池袋本店・金氏世界紀錄全球最大動漫店）</name>
+        <description>東京都豊島区東池袋1-20-7（從池袋 PARCO 步行5分鐘，營業11:00-21:00）。2023年擴建重開的全球最大動漫旗艦店（B2F～9F共11層樓），漫畫、畫集、最新動漫立牌徽章與1F Gratte角色印花拿鐵一應俱全！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7155,35.7309,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>💎 3. 乙女街／乙女之路（乙女ロード / Otome Road・K-BOOKS ジャンプ館挖寶）</name>
+        <description>東京都豊島区東池袋3丁目（從安利美特步行4分鐘、太陽城西側道路，約11:30-20:00）。全東京最強動漫絕版與限定周邊挖寶聖地！必逛「K-BOOKS ジャンプ館（JUMP作品專門館）」、「K-BOOKS アニメ館」、Lashinbang（指南針）、駿河屋乙女ロード店與 Swallowtail 執事咖啡廳！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7176,35.7303,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎡 4. Sunshine City 太陽城（寶可夢中心 MEGA TOKYO ＆ 3000台扭蛋百貨 ＆ 少女服飾）</name>
+        <description>東京都豊島区東池袋3-1（乙女街正對面，Alpa商場10:00-20:00）。2F有「Pokémon Center MEGA TOKYO」、皮卡丘甜點咖啡、Sanrio Cafe；3F有「萬代 Namco Cross Store（一番賞官方店、航海王卡牌店）」與超過3,000台扭蛋機的「Gashapon Department Store」；B1F～2F還有超多平價可愛的青少女服飾品牌！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7195,35.7289,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 4（看天氣彈性調整）：河口湖＆富士吉田全攻略（音樂盒之森下車➔淺間神社遙拜所➔不動茶屋➔美術館前站公車➔金鳥居Q-STA➔日川時計店）</name>
+      <Placemark>
+        <name>🚆 1. 河口湖站（富士回遊1-3號車直達／大月站轉乘備案）＆ 站前Lawson</name>
+        <description>主案：從新宿搭JR特急「富士回遊號」直達（⚠️務必坐第1~3號車廂，4~12車廂會在大月站分離往甲府！）；備案：搭JR中央線到大月站轉富士急行線普通車。出站斜對面即有最紅的「Lawson河口湖站前店」！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7686,35.4982,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎻 2. 河口湖 音樂盒之森美術館站（下車起點・不入館拍免費湖畔富士山）</name>
+        <description>山梨県南都留郡富士河口湖町河口3077-20。搭紅線周遊巴士至第16站下車作為散步起點（不買票入館，立省1.5小時與¥3,100門票，可先在館外免費湖畔步道拍富士山！）。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7631,35.5228,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 3. 河口淺間神社（千年七本杉神木）</name>
+        <description>山梨県南都留郡富士河口湖町河口1（從音樂盒之森美術館步行14分鐘）。超過1100年歷史的世界文化遺產構成資產，擁有樹齡逾1200年的壯觀「七本杉」巨木群，往遙拜所的柏油路起點就在神社右側後方！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7745,35.5303,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 4. 河口淺間神社 遙拜所（天空の鳥居・柏油路直達）</name>
+        <description>山梨県南都留郡富士河口湖町河口1119-2（開放09:00-16:00，環境協力金¥100/人）。從河口淺間神社沿右側蜿蜒上山的柏油路步行約25~30分鐘即達，半山腰朱紅鳥居完美框住正對面的白頭富士山！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7782,35.5349,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏪 5. Lawson 河口湖町店（ローソン 河口湖町店・往不動茶屋必經）</name>
+        <description>山梨県南都留郡富士河口湖町河口732-1。從遙拜所與河口淺間神社下山後，沿707號縣道往餺飥不動河口湖北本店走的中途就會先經過這間北岸Lawson！（再往前走400m即達不動茶屋）。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7694,35.5269,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍲 6. 餺飥不動茶屋 河口湖北本店（ほうとう不動 河口湖北本店）</name>
+        <description>山梨県南都留郡富士河口湖町河口707（營業11:00-20:00，麵售完為止）。古民家木造風格的北本店，必吃熱騰騰的鐵鍋南瓜野菜味噌餺飥麵（ほうとう）！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7662,35.5245,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚌 7. 河口湖美術館前站（搭13:46或14:50富士急行巴士17分鐘直達富士山站！）</name>
+        <description>吃完餺飥不動北本店往湖邊走約10分鐘至「河口湖美術館前（Kawaguchiko-bijutsukan-mae）」站牌，搭乘富士急行路線巴士「甲府線（往富士山駅）」13:46或14:50班次，車程僅17分鐘（¥440）免換車直達富士山站！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7665,35.5177,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 8. 金鳥居（富士吉田・高9.7公尺富士山信仰聖門）</name>
+        <description>山梨県富士吉田市上吉田2-7（富士山站步行3分鐘）。橫跨本町通的巨大銅造鳥居，站在馬路人行道上即可拍到金鳥居框住街道盡頭富士山的震撼畫面！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7975,35.4855,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎁 9. 富士山站 ＆ Q-STA 百貨（キュースタ・買富士山紀念品＆頂樓展望台）</name>
+        <description>山梨県富士吉田市上吉田2-5-1（營業10:00-20:00）。與富士山站共構的商場，1F與B1F有極豐富的富士山限定伴手禮、信玄餅、富士山玻璃杯，6F還有免費屋頂展望台「富士山Deck」！逛完搭電車2站（4分鐘）到下吉田站。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7952,35.4836,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>📸 10. 下吉田站 ＆ 日川時計店（天梯小鎮・本町二丁目商店街）</name>
+        <description>山梨県富士吉田市下吉田2-1-31（從富士山站搭富士急行線2站〔4分鐘〕至下吉田站，步行5分鐘）。⚠️務必在16:25日落天黑前抵達！拍完可直接從下吉田站搭富士回遊號（1~3號車）或普通車到大月轉JR回東京！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.8035,35.4926,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 5：羽田機場第3航廈（退稅新制查驗＆返台）</name>
+      <Placemark>
+        <name>✈️ 東京羽田機場 第3航廈 (Haneda Airport T3)</name>
+        <description>長榮航空 BR192（11/28 07:15-11:00）去／BR191（12/02 12:15-15:05）回，雙人來回總價 TWD 37,792。🚨 2026/11/1退稅新制：建議於 09:15 抵達機場！先推行李去退稅機台（Kiosk）掃護照，完成後再去長榮櫃台托運行李。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.7685,35.5444,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

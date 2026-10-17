@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 冬・東京父女 5天4夜行程與飯店規劃（v2 精實版）</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .tab-btn.active {
+      background-color: #1e40af;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+    }
+    .day-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .day-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+    }
+    @media print {
+      .no-print { display: none !important; }
+      .tab-panel { display: block !important; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-16">
+
+  <!-- Hero Banner -->
+  <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-10 px-6 shadow-lg">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-900">✨ v2 精實版（5天4夜：2026/11/28 六 ～ 12/02 三）</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-400 text-slate-900">✈️ 長榮 松山⇄羽田（BR192 / BR191）雙人總價 TWD 37,792</span>
+        <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-400 text-slate-900">🏨 已訂妥：APA 飯店〈秋葉原末廣町站前〉4 晚 ¥76,200</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">❄️ 2026 冬・東京父女 5天4夜行程與飯店規劃（v2 版）</h1>
+      <p class="text-blue-100 text-sm md:text-base max-w-4xl">
+        出發日期：2026/11/28（週六）～ 12/02（週三）｜ 住宿：APA 飯店〈秋葉原末廣町站前〉（電器街）4 晚連住｜ Day 1 東京大神宮＆神樂坂 ➔ Day 2 浦安＆原宿貓街澀谷 ➔ Day 3 池袋動漫乙女街 ➔ Day 4 河口湖富士山（看天氣彈性對調！）
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 md:px-6 mt-8 space-y-8">
+
+    <!-- Top Navigation Tabs -->
+    <div class="flex flex-wrap gap-2 bg-white p-2 rounded-xl shadow-sm border border-slate-200 no-print">
+      <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗓️ 5日行程模擬 (v2)
+      </button>
+      <button onclick="switchTab('map')" id="tab-map" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗺️ 景點地圖與導航
+      </button>
+      <button onclick="switchTab('kawaguchiko')" id="tab-kawaguchiko" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗻 富士山＆天氣對調攻略
+      </button>
+      <button onclick="switchTab('hotels')" id="tab-hotels" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🏨 已訂飯店與交通
+      </button>
+      <button onclick="switchTab('checklist')" id="tab-checklist" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ✈️ 航班與退稅提醒
+      </button>
+    </div>
+
+    <!-- TAB 1: ITINERARY -->
+    <section id="panel-itinerary" class="tab-panel space-y-6">
+
+      <!-- v2 Upgrade Summary Card + Flight & Hotel Price Banner -->
+      <div class="bg-gradient-to-r from-indigo-50 via-blue-50 to-emerald-50 rounded-xl p-4 border border-indigo-200 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <span class="text-sm font-bold text-indigo-900">🔄 v2 版機票＋飯店定案總覽（11/28 六 ～ 12/02 三）</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-600 text-white">機票 TWD 37,792 ＋ 飯店 4 晚 ¥76,200（官網現場支付）</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-3 text-xs md:text-sm text-slate-700">
+          <div class="bg-white/90 p-3 rounded-lg border border-blue-200">
+            <strong class="text-blue-900">✈️ 長榮航空（松山 TSA ⇄ 羽田 HND）</strong><br>
+            ・<strong>去程 11/28 (六)</strong>：<code>BR192</code>（07:15 TSA T1 ➔ 11:00 HND T3）<br>
+            ・<strong>回程 12/02 (三)</strong>：<code>BR191</code>（12:15 HND T3 ➔ 15:05 TSA T1）<br>
+            ・<strong>雙人含稅總價</strong>：<strong class="text-rose-600">TWD 37,792</strong>
+          </div>
+          <div class="bg-white/90 p-3 rounded-lg border border-amber-200">
+            <strong class="text-amber-900">🏨 已訂妥：APA〈秋葉原末廣町站前〉（電器街）</strong><br>
+            ・<strong>官網 4 晚總價</strong>：<strong class="text-rose-600">76,200 日圓</strong>（含稅・當場支付）<br>
+            ・<strong>神動線</strong>：門口 1 分鐘銀座線「末廣町站」（澀谷一班車直達回飯店！）、走路 6 分鐘 JR 秋葉原站（2站4分鐘直達飯田橋神樂坂）！
+          </div>
+          <div class="bg-white/90 p-3 rounded-lg border border-emerald-100">
+            <strong class="text-emerald-900">🌤️ Day 1 週六名店全開＋Day 3/4 平日避人潮！</strong><br>
+            Day 1 週六神樂坂 11 大名店 100% 全開零公休；Day 2 逛澀谷、<strong>Day 3（週一）逛池袋、Day 4（週二平日）去富士山</strong>，且可依天氣隨時對調！
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Date Selector -->
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+              <span>🎯 選擇 5 天 4 夜出發日期（自動換算星期與店家公休提醒）</span>
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">
+              預設為已訂妥機票與飯店檔期 <strong>11/28（六）～ 12/02（三）</strong>，亦可切換其他日期檢視對應星期與注意事項：
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="startDateSelect" class="text-sm font-medium text-slate-700 whitespace-nowrap">出發日：</label>
+            <select id="startDateSelect" onchange="updateDates()" class="bg-blue-50 border border-blue-300 text-blue-900 text-sm font-semibold rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="2026-11-28" selected>✈️ 已定案：11/28 (六) ～ 12/02 (三) 【BR192去/BR191回・APA秋葉原末廣町】</option>
+              <option value="2026-11-29">備選 B：11/29 (日) ～ 12/03 (四) 【週日出發・Day 2～4 全平日】</option>
+              <option value="2026-11-30">備選 C：11/30 (一) ～ 12/04 (五) 【純平日出發】</option>
+              <option value="2026-12-01">備選 D：12/01 (二) ～ 12/05 (六) 【週二出發】</option>
+              <option value="2026-12-02">備選 E：12/02 (三) ～ 12/06 (日) 【週三出發】</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Alert Banner -->
+        <div id="dateAlertBanner" class="mt-4 p-3.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+        </div>
+      </div>
+
+      <!-- 5-Day Cards Container -->
+      <div id="daysContainer" class="space-y-5">
+        <!-- Rendered by JS -->
+      </div>
+
+    </section>
+
+    <!-- TAB MAP: INTERACTIVE MAP & GOOGLE MAPS LINKS -->
+    <section id="panel-map" class="tab-panel hidden space-y-6">
+
+      <!-- Section 1: High-Res Schematic Route Map Image -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div>
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100 text-blue-800">v2 視覺化全覽圖</span>
+            <h2 class="text-xl font-bold text-slate-900 mt-1">🗺️ 2026 冬・東京父女 5天4夜（v2 版）景點方位與直達交通路線圖</h2>
+            <p class="text-sm text-slate-600 mt-0.5">以已訂妥的「APA 飯店〈秋葉原末廣町站前〉」為住宿基地，一眼看懂 5 天所有願望景點的相對方位、直達電車與天氣彈性對調策略：</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="2026東京5日遊_景點與交通路線圖_v2.png" target="_blank" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-slate-800 text-white hover:bg-slate-700 transition">
+              🖼️ 開啟高解析 PNG 圖片
+            </a>
+            <a href="2026東京5日遊_Google我的地圖匯入檔_v2.kml" download class="px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 transition">
+              📥 下載 Google 我的地圖 (.KML)
+            </a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+          <img src="2026東京5日遊_景點與交通路線圖_v2.png" alt="2026東京5日遊 v2版 景點與交通路線圖" class="w-full h-auto block" />
+        </div>
+      </div>
+
+      <!-- Section 2: Interactive Google Maps Viewer + One-Click Pin Selector -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="mb-4">
+          <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-800">互動式 Google Maps 預覽</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1">📍 點擊下方任一景點／飯店，立即切換 Google 地圖實景與導航</h3>
+          <p class="text-xs text-slate-600 mt-0.5">左側清單已按 v2 版最新順序（已訂飯店 ➔ Day 1 東京大神宮＆神樂坂 ➔ Day 2 浦安＆澀谷 ➔ Day 3 池袋 ➔ Day 4 河口湖富士山 ➔ Day 5 羽田）排列：</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-5">
+          <!-- Left: Spot Selector List -->
+          <div class="lg:col-span-5 space-y-2 max-h-[480px] overflow-y-auto pr-1">
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1">🏨 已訂妥住宿基地（4 晚連住 ¥76,200）</div>
+            <button onclick="selectMapSpot('アパホテル 秋葉原末広町駅前', '✅ 已預訂：APA 飯店〈秋葉原末廣町站前〉(電器街)', '4晚總價 ¥76,200 (當場支付)・銀座線末廣町站步行1分、JR秋葉原站步行6分')" class="w-full text-left p-2.5 rounded-lg border-2 border-emerald-500 bg-emerald-50/70 hover:bg-emerald-100/80 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-emerald-900">✅ APA 飯店〈秋葉原末廣町站前〉（電器街）</div>
+                <div class="text-xs text-slate-700">已訂妥 4 晚 ¥76,200・末廣町站 1 分 / JR 秋葉原站 6 分</div>
+              </div>
+              <span class="text-xs font-semibold text-emerald-800 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('アパホテル 飯田橋駅南', '備選參考：APA飯店〈飯田橋站南〉', '走路3分鐘到東京大神宮與神樂坂')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-semibold text-slate-800">🏮 備選參考：APA飯店〈飯田橋站南〉</div>
+                <div class="text-xs text-slate-500">飯田橋站步行 2 分鐘</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('JR九州ホテル ブラッサム新宿', '備選參考：JR九州飯店 Blossom 新宿', '新宿南口步行 3 分鐘・Busta 新宿旁')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-semibold text-slate-800">🏨 備選參考：JR九州飯店 Blossom 新宿</div>
+                <div class="text-xs text-slate-500">新宿南口步行 3 分鐘</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ Day 1：東京大神宮 ＆ 神樂坂 11 大名店全攻略</div>
+            <button onclick="selectMapSpot('東京大神宮 飯田橋', 'Day 1：東京大神宮（東京伊勢神宮）', '飯田橋站步行 5 分鐘（14:00–14:50）・陽光最美時段參拜、買超美鈴蘭御守與戀愛神籤')" class="w-full text-left p-2.5 rounded-lg border border-rose-200 bg-rose-50/40 hover:bg-rose-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-rose-900">⛩️ Day 1｜東京大神宮（鈴蘭御守）</div>
+                <div class="text-xs text-slate-600">14:00–14:50 陽光最美時段參拜、買幸福鈴蘭御守</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('CANAL CAFE 神楽坂', 'Day 1：神樂坂 CANAL CAFE ＆ 不二家 Peko醬燒', '飯田橋站西口外濠運河畔・邊喝咖啡邊看總武線電車')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">🚂 Day 1｜CANAL CAFE ＆ 不二家Peko醬燒</div>
+                <div class="text-xs text-slate-600">神樂坂坡道起點：水岸電車咖啡＋牛奶妹車輪餅</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('かくれんぼ横丁 兵庫横丁 神楽坂', 'Day 1：捉迷藏橫丁（かくれんぼ横丁）＆ 兵庫橫丁（冰庫橫丁）', '從神樂坂通「仲通り」轉入・最迷人的江戶黑木牆與歐洲石板路迷宮')" class="w-full text-left p-2.5 rounded-lg border border-amber-200 bg-amber-50/40 hover:bg-amber-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-amber-900">🏮 Day 1｜捉迷藏橫丁 ＆ 兵庫橫丁（冰庫橫丁）</div>
+                <div class="text-xs text-slate-600">防漏必看：神樂坂通對面「仲通り」鑽入石板路！</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('ル・ブルターニュ 神楽坂店', 'Day 1：Le Bretagne 法式蕎麥可麗餅 ＆ PAUL 神樂坂店', '神樂坂 4～5 丁目＆善國寺周邊・東京第一家布列塔尼法式可麗餅與法式烘焙坊')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">🥞 Day 1｜Le Bretagne 可麗餅・PAUL・善國寺</div>
+                <div class="text-xs text-slate-600">神樂坂中段：法式可麗餅晚餐、PAUL麵包、石老虎</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('神楽坂 梅花亭 本店 大野屋牛肉店', 'Day 1：大野屋牛肉店（炸肉餅）＆ 梅花亭本店（貓咪最中伴手禮）', '神樂坂 6 丁目・必吃和牛松阪牛可樂餅＆必買福來貓最中、檸檬大福伴手禮（營業至19:00）')" class="w-full text-left p-2.5 rounded-lg border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-emerald-900">🎁 Day 1｜大野屋牛肉店 ＆ 梅花亭（買伴手禮）</div>
+                <div class="text-xs text-slate-600">神樂坂6丁目：現炸和牛可樂餅＋梅花亭貓咪最中</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('ACHO kagurazaka 矢来町103', 'Day 1：ACHO 神樂坂（布丁與燒菓子名店）', '新宿區矢來町 103・獨棟民宅改建的超人氣濃厚布丁與常溫磅蛋糕伴手禮（⚠️週六日營業至18:00）')" class="w-full text-left p-2.5 rounded-lg border border-pink-200 bg-pink-50/40 hover:bg-pink-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-pink-900">🍮 Day 1｜ACHO 神樂坂（人氣布丁＆燒菓子）</div>
+                <div class="text-xs text-slate-600">矢來町巷內（近 la kagū）：必搶神級布丁（週末至18:00）</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('Aux Merveilleux de Fred 東京 赤城神社 la kagu', 'Day 1：赤城神社・Aux Merveilleux de Fred・la kagū', '神樂坂坡頂：隈研吾設計玻璃神社、法國雲朵蛋白霜甜點、la kagū (AKOMEYA) 選物倉庫')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">⛩️ Day 1｜赤城神社・Aux Merveilleux・la kagū</div>
+                <div class="text-xs text-slate-600">神樂坂坡頂：隈研吾雙建築＋法式雲朵蛋白霜甜點</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ Day 2（往前挪！）：浦安清瀧神社 ➔ 原宿 ➔ 貓街 ➔ 澀谷 PARCO 6F ➔ SHIBUYA 109</div>
+            <button onclick="selectMapSpot('清瀧神社 浦安市堀江4-1-5', 'Day 2 上午：千葉浦安・清瀧神社（海神神社）', '東西線「浦安站」步行 5 分鐘（社務所 09:00–16:30）・季節鏤空剪紙御朱印與海龜貝殼御守，參拜完搭東西線轉千代田線直達原宿')" class="w-full text-left p-2.5 rounded-lg border border-teal-200 bg-teal-50/40 hover:bg-teal-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-teal-900">⛩️ Day 2｜浦安・清瀧神社（剪紙御朱印＆海龜御守）</div>
+                <div class="text-xs text-slate-600">09:45 東西線「浦安站」步行 5 分・順遊舊宇田川家古宅</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('原宿竹下通り キャットストリート 渋谷', 'Day 2 下午：原宿（竹下通）➔ 貓街（Cat Street・微下坡散步）', '從明治神宮前〈原宿〉站出發，沿著文青潮牌聚集的「貓街」一路緩下坡散步往澀谷，順吃可麗餅、龍蝦堡與章魚燒')" class="w-full text-left p-2.5 rounded-lg border border-pink-200 bg-pink-50/40 hover:bg-pink-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-pink-900">🐾 Day 2｜原宿竹下通 ➔ 貓街（Cat Street）</div>
+                <div class="text-xs text-slate-600">12:00 原宿往澀谷一路緩下坡散步・潮牌選物＆美食</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('渋谷PARCO JUMP SHOP SHIBUYA 109', 'Day 2 傍晚＆晚間：澀谷 PARCO 6F (JUMP SHOP) ➔ SHIBUYA 109', '先逛貓街出口旁的「澀谷 PARCO 6F（JUMP SHOP、寶可夢中心、Nintendo TOKYO）」，最後一站到「SHIBUYA 109」買衣服，買完直接從澀谷站搭 JR 回新宿！')" class="w-full text-left p-2.5 rounded-lg border border-rose-200 bg-rose-50/50 hover:bg-rose-100/60 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-rose-900">⚡ Day 2｜澀谷 PARCO 6F (JUMP SHOP) ➔ SHIBUYA 109</div>
+                <div class="text-xs text-slate-600">15:30 逛 6F JUMP SHOP 與寶可夢 ➔ 17:30 SHIBUYA 109 買冬衣</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ Day 3（往前挪！）：池袋 PARCO B2F (JUMP SHOP) ➔ 安利美特 ➔ 乙女街 ➔ 太陽城</div>
+            <button onclick="selectMapSpot('池袋PARCO JUMP SHOP', 'Day 3 上午：池袋 PARCO 本館 B2F（JUMP SHOP 池袋PARCO店）', 'JR 池袋站東口出站直通（營業 11:00–21:00）！B2F 有 JUMP SHOP 與 CAPCOM STORE，1F～6F 與 P\'PARCO 有超多年輕女裝')" class="w-full text-left p-2.5 rounded-lg border border-purple-200 bg-purple-50/40 hover:bg-purple-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-purple-900">⚡ Day 3｜池袋 PARCO 本館 B2F（JUMP SHOP）</div>
+                <div class="text-xs text-slate-600">11:00 池袋東口直通・B2F JUMP SHOP＋樓上少女服飾</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('アニメイト池袋本店 乙女ロード K-BOOKSジャンプ館', 'Day 3 下午：安利美特池袋本店 ➔ 乙女街（Otome Road・K-BOOKS JUMP館）', '全球最大 10 層樓「安利美特池袋本店」➔ 步行 4 分鐘至「乙女街（K-BOOKS ジャンプ館、指南針、駿河屋）」挖寶絕版限定動漫徽章與立牌！')" class="w-full text-left p-2.5 rounded-lg border border-fuchsia-200 bg-fuchsia-50/40 hover:bg-fuchsia-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-fuchsia-900">💎 Day 3｜安利美特本店 ➔ 乙女街（Otome Road）</div>
+                <div class="text-xs text-slate-600">12:30 全球最大安利美特 ➔ 14:30 乙女街 K-BOOKS JUMP館挖寶</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('サンシャインシティ 池袋 ポケモンセンターメガトウキョー', 'Day 3 傍晚：Sunshine City 太陽城（寶可夢中心・3000台扭蛋百貨・Alpa服飾）', '乙女街正對面！2F 寶可夢中心 MEGA TOKYO、3F 萬代一番賞官方店與世界最大 3,000 台扭蛋百貨，還有 Alpa 青少女服飾街')" class="w-full text-left p-2.5 rounded-lg border border-indigo-200 bg-indigo-50/40 hover:bg-indigo-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">🎡 Day 3｜Sunshine City 太陽城（寶可夢＆扭蛋百貨）</div>
+                <div class="text-xs text-slate-600">16:30 乙女街正對面・寶可夢中心＋3000台扭蛋＋少女服飾</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ Day 4（看天氣彈性調整）：河口湖＆富士吉田全攻略</div>
+            <button onclick="selectMapSpot('河口湖 音楽と森の美術館', 'Day 4：河口湖 音樂盒之森美術館站（下車起點・不入館）', '河口湖紅線周遊巴士第 16 站下車作為散步起點（不買票入館，省下1.5hr與¥3,100，在免費湖畔步道拍富士山）')" class="w-full text-left p-2.5 rounded-lg border border-blue-200 bg-blue-50/40 hover:bg-blue-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-blue-900">🎻 Day 4｜音樂盒之森美術館站（下車起點）</div>
+                <div class="text-xs text-slate-600">09:45 搭紅線公車下車・走免費湖畔步道拍富士山</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('河口浅間神社 遥拝所 天空の鳥居', 'Day 4：河口淺間神社 ＆ 遙拜所（天空鳥居）', '從音樂盒之森步行14分鐘至淺間神社（千年七本杉）➔ 走旁邊蜿蜒柏油路上山25分鐘抵「天空鳥居」（09:00–16:00，¥100）')" class="w-full text-left p-2.5 rounded-lg border border-rose-200 bg-rose-50/40 hover:bg-rose-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-rose-900">⛩️ Day 4｜河口淺間神社 ＆ 遙拜所（天空鳥居）</div>
+                <div class="text-xs text-slate-600">10:15 參拜千年七本杉 ➔ 走旁邊柏油路登頂天空鳥居</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('ほうとう不動 河口湖北本店 河口湖美術館', 'Day 4：Lawson ➔ 餺飥不動河口湖北本店 ➔ 河口湖美術館前站（搭公車）', '下山先經過北岸 Lawson ➔ 吃餺飥不動北本店 ➔ 走到「河口湖美術館前站」搭 13:46/14:50 富士急行巴士 17 分鐘直達富士山站！')" class="w-full text-left p-2.5 rounded-lg border border-amber-200 bg-amber-50/40 hover:bg-amber-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-amber-900">🍲 Day 4｜Lawson ➔ 餺飥不動北本店 ➔ 美術館前站搭公車</div>
+                <div class="text-xs text-slate-600">12:15 吃南瓜餺飥麵 ➔ 河口湖美術館前搭公車直達富士山站</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('金鳥居 富士山駅 Q-STA', 'Day 4：富士山站・金鳥居 ＆ Q-STA 百貨買紀念品', '富士山站步行 3 分鐘拍 9.7 公尺「金鳥居」框住富士山 ➔ 車站共構百貨「Q-STA（10:00–20:00）」買富士山限定伴手禮')" class="w-full text-left p-2.5 rounded-lg border border-indigo-200 bg-indigo-50/40 hover:bg-indigo-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">🎁 Day 4｜富士山站：金鳥居 ＆ Q-STA 買紀念品</div>
+                <div class="text-xs text-slate-600">拍巨大金鳥居街景＋Q-STA 百貨採買富士山伴手禮</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('日川時計店 下吉田駅', 'Day 4：下吉田站・日川時計店（天梯小鎮打卡聖地）', '從富士山站搭 2 站（4分鐘）至下吉田站・⚠️務必於 16:25 日落前抵達拍照！拍完直接從下吉田站搭電車回東京')" class="w-full text-left p-2.5 rounded-lg border border-sky-200 bg-sky-50/40 hover:bg-sky-100/50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-sky-900">📸 Day 4｜下吉田站：日川時計店（天梯小鎮）</div>
+                <div class="text-xs text-slate-600">搭 2 站抵下吉田（⚠️16:25前趁天亮拍）➔ 直接搭車回東京</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ Day 5：羽田機場返台</div>
+            <button onclick="selectMapSpot('羽田空港 第3ターミナル', 'Day 5：羽田機場第 3 航廈（預留 3 小時退稅）', '09:20 抵達先刷退稅機台 Kiosk ➔ 再托運行李')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-emerald-900">✈️ Day 5｜羽田機場第 3 航廈（江戶小路）</div>
+                <div class="text-xs text-slate-600">先刷 Kiosk 退稅機台 ➔ 再托運行李</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+          </div>
+
+          <!-- Right: Live Google Map Embed -->
+          <div class="lg:col-span-7 flex flex-col">
+            <div class="p-3 bg-slate-800 text-white rounded-t-xl flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <div id="mapSpotTitle" class="text-sm font-bold">✅ 已訂妥飯店：APA 飯店〈秋葉原末廣町站前〉（電器街）</div>
+                <div id="mapSpotDesc" class="text-xs text-slate-300">末廣町站步行 1 分・JR 秋葉原站步行 6 分｜4晚總價 ¥76,200（現場支付）</div>
+              </div>
+              <a id="mapExternalLink" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%91%E3%83%9B%E3%83%86%E3%83%AB%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AB%E5%BA%83%E7%94%BA%E9%A7%85%E5%89%8D" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-500 hover:bg-blue-400 text-white text-xs font-bold transition whitespace-nowrap">
+                📱 在 Google Maps 開啟導航 ↗
+              </a>
+            </div>
+            <iframe id="googleMapIframe" class="w-full h-[420px] rounded-b-xl border border-t-0 border-slate-300" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=%E3%82%A2%E3%83%91%E3%83%9B%E3%83%86%E3%83%AB%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AB%E5%BA%83%E7%94%BA%E9%A7%85%E5%89%8D&hl=zh-TW&z=15&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Daily Multi-Stop Route Navigation Links & KML Guide -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-2">🧭 v2 每日行程「多點串聯路線」一鍵開啟 Google Maps</h3>
+          <p class="text-xs text-slate-600 mb-3">在手機上點擊以下連結，可直接叫出當日所有景點串聯路線規劃：</p>
+          <div class="space-y-2 text-xs">
+            <a href="https://www.google.com/maps/dir/%E9%A3%AF%E7%94%B0%E6%A9%8B%E9%A7%85/%E6%9D%B1%E4%BA%AC%E5%A4%A7%E7%A5%9E%E5%AE%AE/CANAL+CAFE/%E3%81%8B%E3%81%8F%E3%82%8C%E3%82%93%E3%81%BC%E6%A8%AA%E4%B8%81/%E3%83%AB%E3%83%BB%E3%83%96%E3%83%AB%E3%82%BF%E3%83%BC%E3%83%8B%E3%83%A5+%E7%A5%9E%E6%A5%BD%E5%9D%82%E5%BA%97/PAUL+%E7%A5%9E%E6%A5%BD%E5%9D%82%E5%BA%97/%E5%A4%A7%E9%87%8E%E5%B1%8B%E7%89%9B%E8%82%89%E5%BA%97/%E7%A5%9E%E6%A5%BD%E5%9D%82+%E6%A2%85%E8%8A%B1%E4%BA%AD+%E6%9C%AC%E5%BA%97/ACHO+kagurazaka/Aux+Merveilleux+de+Fred+Tokyo/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-900 font-semibold transition">
+              <span>Day 1 神樂坂全攻略路線：飯田橋站➔東京大神宮➔捉迷藏/兵庫橫丁➔Le Bretagne➔PAUL➔大野屋➔梅花亭➔ACHO➔la kagū</span>
+              <span class="whitespace-nowrap ml-2">開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/%E6%B8%85%E7%80%A7%E7%A5%9E%E7%A4%BE+%E6%B5%A6%E5%AE%89/%E5%8E%9F%E5%AE%BF%E7%AB%B9%E4%B8%8B%E9%80%9A%E3%82%8A/%E3%82%AD%E3%83%A3%E3%83%83%E3%83%88%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88+%E6%B8%8B%E8%B0%B7/%E6%B8%8B%E8%B0%B7PARCO/SHIBUYA+109/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-pink-50 hover:bg-pink-100 text-pink-900 font-semibold transition">
+              <span>Day 2（往前挪！）浦安＋原宿貓街＋澀谷路線：浦安・清瀧神社 ➔ 原宿竹下通 ➔ 貓街 Cat Street ➔ 澀谷 PARCO (6F JUMP SHOP) ➔ SHIBUYA 109</span>
+              <span class="whitespace-nowrap ml-2">開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/%E6%B1%A0%E8%A2%8BPARCO/%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A4%E3%83%88%E6%B1%A0%E8%A2%8B%E6%9C%AC%E9%99%A2/%E4%B9%99%E5%A5%B3%E3%83%AD%E3%83%BC%E3%83%89+%E6%B1%A0%E8%A2%8B/%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A3%E3%82%A4%E3%83%B3%E3%82%B7%E3%83%86%E3%82%A3+%E6%B1%A0%E8%A2%8B/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-purple-50 hover:bg-purple-100 text-purple-900 font-semibold transition">
+              <span>Day 3（往前挪！）池袋動漫與服飾路線：池袋 PARCO (本館 B2F JUMP SHOP) ➔ 安利美特池袋本店 ➔ 乙女街 (K-BOOKS ジャンプ館) ➔ Sunshine City 太陽城</span>
+              <span class="whitespace-nowrap ml-2">開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85/%E6%B2%B3%E5%8F%A3%E6%B9%96+%E9%9F%B3%E6%A5%BD%E3%81%A8%E6%A3%AE%E3%81%AE%E7%BE%8E%E8%A1%93%E9%A4%A8/%E6%B2%B3%E5%8F%A3%E6%B5%85%E9%96%93%E7%A5%9E%E7%A4%BE/%E6%B2%B3%E5%8F%A3%E6%B5%85%E9%96%93%E7%A5%9E%E7%A4%BE+%E9%81%99%E6%8B%9D%E6%89%80/%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3+%E6%B2%B3%E5%8F%A3%E6%B9%96%E7%94%BA%E5%BA%97/%E3%81%BB%E3%81%86%E3%81%A8%E3%81%86%E4%B8%8D%E5%8B%95+%E6%B2%B3%E5%8F%A3%E6%B9%96%E5%8C%97%E6%9C%AC%E5%BA%97/%E6%B2%B3%E5%8F%A3%E6%B9%96%E7%BE%8E%E8%A1%93%E9%A4%A8/%E9%87%91%E9%B3%A5%E5%B1%85+%E5%AF%8C%E5%A3%AB%E5%90%89%E7%94%B0/Q-STA+%E5%AF%8C%E5%A3%AB%E5%B1%B1%E9%A7%85/%E6%97%A5%E5%B7%9D%E6%99%82%E8%A8%88%E5%BA%97/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-semibold transition">
+              <span>Day 4（看天氣彈性調整）河口湖＋富士吉田路線：河口湖站➔音樂盒之森➔淺間神社＆遙拜所➔Lawson➔餺飥不動北本店➔河口湖美術館前公車➔金鳥居＆Q-STA➔日川時計店</span>
+              <span class="whitespace-nowrap ml-2">開啟路線 ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-2">📥 如何把 v2 專屬標記檔匯入您的「Google 我的地圖」？</h3>
+          <p class="text-xs text-slate-600 mb-3">
+            同目錄下已為您建立好包含<strong>所有推薦飯店＋v2 版 Day 1～5 全部景點座標與備註</strong>的 <code class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">2026東京5日遊_Google我的地圖匯入檔_v2.kml</code>，只需 3 步驟即可同步到手機 Google Maps App：
+          </p>
+          <ol class="text-xs text-slate-700 space-y-2 list-decimal list-inside">
+            <li>電腦開啟 <a href="https://www.google.com/maps/d/" target="_blank" class="text-blue-600 font-semibold underline">Google 我的地圖 (Google My Maps)</a>，點選左上角<strong>「建立新地圖」</strong>。</li>
+            <li>在左側圖層點擊<strong>「匯入」</strong>，選擇目錄下的 <code class="bg-slate-100 px-1 py-0.5 rounded">2026東京5日遊_Google我的地圖匯入檔_v2.kml</code> 上傳。</li>
+            <li>匯入後，所有景點會自動依 v2 版 Day 1～Day 5 分類標記！打開手機版 <strong>Google Maps App ➔ 底部「已儲存」➔ 滑到最下方「地圖」</strong>，即可在東京街頭隨時看著標記走！</li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB 2: KAWAGUCHIKO & WEATHER SWAP -->
+    <section id="panel-kawaguchiko" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="flex items-start justify-between flex-wrap gap-4 border-b border-slate-100 pb-4">
+          <div>
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100 text-blue-800">Day 4（可與 Day 2 / Day 3 看天氣隨時對調！）</span>
+            <h2 class="text-xl font-bold text-slate-900 mt-2">🗻 河口湖＆富士吉田全攻略 ＋ 天氣機動對調秘訣</h2>
+          </div>
+          <span class="px-4 py-1.5 rounded-full text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+            ✅ 去程坐河口湖站・回程直接從下吉田/富士山站回東京！
+          </span>
+        </div>
+
+        <!-- Weather Swap Guide -->
+        <div class="mt-4 p-4 rounded-xl bg-indigo-50 border border-indigo-200">
+          <h3 class="text-sm font-bold text-indigo-900 mb-1.5">🌤️ 如何利用「Day 2 澀谷、Day 3 池袋、Day 4 富士山」看天氣彈性調整？</h3>
+          <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+            先把<strong>澀谷（Day 2）</strong>和<strong>池袋（Day 3）</strong>排在前面，除了能讓女兒一到東京就先買到喜歡的冬裝與 JUMP SHOP 周邊外，更棒的是<strong>這兩天都是東京都心行程，完全不需要事先預訂車票</strong>！<br>
+            抵達東京的第一天（Day 1）晚上，查詢日本網站<strong>「<a href="https://fuji-san.info/" target="_blank" class="text-blue-700 underline font-semibold">富士見予報（富士山能見度指數）</a>」</strong>：<br>
+            ・若 <strong>Day 4 預報能見度 8～10 級（大晴天）</strong> ➔ 照原定計畫 <strong>Day 2 澀谷、Day 3 池袋、Day 4 富士山</strong>。<br>
+            ・若 <strong>Day 4 預報多雲或下雨，反而是 Day 2 或 Day 3 大晴天</strong> ➔ 直接把富士山往前挪到晴天的那一天！（若在 JR 東日本官網訂富士回遊號，取票前可於網路免費改期一次；或直接改搭下方「備案 B：JR 到大月站轉乘富士急行線」，隨到隨搭完全免搶票！）
+          </p>
+        </div>
+
+        <p class="text-slate-700 text-sm leading-relaxed mt-4">
+          💡 <strong>關於「河口湖 音樂盒之森美術館」門票與不入館優勢：</strong><br>
+          美術館入館門票為<strong>平日成人 ¥1,800、高中生/大學生 ¥1,300</strong>（週六日及國定假日為成人 ¥2,100、高中生 ¥1,600；每週二、週三公休）。既然您本來沒有打算買票進去，<strong>純粹把它當作早上的「公車下車起點」並走外圍免費的湖畔步道</strong>，不僅立省 ¥3,100 門票、直接<strong>多出 1.5 小時的充裕時間</strong>，而且<strong>就算選在週二或週三（美術館公休日）去河口湖，外圍湖畔步道與紅線公車、甲府線公車也全部照常開放通行，完全不受影響！</strong>
+        </p>
+
+        <!-- Transport Comparison -->
+        <h3 class="text-base font-bold text-slate-800 mt-6 mb-3">🚆 新宿 ⇄ 河口湖／下吉田 鐵道主案與備案</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border border-blue-200 bg-blue-50/40 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-blue-900 text-base">🅰️ 主要方案：JR 特急「富士回遊」直達</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-blue-600 text-white rounded">務必坐 1～3 號車廂！</span>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-1.5">
+              <li>・<strong>乘車地點</strong>：JR 新宿站 ➔ 直達河口湖站（約 1 小時 53 分）</li>
+              <li>・<strong>⚠️ 車廂鐵則</strong>：<strong>一定要預訂並搭乘「第 1～3 號車廂」</strong>！第 4～12 號車廂是併結的「梓號 Azusa / 甲斐路號 Kaiji」，會在<strong>大月站切離</strong>開往甲府，坐錯車廂會被載去甲府！</li>
+              <li>・<strong>建議去程</strong>：07:30（富士回遊 3 號）或 08:30（富士回遊 7 號）新宿發車</li>
+              <li>・<strong>建議回程</strong>：<strong>直接從「下吉田站」或「富士山站」上車回新宿！</strong>（例如 17:00 或 17:47 從下吉田站發車直達新宿，完全不用再走回頭路去河口湖站！）</li>
+            </ul>
+          </div>
+
+          <div class="border border-emerald-200 bg-emerald-50/40 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-emerald-900 text-base">🅱️ 備案方案：JR 到「大月站」轉富士急行線</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-emerald-600 text-white rounded">免搶票・看天氣改期最神</span>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-1.5">
+              <li>・<strong>第一段（JR 中央線）</strong>：從新宿搭 JR 特急「Kaiji / Azusa」（班次極多，約 60 分鐘）或 JR 中央線快速至<strong>「大月站（Otsuki）」</strong>。</li>
+              <li>・<strong>第二段（富士急行線）</strong>：在大月站內順著指標刷 IC 卡（Suica/PASMO）轉乘<strong>「富士急行線」普通車</strong>（約 55 分鐘）或富士急行特急至河口湖站。</li>
+              <li>・<strong>優勢</strong>：就算臨時看天氣決定改期、沒買到富士回遊號，這招只多花約 15～20 分鐘，且回程從「下吉田站」搭普通車到大月站更是每 30 分鐘就有一班！</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3 Important Tweaks -->
+        <div class="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-4">
+          <h4 class="font-bold text-amber-900 text-sm mb-2">🔍 河口湖＆富士吉田 3 大實戰關鍵（含老辣妹直達公車秘訣）：</h4>
+          <ol class="text-sm text-slate-700 space-y-2 list-decimal list-inside">
+            <li><strong>下山去「餺飥不動河口湖北本店」與「Lawson」的順序</strong>：從遙拜所（天空鳥居）下山回到河口淺間神社後，往美術館方向走回來的路上（707號縣道），會<strong>先經過「Lawson 河口湖町店」➔ 再往前走 5 分鐘（400m）就到「餺飥不動茶屋 河口湖北本店」</strong>！（💡 <em>若想拍「藍底招牌＋正後方富士山」網美照，是「Lawson 河口湖站前店」，早上出河口湖站等公車時走 3 分鐘就能先拍！</em>）</li>
+            <li><strong>🚌 老辣妹推薦「河口湖美術館前站」搭公車 17 分鐘直達「富士山站」</strong>：吃完不動茶屋往湖畔走約 10 分鐘（經過音樂盒之森美術館再往南走 300m 到「河口湖美術館」門口），在<strong>「河口湖美術館前（Kawaguchiko-bijutsukan-mae）」站</strong>搭乘<strong>富士急行路線巴士「甲府線（往 富士山駅）」</strong>！下午有 <strong><code>12:55</code>、<code>13:46</code>、<code>14:50</code></strong> 班次（老辣妹搭的是 14:50，因為您不進音樂盒美術館，甚至能提早搭上 <strong>13:46</strong> 那班！），<strong>車程僅 17 分鐘、車資 ¥440，免在河口湖站換車，直接坐到「富士山車站」</strong>！</li>
+            <li><strong>⚠️ 防天黑提醒（11月底 16:25 日落）</strong>：因為不進音樂盒美術館，若搭上 <code>13:46</code> 的直達公車，<code>14:03</code> 就抵達「富士山站」了！拍完<strong>金鳥居</strong>、逛完旁邊的 <strong>Q-STA 百貨</strong>買伴手禮，<code>15:00</code> 左右搭 2 站電車（4分鐘）到<strong>「下吉田站」拍日川時計店</strong>，時間超級充裕！（即使慢慢吃到搭 <code>14:50</code> 公車，<code>15:07</code> 到富士山站，只要在 <code>15:35</code> 前搭車去下吉田站也完全來得及在日落前拍完！）</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: HOTELS -->
+    <section id="panel-hotels" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-emerald-500">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white">✅ 已於日本官網訂妥（4 晚總價 ¥76,200・現地精算）</span>
+          <span class="text-xs font-bold text-emerald-800">2026/11/28(六) 入住 ～ 12/02(三) 退房｜No.379</span>
+        </div>
+        <h2 class="text-xl font-bold text-slate-900">🏨 確定入住基地：APA 飯店〈秋葉原末廣町站前〉（電器街）</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          <strong>アパホテル〈秋葉原末広町駅前〉（電気街）</strong>｜東京都千代田區外神田 3-15-7｜2024 年 7 月全新開幕！<br>
+          距離東京 Metro 銀座線<strong>「末廣町站（1、3號出口）」步行僅 1 分鐘</strong>、<strong>JR「秋葉原站（電器街口）」步行 6 分鐘</strong>。4 晚房價明細：<code>11/28(六) ¥30,200</code>、<code>11/29(日) ¥15,000</code>、<code>11/30(一) ¥14,000</code>、<code>12/01(二) ¥17,000</code>，合計 <strong>¥76,200（含稅，約 NT$16,000，現場刷卡或付現皆可）</strong>！從飯店出發去 5 天景點全部超順：
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">⛩️ Day 1 往 東京大神宮＆神樂坂</div>
+            <div class="text-slate-600 text-xs mt-1">從「JR 秋葉原站」搭 JR 總武線<strong>只坐 2 站（4 分鐘）</strong>直達「飯田橋站」！</div>
+          </div>
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">⛩️ Day 2 往 浦安清瀧神社</div>
+            <div class="text-slate-600 text-xs mt-1">樓下「末廣町站」搭銀座線 2 站至「日本橋站」，同站轉東西線 18 分鐘直達「浦安站」</div>
+          </div>
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">🛍️ Day 2 晚間 澀谷 109 秒回飯店</div>
+            <div class="text-slate-600 text-xs mt-1">從「澀谷站」搭<strong>銀座線（起點站保證有座位！）一班車免轉乘直達「末廣町站」</strong>，出站 1 分鐘到家！</div>
+          </div>
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">⚡ Day 3 往 池袋＋樓下逛秋葉原</div>
+            <div class="text-slate-600 text-xs mt-1">JR 山手線直達「池袋站」；晚上回飯店樓下就是秋葉原中央通（安利美特、Radio會館、扭蛋會館）！</div>
+          </div>
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">🗻 Day 4 往 新宿轉乘河口湖</div>
+            <div class="text-slate-600 text-xs mt-1">JR 秋葉原站搭總武線 1 站至「御茶之水站」，同月台對面轉中央線快速直達「新宿站」（共 16 分）</div>
+          </div>
+          <div class="p-3 rounded-lg bg-emerald-50/60 border border-emerald-200 text-sm">
+            <div class="font-bold text-emerald-950">✈️ Day 1 & 5 往返 羽田機場 T3</div>
+            <div class="text-slate-600 text-xs mt-1">JR 秋葉原站搭山手線/京濱東北線 3 站（6分）至「濱松町站」，轉東京單軌電車 13 分直達羽田 T3！</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hotel Cards -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- Hotel 1 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border-2 border-blue-600 relative">
+          <span class="absolute -top-3 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">⭐ 首選推薦（綜合最優）</span>
+          <h3 class="text-lg font-bold text-slate-900">1. JR九州飯店 Blossom 新宿</h3>
+          <p class="text-xs text-slate-500 mb-3">JR Kyushu Hotel Blossom Shinjuku</p>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">Busta 新宿旁</span>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs font-medium">乾濕分離日式浴室</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：位於安靜安全的南口代代木方向，走去搭 JR 或利木津巴士只要 3 分鐘，完全避開歌舞伎町。</li>
+            <li>・<strong>房間優勢</strong>：標準雙床房（Twin Room）約 22～25㎡，配有大面積落地窗與獨立淋浴泡澡空間（非傳統一體成型塑膠浴缸），父女入住非常舒適自在。</li>
+            <li>・<strong>周邊機能</strong>：巷口即有 Lawson、全家、星巴克、麥當勞與藥妝店。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">2. 小田急世紀南悅酒店</h3>
+              <p class="text-xs text-slate-500 mb-3">Hotel Century Southern Tower</p>
+            </div>
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-full">高空景觀無敵</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-purple-50 text-purple-800 rounded text-xs font-medium">22～35樓高空景觀房</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">利木津巴士直達門口</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：就在 Busta 新宿正對面，沿著高島屋連通道走即可抵達。羽田機場利木津巴士直接停在飯店大廳樓下！</li>
+            <li>・<strong>房間優勢</strong>：大廳在 20 樓，客房全部在 22～35 樓，視野極佳，冬季晴天甚至有機會從高樓層遠眺富士山或東京夜景。</li>
+            <li>・<strong>周邊機能</strong>：緊鄰新宿高島屋、NEWoMan 百貨、藍瓶咖啡（Blue Bottle）。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">3. 新宿燦路都廣場大飯店</h3>
+              <p class="text-xs text-slate-500 mb-3">Hotel Sunroute Plaza Shinjuku</p>
+            </div>
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full">高 CP 值穩健選</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">利木津巴士直達門口</span>
+            <span class="px-2 py-0.5 bg-slate-100 text-slate-800 rounded text-xs font-medium">地鐵大江戶線旁</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：就在 JR 九州 Blossom 飯店隔壁，共享完全相同的黃金地理位置，但房價通常更親民一些。</li>
+            <li>・<strong>房間優勢</strong>：羽田機場利木津巴士同樣直達飯店門口，雙床房乾淨隔音佳，大廳設有自助行李寄放櫃，服務成熟穩定。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">4. 三井花園飯店神宮外苑東京普米爾</h3>
+              <p class="text-xs text-slate-500 mb-3">Mitsui Garden Hotel Jingugaien Tokyo Premier</p>
+            </div>
+            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-full">大浴場＋綠意陽台</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">JR 千駄谷站步行 5 分</span>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs font-medium">附設男女大浴場</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">每房皆有私人陽台</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：若不喜歡新宿大站的繁忙感，這間位於新宿往東 2 站的「千駄谷／信濃町」，往西 2 站到新宿、往東 3 站就到飯田橋（東京大神宮＆神樂坂）！</li>
+            <li>・<strong>房間優勢</strong>：2019 年底開幕，每間客房都有戶外陽台，樓下有超香的 R Baker 烘焙坊，且附設日式大浴場，冬天逛完街泡湯超享受。</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- High CP Value APA Hotels Section -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-amber-500">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div>
+            <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-900">省預算高 CP 值首選（4 晚立省約 1.2 萬～1.6 萬台幣！）</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1">♨️ 覺得新宿大飯店太貴？精選 3 間「安全區＋雙床房＋免費大浴場」APA 飯店</h3>
+          </div>
+        </div>
+        <p class="text-xs md:text-sm text-slate-600 mb-4">
+          ⚠️ <strong>帶女兒住 APA 的兩大選店原則</strong>：① <strong>絕對避開「歌舞伎町」內的兩間 APA</strong>（環境較複雜）；② <strong>房型請務必訂「Twin Room（雙床房，約 14～18㎡）」</strong>，一人一張獨立單人床，空間比單張標準雙人床（11㎡）寬敞許多！
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          <!-- APA 1 -->
+          <div class="p-4 rounded-xl bg-amber-50/40 border border-amber-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold px-2 py-0.5 bg-amber-600 text-white rounded">🥇 露天大浴場＋近都廳夜景</span>
+              <span class="text-xs font-bold text-amber-900">約 NT$3,500～4,800/晚</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base mt-1">APA 飯店＆度假村〈西新宿五丁目站塔〉</h4>
+            <p class="text-xs text-slate-500 mb-2">APA Hotel & Resort Nishishinjuku-Gochome-Eki Tower</p>
+            <ul class="text-xs text-slate-700 space-y-1.5 leading-relaxed">
+              <li>・<strong>位置</strong>：大江戶線「西新宿五丁目站」A2 出口步行 <strong>1 分鐘</strong>，搭車 <strong>4 分鐘（2站）即達新宿站</strong>，完全遠離歌舞伎町。</li>
+              <li>・<strong>大浴場</strong>：附設免費人工溫泉大浴場「玄要之湯」與半露天風呂，冬天泡湯超解乏！</li>
+              <li>・<strong>晚上去哪玩</strong>：走路 10 分鐘（或搭 1 站）就能去<strong>東京都廳看免費巨型光雕投影秀（演到 21:30）＋45 樓免費展望台夜景</strong>；樓下即有 Lawson 超商與餐廳。</li>
+            </ul>
+          </div>
+
+          <!-- APA 2 -->
+          <div class="p-4 rounded-xl bg-indigo-50/40 border border-indigo-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold px-2 py-0.5 bg-indigo-600 text-white rounded">🥈 走路到東京大神宮＆神樂坂</span>
+              <span class="text-xs font-bold text-indigo-900">約 NT$3,200～4,500/晚</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base mt-1">APA 飯店〈飯田橋站南〉</h4>
+            <p class="text-xs text-slate-500 mb-2">APA Hotel Iidabashi-Eki Minami</p>
+            <ul class="text-xs text-slate-700 space-y-1.5 leading-relaxed">
+              <li>・<strong>位置</strong>：位於東京頂級文教安全區，「飯田橋站」步行 2 分鐘。</li>
+              <li>・<strong>景點神動線</strong>：下樓走路 <strong>3 分鐘就到「東京大神宮」與「神樂坂」</strong>！搭總武線 <strong>9～11 分鐘直達新宿</strong>；搭東西線 <strong>22 分鐘免轉車直達「浦安・清瀧神社」</strong>；搭有樂町線 <strong>9 分鐘直達「池袋」</strong>！</li>
+              <li>・<strong>晚上去哪玩</strong>：晚上 8 點後神樂坂商店街餐廳、藥妝、超市全開，散步還能去東京巨蛋城（Tokyo Dome City）看冬季大型聖誕燈飾！</li>
+            </ul>
+          </div>
+
+          <!-- APA 3 -->
+          <div class="p-4 rounded-xl bg-emerald-50/40 border border-emerald-200">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold px-2 py-0.5 bg-emerald-600 text-white rounded">🥉 走路到 Busta 新宿＋大浴場</span>
+              <span class="text-xs font-bold text-emerald-900">約 NT$3,800～5,200/晚</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base mt-1">APA 飯店〈新宿御苑前〉</h4>
+            <p class="text-xs text-slate-500 mb-2">APA Hotel Shinjuku-Gyoemmae</p>
+            <ul class="text-xs text-slate-700 space-y-1.5 leading-relaxed">
+              <li>・<strong>位置</strong>：丸之內線「新宿御苑前站」步行 1 分鐘；從 <strong>JR 新宿站南口／Busta 新宿沿大馬路散步約 9～10 分鐘</strong>可達。</li>
+              <li>・<strong>大浴場</strong>：B1F 附設免費人工溫泉大浴場「玄要之湯」。</li>
+              <li>・<strong>晚上去哪玩</strong>：正對皇室庭園「新宿御苑」，治安單純安靜；晚上可從新宿高島屋、伊勢丹、BICQLO（Bic Camera）一路逛街吃拉麵散步回飯店。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: CHECKLIST & FLIGHTS -->
+    <section id="panel-checklist" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-blue-500">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <h2 class="text-xl font-bold text-slate-900">✈️ 長榮航空「松山 TSA ⇄ 羽田 HND」航班明細與價格</h2>
+          <span class="px-3.5 py-1.5 rounded-full text-sm font-bold bg-rose-600 text-white shadow-sm">
+            💰 雙人來回含稅總價：TWD 37,792（平均 NT$18,896 / 人・立省 NT$1,454！）
+          </span>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-blue-50/50 border border-blue-200">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-blue-800 uppercase">去程｜2026年11月28日（星期六）</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-blue-600 text-white rounded">直飛・2小時45分</span>
+            </div>
+            <div class="mt-2 space-y-2 text-sm">
+              <div class="p-3 bg-white rounded-lg border border-blue-200">
+                <div class="font-bold text-slate-900 text-base">✈️ 長榮航空 BR 192（07:15 TSA ➔ 11:00 HND）</div>
+                <div class="text-xs text-blue-800 font-medium mt-1">・台北松山機場（TSA 第1航廈）➔ 東京羽田國際機場（HND 第3航廈）｜經濟艙 基本 Basic (V)</div>
+                <div class="text-xs text-slate-600 mt-1.5 leading-relaxed">✨ <strong>時段優勢</strong>：冬季班表提早於 <strong>11:00 抵達羽田</strong>！過海關搭車去飯店寄放行李後，下午 14:00 即可悠閒開始「東京大神宮＋神樂坂 11 大名店與橫丁」行程（週六 11 大名店 100% 全開零公休）！</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-emerald-50/50 border border-emerald-200">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-800 uppercase">回程｜2026年12月2日（星期三）</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-emerald-600 text-white rounded">直飛・3小時50分</span>
+            </div>
+            <div class="mt-2 space-y-2 text-sm">
+              <div class="p-3 bg-white rounded-lg border border-emerald-200">
+                <div class="font-bold text-slate-900 text-base">✈️ 長榮航空 BR 191（12:15 HND ➔ 15:05 TSA）</div>
+                <div class="text-xs text-emerald-800 font-medium mt-1">・東京羽田國際機場（HND 第3航廈）➔ 台北松山機場（TSA 第1航廈）｜經濟艙 基本 Basic (W)</div>
+                <div class="text-xs text-slate-600 mt-1.5 leading-relaxed">✨ <strong>時段優勢與退稅配合</strong>：中午 <strong>12:15 起飛</strong>超舒服！Day 5 早上不用摸黑早起，吃完早餐 <strong>08:30 從飯店退房出發、09:15 抵達羽田第 3 航廈</strong>（起飛前 3 小時），先刷退稅機台（Kiosk）再托運行李，15:05 返抵台北松山！</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-rose-500">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <h2 class="text-xl font-bold text-rose-900">🚨 2026/11/1 日本退稅新制上路！Day 4 打包與 Day 5 羽田實戰攻略</h2>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800">新制首月必看重點</span>
+        </div>
+        <p class="text-sm text-slate-700 mb-4">
+          11/28～12/02 出發剛好遇上日本退稅新制（<strong>先付含稅價、機場確認後退稅 Refund Method</strong>）上路滿月！對行程時間有「一好一壞」的影響：
+        </p>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+            <div class="font-bold text-emerald-900 mb-1">✅ 好消息：澀谷・池袋逛街結帳變快！</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              取消「消耗品 50 萬上限」與「透明密封袋包裝」！在 SHIBUYA 109、PARCO、安利美特或藥妝店購物時，<strong>先付 10% 含稅價</strong>，店員只需掃描護照將資料上傳雲端，不用再排隊等店員封袋，市區逛街反而更省時間。
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-rose-50 border border-rose-200">
+            <div class="font-bold text-rose-900 mb-1">⚠️ 關鍵：Day 5 回程 09:15 抵羽田先刷機台！</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              抵達羽田機場第 3 航廈時，<strong>「絕對不能先去櫃台托運行李」</strong>！必須先推著行李去出發大廳的<strong>退稅機台（Kiosk）掃護照</strong>：亮<strong>綠燈</strong>可直接去托運；亮<strong>紅燈</strong>則需當場打開行李箱給海關檢查商品。配合 BR191（12:15 起飛），請於 <strong>09:15 抵達羽田 T3</strong>！
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+            <div class="font-bold text-amber-900 mb-1">🧳 Day 4 晚間打包：退稅品放最上層</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              雖然沒有透明密封袋，但退稅商品仍規定<strong>不可在日本境內拆封消耗</strong>，且須帶出境。<strong>Day 4 最後一晚打包時</strong>，請把所有退稅買的衣服、動漫周邊、藥妝集中在同一咖行李箱的最上層，萬一機場抽中紅燈，拉開拉鍊 30 秒就能驗完！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const weekdayNames = ['日', '一', '二', '三', '四', '五', '六'];
+
+    const baseItinerary = [
+      {
+        dayNum: 1,
+        title: '抵達東京（BR192 11:00抵）➔ 東京大神宮（鈴蘭御守）➔ 神樂坂 11 大名店伴手禮＆法式薄餅慢遊散策',
+        badge: '11:00早到＋取消棋院＋週六11名店全開！神社＋小巴黎美食全攻略',
+        badgeColor: 'bg-indigo-100 text-indigo-800',
+        checkDay1Closures: true,
+        spots: ['07:15-11:00 長榮BR192抵羽田T3', '14:00 東京大神宮(鈴蘭御守)', '14:55 CANAL CAFE / 牛奶妹燒', '15:25 捉迷藏橫丁＆兵庫橫丁(冰庫橫丁)', '16:00 善國寺 / PAUL / 大野屋牛肉店 / 梅花亭', '16:50 ACHO 布丁燒菓子(18:00打烊前穩買!)', '17:20 la kagū / Aux Merveilleux / 赤城神社', '18:30 Le Bretagne 法式可麗餅晚餐'],
+        schedule: [
+          { time: '07:15 - 11:00', title: '✈️ 搭乘長榮 BR192（松山 T1 07:15 ➔ 羽田 T3 11:00）＆ 飯店寄放行李', desc: '台北松山機場第 1 航廈出發，<strong>11:00 提早抵達東京羽田第 3 航廈</strong>（雙人來回機票總價 TWD 37,792）。從羽田機場 T3 搭東京單軌電車至「濱松町站」轉 JR 山手線/京濱東北線 3 站至「秋葉原站」（全程約 25 分鐘），前往已訂妥的<strong>「APA 飯店〈秋葉原末廣町站前〉（電器街）」</strong>寄放行李、悠哉吃個午餐並看一眼未來三天「富士山能見度預報」。<strong>因為 v2 版取消了日本棋院（市ヶ谷站），下午不用趕場轉車，從 JR 秋葉原站搭 JR 總武線<strong>只坐 2 站（4 分鐘）就直達「飯田橋站」</strong>，展開東京大神宮與神樂坂慢遊！</strong>' },
+          { time: '14:00 - 14:50', title: '🌸【午後暖陽參拜】東京大神宮（東京伊勢神宮・超人氣幸福鈴蘭御守）', desc: '從 JR / 地鐵「飯田橋站」步行 5 分鐘即達。<strong>提早到 14:00 午後陽光最明亮溫暖的時候參拜東京大神宮</strong>（社務所至 19:00），拍照光線最柔和，從容挑選超受歡迎的白色「幸福鈴蘭御守（幸福が訪れる）」與花朵戀愛神籤！' },
+          { time: '14:55 - 16:00', title: '🏮【神樂坂下 ➔ 石板小巷】① CANAL CAFE ➔ ② 不二家 Peko醬燒 ➔ ③ 捉迷藏橫丁 ＆ 兵庫橫丁（冰庫橫丁）', desc: '從飯田橋站西口進入神樂坂坡底：<br>・<strong>① CANAL CAFE ＆ ② 不二家 Peko醬燒（神樂坂2丁目）</strong>：先看外濠運河水岸與電車同框，再買全日本唯一的立體「牛奶妹頭型大判燒」暖手（旁邊還有<strong>梅花亭 ポルタ神樂坂分店</strong>可先看）。<br>・<strong>③ 捉迷藏橫丁（かくれんぼ横丁）＆ 兵庫橫丁（老辣妹影片稱「冰庫橫丁」，神樂坂3～4丁目）</strong>：⚠️ <strong>防漏轉彎秘訣</strong>：還沒到善國寺前，從右手邊「神樂坂仲通り」轉進去，趁 15:25～16:00 冬日斜陽餘暉走進江戶時代黑木板牆（黒塀）與歐洲石板路交織的秘密巷弄，拍照清楚又不怕天黑迷路！' },
+          { time: '16:00 - 17:15', title: '🎁【神樂坂中段～坡頂・黃金時段從容採買！】④ 善國寺 ➔ ⑤ PAUL ➔ ⑥ 大野屋牛肉店 ➔ ⑦ 梅花亭 ➔ ⑧ ACHO 布丁燒菓子', desc: '✨ <strong>11/28（週六）＋取消棋院的雙重紅利：週六神樂坂 11 大名店 100% 全開無公休，且提早於 16:00～17:15 逛到這段，完全不用擔心 ACHO 週末 18:00 打烊或熱門甜點完售！</strong><br>・<strong>④ 善國寺（神樂坂5丁目）</strong>：參拜門口罕見的「石老虎（狛虎）」。<br>・<strong>⑤ PAUL 神樂坂店（神樂坂5-1-4）</strong>：就在善國寺正對面！充滿巴黎街頭風情的法式烘焙咖啡館，甚至有時間坐下來喝杯熱咖啡配可頌。<br>・<strong>⑥ 大野屋牛肉店（神樂坂6-8，營業至 19:00）</strong>：昭和 11 年創業精肉老舖，必買剛炸好酥脆多汁的<strong>「松阪牛／黑毛和牛炸肉餅（メンチカツ）」與可樂餅</strong>當下午茶點心！<br>・<strong>⑦ 神樂坂 梅花亭 本店（神樂坂6-15，營業至 19:00，週六正常營業！）</strong>：昭和 10 年和菓子名店，必買超可愛<strong>立體貓咪造型「福來貓最中（福来猫もなか）」、檸檬大福與銅鑼燒</strong>當伴手禮！<br>・<strong>⑧ ACHO kagurazaka（矢來町103，⚠️週六日提早至 18:00 打烊）</strong>：從神樂坂站旁巷子走 2 分鐘，獨棟古民宅改建的布丁與燒菓子專門店，<strong>約 16:50 抵達，在 18:00 打烊前 70 分鐘從容挑選神級濃厚布丁（帶回飯店當宵夜）與法式常溫磅蛋糕伴手禮</strong>！' },
+          { time: '17:20 - 20:00', title: '⛩️【神樂坂坡頂＆法式晚餐】⑨ 隈研吾 la kagū (AKOMEYA) ➔ ⑩ Aux Merveilleux de Fred ＆ 赤城神社 ➔ ⑪ Le Bretagne 法式可麗餅晚餐', desc: '買完提袋伴手禮後，接續逛坡頂建築與法式餐廳：<br>・<strong>⑨ la kagū（AKOMEYA TOKYO in la kagū，營業至 20:00）</strong>：神樂坂站 2 號出口正對面，建築大師「隈研吾」改造的木造大階梯選物倉庫，好逛好買日本文具、餐具與精緻伴手禮雜貨。<br>・<strong>⑩ 赤城神社 ＆ Aux Merveilleux de Fred（營業至 20:00）</strong>：隈研吾設計的玻璃帷幕摩登神社（夜間點燈極美，社務所至 19:00 可買鬼太郎背心御守），正對面就是法國巴黎傳奇<strong>「雲朵蛋白霜奶油甜點（Merveilleux）」</strong>與巧克力布里歐麵包名店！<br>・<strong>⑪ 晚餐推薦：Le Bretagne 神樂坂店（ル・ブルターニュ，神樂坂4-2，營業至 22:00，⚠️週一休、週六正常營業）</strong>：18:30 散步回神樂坂 4 丁目（兵庫橫丁入口旁），享用<strong>東京第一家正宗法國布列塔尼「蕎麥法式可麗餅（Galette）」與甜可麗餅、蘋果氣泡酒/果汁</strong>，藤蔓紅磚外觀就像置身法國小酒館！<br><span class="inline-block mt-1.5 px-2.5 py-1 rounded bg-red-50 text-red-700 font-semibold">🎬 行前必看 YouTuber 神樂坂影片：<a href="https://www.youtube.com/results?search_query=%E6%9D%B1%E4%BA%AC%E8%B5%B0%E8%91%97%E7%9E%A7+%E7%A5%9E%E6%A5%BD%E5%9D%82" target="_blank" class="underline hover:text-red-900">東京走著瞧（神樂坂半日遊）</a> ｜ <a href="https://www.youtube.com/results?search_query=%E5%90%89%E7%94%B0%E7%A4%BE%E9%95%B7+%E7%A5%9E%E6%A5%BD%E5%9D%82" target="_blank" class="underline hover:text-red-900">吉田社長 Japan TV</a> ｜ <a href="https://www.youtube.com/results?search_query=%E8%80%81%E8%BE%A3%E5%A6%B9+%E7%A5%9E%E6%A5%BD%E5%9D%82" target="_blank" class="underline hover:text-red-900">老辣妹（神樂坂文青路線）</a></span>' }
+        ]
+      },
+      {
+        dayNum: 2,
+        title: '【往前挪！】海神祈福與原宿澀谷潮流一線通・千葉浦安「清瀧神社」➔ 原宿 ➔ 逛貓街（微下坡）➔ 澀谷 PARCO 6F (JUMP SHOP) ➔ SHIBUYA 109',
+        badge: '✨ 往前排！鏤空御朱印＋原宿貓街微下坡逛到澀谷（可與 Day 4 看天氣對調）',
+        badgeColor: 'bg-pink-100 text-pink-800',
+        weatherSwapNote: true,
+        spots: ['09:45 浦安：清瀧神社 (剪紙御朱印＆海龜御守)', '11:30 東西線轉千代田線直達原宿', '12:15 原宿竹下通 / 表參道午餐', '14:00 逛貓街 Cat Street (一路微下坡超省力！)', '15:30 澀谷 PARCO 6F (JUMP SHOP / 寶可夢 / 任天堂)', '17:30 SHIBUYA 109 買衣服 (最後買重物秒回新宿！)'],
+        schedule: [
+          { time: '09:15 - 11:30', title: '⛩️【願望景點】① 千葉浦安・清瀧神社（海神神社・季節鏤空剪紙御朱印）＆ 浦安元町古宅散策', desc: '・<strong>交通</strong>：從飯店樓下「末廣町站」搭銀座線 2 站（4分）至「日本橋站」，轉乘東京 Metro 東西線直達「浦安站」（車程約 18 分鐘），南口出站沿境川散步約 6 分鐘。<br>・<strong>① 清瀧神社（社務所 09:00–16:30）</strong>：創建於 1196 年的「浦安三社」之一，主祀海神「大綿津見神」。<strong>三大必看亮點</strong>：<br>　1. <strong>超美限定御朱印與海洋御守</strong>：以精緻的<strong>「季節限定鏤空剪紙御朱印（切り絵御朱印）」</strong>、透明彩繪御朱印，以及海龜、貝殼、海浪造型的海洋風御守聞名！<br>　2. <strong>浦島太郎與龍宮城木雕</strong>：繞到本殿側面，可近距離欣賞大師雕刻的「浦島太郎騎海龜」、「龍宮城」、「八岐大蛇」立體木雕。<br>　3. <strong>江戶富士塚與古民家</strong>：境內有可登高的下總富士塚；參拜後走出神社 2 分鐘，順遊免費開放的百年古宅<strong>「舊宇田川家住宅（1869年建）」與「舊大塚家住宅」</strong>（⚠️週一休館，11/29 週日正常開放）。' },
+          { time: '11:30 - 14:00', title: '🚇【地鐵順暢銜接】浦安 ➔ ② 原宿（明治神宮前・竹下通・表參道午餐與潮流小店）', desc: '・<strong>浦安 ➔ 原宿超順地鐵動線（約 38 分鐘）</strong>：從「浦安站」搭東京 Metro 東西線至「大手町站」，站內轉乘一次<strong>東京 Metro 千代田線</strong>，即可直達<strong>「明治神宮前〈原宿〉站」</strong>！<br>・<strong>② 原宿（竹下通 ＆ 裏原宿午餐）</strong>：先帶女兒逛年輕人最愛的<strong>「竹下通（Takeshita Street）」</strong>拍彩虹棉花糖、可麗餅、逛 WEGO 與偶像周邊小店；中午可在原宿/表參道享用人氣<strong>「AFURI 阿夫利柚子鹽拉麵」</strong>、<strong>「Luke\'s Lobster 龍蝦堡」</strong>或迴轉壽司，還可順逛 6 層樓的<strong>「@cosme TOKYO 原宿旗艦店」</strong>。' },
+          { time: '14:00 - 15:30', title: '🐾【省力微下坡神動線】③ 逛貓街（Cat Street / 舊澀川遊步道・裏原宿一路散步到澀谷）', desc: '・💡 <strong>為什麼「原宿 ➔ 貓街 ➔ 澀谷」順著走最棒？</strong>因為從原宿（表參道 KIDDY LAND 旁入口）順著<strong>「貓街（キャットストリート）」</strong>往澀谷方向走，地勢是<strong>「一路緩和微下坡」</strong>，完全不用爬坡，邊走邊逛超輕鬆！<br>・<strong>③ 貓街必逛亮點</strong>：全長約 1 公里的無車質感步行街，兩旁匯集運動潮牌旗艦店（On、New Balance、adidas Originals、Puma）、日系設計師選物店、古著店，必買超人氣焦糖牛奶糖名店<strong>「NUMBER SUGAR（編號 1～12 號不同口味手工牛奶糖）」</strong>與章魚燒名店「築地銀だこ」！' },
+          { time: '15:30 - 17:30', title: '⚡【動漫與電玩聖殿】④ 澀谷 PARCO 6F（JUMP SHOP 澀谷店・寶可夢中心・任天堂旗艦店）', desc: '・從貓街南端走出來（經過 MIYASHITA PARK 宮下公園），順著公園通走 5 分鐘，<strong>第一站剛好就抵達「澀谷 PARCO（11:00–21:00）」</strong>，完全不走回頭路！<br>・<strong>④ 直衝 6 樓「CYBERSPACE SHIBUYA」</strong>：<br>　1. <strong>🔥 JUMP SHOP 澀谷店</strong>：集英社官方《週刊少年 Jump》專賣店！《排球少年!!》、《咒術迴戰》、《ONE PIECE 航海王》、《我的英雄學院》、《SAKAMOTO DAYS 坂本日常》等最新原作漫畫周邊、徽章、立牌一次逛齊！<br>　2. <strong>同層樓神級陣容</strong>：緊鄰在 JUMP SHOP 旁邊的就是<strong>「Pokémon Center SHIBUYA（巨型超夢培養皿）」</strong>、<strong>「Nintendo TOKYO（任天堂東京官方旗艦店）」</strong>與<strong>「CAPCOM STORE TOKYO」</strong>，整個 6 樓就是二次元天堂！' },
+          { time: '17:30 - 20:30', title: '👗【願望景點・壓軸治裝】⑤ SHIBUYA 109 買衣服 ＆ 澀谷夜景（買完大包小包 7 分鐘秒回新宿！）', desc: '・從澀谷 PARCO 沿著熱鬧的「西班牙坂（スペイン坂）」散步下坡 4 分鐘，即抵達<strong>「⑤ SHIBUYA 109（營業至 21:00）」</strong>！<br>・💡 <strong>把 SHIBUYA 109 排在當天最後一站的貼心優勢</strong>：冬天買大衣、毛衣、厚帽T跟鞋子體積大又重，<strong>排在最後一站買完衣服，走出 109 大門進「澀谷站」搭<strong>東京 Metro 銀座線（澀谷是起點站，保證有位置坐！）一班車免轉乘直達飯店樓下「末廣町站」</strong>，出站走 1 分鐘就回到飯店</strong>，完全不用提著沉重的衣服袋走貓街！<br>・<strong>順逛與晚餐</strong>：若還有體力，109 旁邊就是 7 層樓的「澀谷 LOFT」、「MEGA 唐吉訶德」，入夜後還可免費走過「澀谷十字路口」或欣賞<strong>「表參道／青之洞窟冬季聖誕燈海」</strong>！' }
+        ]
+      },
+      {
+        dayNum: 3,
+        title: '【往前挪・週一平日逛超爽！】二次元動漫聖地全攻略・池袋 PARCO 本館 B2F (JUMP SHOP) ➔ 安利美特池袋本店 ➔ 乙女街 (Otome Road) ➔ Sunshine City 太陽城',
+        badge: '✨ 往前排！池袋東口動漫黃金動線（可與 Day 4 看天氣對調）',
+        badgeColor: 'bg-purple-100 text-purple-800',
+        weatherSwapNote: true,
+        spots: ['11:00 池袋 PARCO 本館 B2F (JUMP SHOP 池袋店＋服飾)', '12:30 安利美特池袋本店 (全球最大動漫旗艦店)', '14:30 乙女街 Otome Road (K-BOOKS ジャンプ館挖寶！)', '16:30 Sunshine City 太陽城 (寶可夢中心＋一番賞＋世界最大扭蛋)', '19:00 池袋無敵家拉麵 / 敘敘苑燒肉'],
+        schedule: [
+          { time: '11:00 - 12:30', title: '🔥【出站 1 分鐘直達】① 池袋 PARCO 本館 B2F「JUMP SHOP 池袋店」＆ 年輕服飾巡禮', desc: '・<strong>交通超近</strong>：從「JR 秋葉原站」搭 JR 山手線<strong>一班車免轉乘直達「池袋站」</strong>（約 18 分鐘）！<br>・<strong>① 池袋 PARCO 本館 B2F「JUMP SHOP 池袋PARCO店」（11:00–21:00）</strong>：與 JR 池袋站東口（北通道）直通！11:00 一開門直接下 B2F 開逛，除了能補足澀谷店缺貨的《週刊少年 Jump》限定周邊與原作商品外，<strong>同在 B2F 還有「CAPCOM STORE IKEBUKURO」</strong>！<br>・<strong>順逛女裝</strong>：池袋 PARCO 本館 1F～6F（以及旁邊的 P\'PARCO、LUMINE 池袋）有非常多適合女兒年紀的日系流行女裝與飾品專櫃，週一平日人潮比週末更舒服好試穿！' },
+          { time: '12:30 - 14:30', title: '🏢【金氏世界紀錄認證】② 安利美特池袋本店（Animate Ikebukuro Flagship Store・11:00–21:00）', desc: '・從池袋 PARCO 東口出來往東北散步 5 分鐘，經過熱鬧的「池袋太陽城通（Sunshine 60 Street）」，抵達 2023 年全新擴建開幕、獲金氏世界紀錄認證<strong>「全球最大規模動漫專賣店」的安利美特池袋本店（B2F～9F 整棟 10 層樓）</strong>！<br>・<strong>樓層精華攻略</strong>：<br>　・<strong>1F</strong>：最新當季熱門動漫快閃區與話題周邊、Gratte 角色拉花飲品／糖霜餅乾。<br>　・<strong>2F～3F</strong>：全系列少年漫畫、少女漫畫、輕小說與畫集（《排球少年》《藍色監獄》《芙莉蓮》《藥師少女的獨語》等應有盡有）。<br>　・<strong>4F～6F</strong>：整整三層樓的動漫角色周邊（徽章、壓克力立牌、玩偶、痛包配件、卡牌與遊戲周邊）！' },
+          { time: '14:30 - 16:30', title: '💎【動漫迷挖寶天堂】③ 乙女街 / 乙女之路（Otome Road / 乙女ロード・K-BOOKS ジャンプ館、指南針、駿河屋）', desc: '・從安利美特再往前走 4 分鐘（就在 Sunshine City 太陽城西側道路），進入聞名全球的二次元聖地<strong>「③ 乙女街（乙女ロード）」</strong>！<br>・💡 <strong>為什麼去完 JUMP SHOP 一定要來乙女街？</strong>因為官方 JUMP SHOP 很多徽章、立牌是「盲抽（隨機）」或「已絕版完售」，但在乙女街的<strong>二手／全新開封專賣店，全部幫你「按作品、按角色分類掛好」，可以直接挑自己推的角色買，不用盲抽賭運氣！</strong><br>・<strong>乙女街 4 大必逛名店（通常 11:30/12:00 開到 20:00）</strong>：<br>　1. <strong>🔥 K-BOOKS 池袋ジャンプ館（JUMP 館）</strong>：<strong>整間店專門只賣《週刊少年 Jump》作品（排球少年、咒術迴戰、獵人、航海王、我英、銀魂等）的周邊！</strong>連過去幾年絕版的生日徽章、原畫立牌都能在這裡挖到寶！<br>　2. <strong>K-BOOKS アニメ館（動漫館）＆ キャラ館</strong>：專攻各大熱門動畫（如《藍色監獄》《防風少年》《文豪野犬》等）周邊。<br>　3. <strong>Lashinbang（らしんばん 指南針 池袋本店）＆ 駿河屋（Surugaya 乙女ロード店）</strong>：超大型二手動漫模型、公仔、畫冊與同人誌寶庫。<br>　4. <strong>Swallowtail 執事喫茶（外觀巡禮／甜點店 Patisserie Swallowtail）</strong>：乙女街最具代表性的傳奇地標。' },
+          { time: '16:30 - 20:30', title: '🎡【巨型商場收尾】④ Sunshine City 太陽城（寶可夢中心・一番賞・世界最大 3,000 台扭蛋百貨）', desc: '・乙女街過個馬路（步行 2 分鐘）就是池袋地標<strong>「④ Sunshine City（太陽城，營業至 20:00/21:00）」</strong>！室內吹暖氣逛街、吃晚餐超舒服：<br>　1. <strong>2F Pokémon Center MEGA TOKYO（寶可夢中心 MEGA 東京旗艦店）</strong>：全日本規模最大級的寶可夢中心，旁邊還有超好拍的「Pikachu Sweets 皮卡丘甜點咖啡外帶店」與《芝麻街》專賣店。<br>　2. <strong>3F 萬代 Namco Cross Store 東京</strong>：內有<strong>「一番賞官方專賣店（一番くじ公式ショップ）」</strong>、<strong>「ONE PIECE 卡牌遊戲官方店」</strong>、《吉伊卡哇》《藍色監獄》等景品專區。<br>　3. <strong>3F Gashapon Department Store（ガシャポンのデパート 池袋總本店）</strong>：擁有超過 <strong>3,000 台扭蛋機</strong>的世界最大扭蛋百貨，把零錢硬幣在這裡扭光超快樂！<br>・<strong>🍜 晚餐推薦</strong>：可於太陽城內餐廳、池袋東口超人氣排隊名店<strong>「麵創房 無敵家拉麵」</strong>、或<strong>「敘敘苑 池袋店」</strong>吃燒肉，搭 JR 山手線直達回秋葉原！回飯店路上還能順逛樓下的秋葉原 Radio 會館、安利美特秋葉原店與扭蛋會館！' }
+        ]
+      },
+      {
+        dayNum: 4,
+        title: '【往後挪・週二平日看富士山！】富士山絕景一日全攻略・音樂森林美術館(下車起點) ➔ 淺間神社＆遙拜所(天空鳥居) ➔ Lawson＆不動茶屋 ➔ 美術館前站搭公車直達富士山站(金鳥居+Q-STA) ➔ 下吉田(日川時計店)',
+        badge: '🌤️ 週二平日避開週末人潮！依天氣機動與 Day 2/3 對調',
+        badgeColor: 'bg-blue-100 text-blue-800',
+        fujiWeatherDay: true,
+        spots: ['07:30 新宿 ➔ 河口湖(富士回遊1-3車廂/大月轉乘備案)', '09:45 音樂森林美術館站下車(不入館)', '10:15 河口淺間神社 ➔ 走旁邊柏油路登遙拜所(天空鳥居)', '12:15 經過北岸Lawson ➔ 餺飥不動河口湖北本店', '13:46/14:50 河口湖美術館前站搭公車(17分)直達富士山站', '14:05/15:07 富士山站(金鳥居＋Q-STA買紀念品)', '15:15/15:45 下吉田站(日川時計店) ➔ 搭電車回東京', '🧳 晚間打包：退稅品放最上層'],
+        schedule: [
+          { time: '07:30 - 09:28', title: '🚆【去程主案＋備案】新宿出發 ➔ 河口湖站（順拍站前 Lawson）', desc: '・<strong>🅰️ 主要方案（直達首選）</strong>：從新宿搭 JR 特急<strong>「富士回遊號（Fuji Excursion，如 07:30 發車 3 號或 08:30 發車 7 號）」</strong>直達河口湖站。⚠️ <strong>超級重點：務必預訂並搭乘「第 1～3 號車廂」</strong>！因為第 4～12 號車廂是併結的「梓號 Azusa / 甲斐路號 Kaiji」，會在<strong>「大月站」與前段切離</strong>開往甲府，坐錯車廂會被載去甲府！<br>・<strong>🅱️ 備案方案（免搶票・看天氣臨時改期最方便！）</strong>：從新宿搭 JR 中央線特急（Kaiji/Azusa）或中央線快速至<strong>「大月站」</strong>➔ 在站內刷 IC 卡轉乘<strong>「富士急行線（普通車或特急）」</strong>到河口湖站（僅多花約 15～20 分鐘，完全不怕臨時改期買不到直達票！）。<br>・<strong>📸 順路彩蛋</strong>：剛出河口湖站等公車時，走去車站斜對面的<strong>「Lawson 河口湖站前店」</strong>5 分鐘就能先拍最紅的藍底招牌＋富士山同框！' },
+          { time: '09:45 - 10:15', title: '🎻【下車起點＆湖畔步道】① 河口湖 音樂盒之森美術館站（不入館，省下 1.5 小時與 ¥3,100！）', desc: '從河口湖站搭乘<strong>「河口湖周遊巴士紅線（Red Line，約 20 分鐘）」</strong>至第 16 站「音楽と森の美術館」下車。<br>・💡 <strong>門票資訊與不入館優勢</strong>：音樂盒之森美術館門票為<strong>平日成人 ¥1,800、高中生 ¥1,300</strong>（假日 ¥2,100 / ¥1,600，週二週三休）。既然本來沒打算進館，純粹把這裡當作<strong>公車下車起點</strong>，並在館外免費的「河口湖畔步道／古賀政男紀念公園」拍湖景富士山，整天行程頓時多出 1.5 小時，超級從容！（且即使選週二去，公車與免費湖畔步道也照常開放！）' },
+          { time: '10:15 - 12:15', title: '⛩️【千年神木與天空鳥居】② 河口淺間神社 ➔ 走旁邊柏油路 ➔ ③ 遙拜所（天空の鳥居）', desc: '・<strong>② 河口淺間神社</strong>：從音樂盒之森美術館散步約 14 分鐘（1.1km）即達。參拜擁有 1100 年歷史的世界文化遺產神社與震撼的 7 棵千年巨木<strong>「七本杉」</strong>。<br>・<strong>③ 走旁邊柏油路登「遙拜所（天空の鳥居，09:00–16:00，協力金 ¥100）」</strong>：從神社本殿右側後方的<strong>「蜿蜒上山柏油路（舗装道路）」</strong>往上走約 25～30 分鐘，抵達半山腰的遙拜所！早上 11 點多光線最順、雲層最少，站在朱紅鳥居正後方，把無遮蔽的巨大富士山框進鳥居中央！（拍完順柏油路下山約 20 分鐘）。' },
+          { time: '12:15 - 13:35', title: '🍲【下山順路動線】④ 經過 Lawson（河口湖町店）➔ ⑤ 餺飥不動茶屋 河口湖北本店', desc: '・<strong>下山順序超順路</strong>：從遙拜所順著柏油路下山回到「河口淺間神社」後，沿著縣道 707 號往美術館方向走回來的路上，會<strong>先經過「④ Lawson 河口湖町店（河口732-1）」➔ 再往前走 5 分鐘（400m）就抵達「⑤ 餺飥不動 河口湖北本店（河口707，11:00–20:00）」</strong>！<br>・<strong>必吃名物</strong>：在充滿日式古民家氛圍的北本店，品嚐滾燙鐵鍋端上桌的山梨鄉土料理<strong>「南瓜野菜味噌餺飥麵（名物ほうとう，¥1,320）」</strong>與黑糖腐皮壽司，爬完山吃這鍋超暖胃！' },
+          { time: '13:46（或 14:50）', title: '🚌【老辣妹推薦神路線】從「河口湖美術館前站」搭富士急行巴士 17 分鐘直達「富士山車站」（¥440）！', desc: '・<strong>⚠️ 站牌小細節（兩個美術館站差 300 公尺）</strong>：吃完餺飥不動北本店後，往湖邊走約 10 分鐘（經過「音樂盒之森美術館」再往南走 300 公尺），到「河口湖美術館」門口的<strong>「河口湖美術館前（Kawaguchiko-bijutsukan-mae）」公車站</strong>！<br>・<strong>直達公車班次</strong>：搭乘<strong>富士急行路線巴士「甲府線（Kofu Station – Mt. Fuji Station）」往「富士山駅」方向</strong>，下午班次有 <strong><code>12:55</code>、<code>13:46</code>、<code>14:50</code></strong>（老辣妹影片截圖搭的是 <code>14:50</code> 那班；因為您不進音樂盒美術館，吃完麵剛好可以搭上 <strong><code>13:46</code></strong> 那班，或者慢慢逛到搭 <code>14:50</code> 都可以！），<strong>車程僅約 17 分鐘、車資 ¥440，免在河口湖站換車，直接一班公車坐到「富士山車站」</strong>！' },
+          { time: '14:05 - 20:30', title: '📸【富士吉田雙地標＆伴手禮】⑥ 金鳥居 ＆ ⑦ 富士山站 Q-STA 買紀念品 ➔ 搭兩站至 ⑧ 下吉田站（日川時計店）➔ 回東京＆打包退稅品', desc: '・<strong>14:05–15:10（若搭 14:50 公車則為 15:07–15:40）</strong>：抵達<strong>「富士山站」</strong>➔ 走出站外 3 分鐘拍高 9.7 公尺的<strong>「⑥ 金鳥居」</strong>框住街道盡頭的富士山 ➔ 進車站共構百貨<strong>「⑦ Q-STA（キュースタ，10:00–20:00）」</strong>1F 與 B1F 採買富士山限定紀念品、信玄餅與富士山玻璃杯（6F 還有免費屋頂展望台）。<br>・<strong>15:15–16:30（若搭 14:50 公車則為 15:45–16:30）</strong>：從富士山站搭富士急行線電車（往大月方向，<strong>坐 2 站、僅 4 分鐘</strong>）抵達<strong>「下吉田站」</strong>➔ 步行 5 分鐘至<strong>「⑧ 日川時計店（本町二丁目商店街・天梯小鎮）」</strong>，在 16:25 日落前的夕陽金光下，拍下復古招牌與筆直街道通往富士山的經典畫面！<br>・<strong>16:50 或 17:40</strong>：拍完<strong>直接從「下吉田站」搭電車回東京</strong>（不用再回河口湖站！主案：搭下吉田站停靠的<strong>「富士回遊號 1～3 號車廂」</strong>如 17:00 或 17:47 發車直達新宿；備案：從下吉田搭普通車約 40 分鐘到「大月站」轉 JR 中央線回新宿）。<br>・🧳 <strong>Day 4 最後一晚打包關鍵</strong>：回飯店整理行李時，請把這幾天<strong>所有辦理免稅（Tax-Free）購買的衣服、動漫周邊與藥妝集中在行李箱「最上層」</strong>，方便隔天早上羽田機場退稅機台抽驗！' }
+        ]
+      },
+      {
+        dayNum: 5,
+        title: '悠閒早餐退房 ➔ 羽田機場第 3 航廈（退稅新制確認＋江戶小路）➔ 搭乘長榮 BR191（12:15）返抵台北松山',
+        badge: '賦歸日（BR191 12:15起飛・09:15抵機場從容退稅）',
+        badgeColor: 'bg-emerald-100 text-emerald-800',
+        spots: ['08:30 飯店悠閒退房往羽田', '09:15 羽田T3：先刷退稅機台 ➔ 再托運行李', '江戶小路＆出境免稅店採買', '12:15-15:05 長榮 BR191 返抵台北松山'],
+        schedule: [
+          { time: '08:15 - 09:15', title: '飯店悠閒早餐退房 ＆ 搭利木津巴士前往東京羽田國際機場第 3 航廈', desc: '改搭中午 <strong>BR191（12:15 起飛）</strong>超舒服，早上完全不用摸黑趕車！吃完早餐約 <strong>08:30 從秋葉原末廣町 APA 飯店退房，從 JR 秋葉原站搭山手線/京濱東北線 3 站（6分）至「濱松町站」轉乘東京單軌電車（13分），約 09:10 即輕鬆抵達羽田機場第 3 航廈</strong>（預留整整 3 小時應對 2026/11/1 退稅新制）。' },
+          { time: '09:15 - 10:15', title: '🚨【退稅新制關鍵步驟】先去退稅機台（Kiosk）刷護照 ➔ 完成後再去長榮櫃台托運行李', desc: '切記絕對不能先托運行李！先推行李到出發大廳免稅確認機台掃描護照：亮「綠燈」即可直接去長榮櫃台托運；若抽中「紅燈」則推行李至海關櫃台開箱查驗後再托運。' },
+          { time: '10:15 - 11:45', title: '羽田機場江戶小路散策 ＆ 出境免稅店最後採買', desc: '完成退稅與托運後一身輕！可先逛 4 樓復古「江戶小路」與展望台看飛機，通過安檢出境後再買東京芭娜娜、白色戀人、ROYCE 生巧克力等伴手禮（機場禁區內免稅店依然直接免稅！）。' },
+          { time: '12:15 - 15:05', title: '✈️ 搭乘長榮 BR191（羽田 T3 12:15 ➔ 松山 T1 15:05）返回台北松山機場', desc: '<strong>15:05 抵達台北松山機場第 1 航廈</strong>，傍晚前輕鬆到家休息，完美結束父女 5 天 4 夜冬日東京之旅！' }
+        ]
+      }
+    ];
+
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('panel-' + tabName).classList.remove('hidden');
+      document.getElementById('tab-' + tabName).classList.add('active');
+    }
+
+    function selectMapSpot(query, title, desc) {
+      const encoded = encodeURIComponent(query);
+      document.getElementById('mapSpotTitle').textContent = title;
+      document.getElementById('mapSpotDesc').textContent = desc;
+      document.getElementById('googleMapIframe').src = `https://www.google.com/maps?q=${encoded}&hl=zh-TW&z=15&output=embed`;
+      document.getElementById('mapExternalLink').href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+    }
+
+    function formatDate(dateObj) {
+      const m = dateObj.getMonth() + 1;
+      const d = dateObj.getDate();
+      const w = weekdayNames[dateObj.getDay()];
+      return `${m}/${d < 10 ? '0' + d : d}（週${w}）`;
+    }
+
+    function updateDates() {
+      const startStr = document.getElementById('startDateSelect').value;
+      const [y, m, d] = startStr.split('-').map(Number);
+      const startDate = new Date(y, m - 1, d);
+
+      const container = document.getElementById('daysContainer');
+      const alertBanner = document.getElementById('dateAlertBanner');
+      container.innerHTML = '';
+
+      let alerts = [];
+      if (startStr === '2026-11-28') {
+        alerts.push('✈️ <strong>已訂妥機票＆飯店（11/28 六 ～ 12/02 三｜長榮 BR192 去 / BR191 回 TWD 37,792 ＋ APA 飯店〈秋葉原末廣町站前〉4 晚 ¥76,200 現地支付）：</strong><br>・<strong>Day 1（11/28 週六）</strong>：11:00 提早抵羽田，<strong>東京大神宮＆神樂坂 11 大名店（梅花亭、大野屋、ACHO、PAUL、la kagū、Le Bretagne）100% 全開零公休</strong>！且取消日本棋院後 16:50 即抵 ACHO，完全不怕週末 18:00 打烊！<br>・<strong>Day 3（11/30 週一逛池袋）＆ Day 4（12/01 週二去富士山）皆為平日</strong>，完美避開河口湖與下吉田的週末人潮！<br>・<strong>Day 5（12/02 週三）</strong>：回程 <code>BR191</code> 為中午 <strong>12:15 起飛</strong>，早上不用摸黑趕車，08:30 退房、09:15 抵羽田 T3 從容退稅！');
+      } else if (startStr === '2026-11-29') {
+        alerts.push('✨ <strong>備選 B（11/29 日 ～ 12/03 四）平日優勢：</strong>Day 1（週日）東京大神宮與神樂坂名店全開，且 <strong>Day 2（澀谷）、Day 3（池袋）、Day 4（河口湖富士山）全部落在平日（週一～週三）</strong>！');
+      } else if (startStr === '2026-11-30') {
+        alerts.push('💡 <strong>週一出發完全免改行程（取消棋院紅利）：</strong>v2 取消日本棋院後，<strong>週一（11/30）出發也完全不受博物館週一休館限制</strong>！僅神樂坂晚餐「Le Bretagne 法式薄餅」週一公休。');
+      } else if (startStr === '2026-12-02') {
+        alerts.push('💡 <strong>備選 E（12/02 三 ～ 12/06 日）：</strong>Day 1（週三）神樂坂「梅花亭」公休，Day 2（週四澀谷）、Day 3（週五池袋）為平日，Day 4（週六）去富士山。');
+      } else {
+        alerts.push('💡 <strong>12月初平日檔期優勢：</strong>取消昭和紀念公園與日本棋院後，任何一天出發都零休館限制！且 Day 2～Day 4 可看《富士見予報》隨時把河口湖調到最晴朗的一天！');
+      }
+      alertBanner.innerHTML = alerts.join('<br>');
+
+      baseItinerary.forEach((day, idx) => {
+        const curDate = new Date(startDate);
+        curDate.setDate(startDate.getDate() + idx);
+        const dow = curDate.getDay();
+        const dateLabel = formatDate(curDate);
+
+        let specialNote = '';
+        if (day.checkDay1Closures) {
+          if (dow === 6 || dow === 0) {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-medium">🎉 <strong>週末黃金紅利：</strong>這天（${dateLabel}）東京大神宮與神樂坂 11 大名店（梅花亭本店、大野屋牛肉店、ACHO、PAUL、la kagū、Aux Merveilleux、Le Bretagne 可麗餅）<strong>100% 全部營業無公休</strong>！且取消日本棋院後下午 16:50 就逛到 ACHO，完全不怕週末 18:00 提早打烊！</div>`;
+          } else if (dow === 1) {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs">💡 小提醒：這天是星期一，取消日本棋院後東京大神宮、梅花亭、ACHO 皆正常營業！僅晚餐「Le Bretagne 法式薄餅」週一公休（可改吃神樂坂名店「鳥茶屋 別亭」親子丼，或與 Day 2/3 對調）。</div>`;
+          } else if (dow === 2) {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs">💡 小提醒：這天是星期二，東京大神宮與梅花亭正常營業，但神樂坂甜點「ACHO」週二公休（可改在 Aux Merveilleux de Fred 與 PAUL 買甜點伴手禮）。</div>`;
+          } else if (dow === 3) {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs">💡 小提醒：這天是星期三，東京大神宮、大野屋牛肉店、ACHO 布丁、PAUL、la kagū、Le Bretagne 可麗餅皆正常營業！僅神樂坂「梅花亭」週三公休。</div>`;
+          }
+        }
+        if (day.weatherSwapNote) {
+          specialNote += `<div class="mt-2 p-2.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-900 text-xs font-medium">🔄 <strong>看天氣彈性調整：</strong>若預報顯示這天（${dateLabel}）河口湖是萬里無雲大晴天、而 Day 4 多雲，可隨時將本天行程與 <strong>Day 4（河口湖富士山）</strong>對調！</div>`;
+        }
+        if (day.fujiWeatherDay) {
+          specialNote += `<div class="mt-2 p-2.5 rounded-lg bg-sky-50 border border-sky-300 text-sky-900 text-xs font-semibold">🌤️ <strong>富士山天氣機動日（週二平日人少超讚！）：</strong>先排在 Day 4（${dateLabel}），讓女兒 Day 2、Day 3 先去逛最期待的澀谷與池袋！抵達東京後看「富士見予報」，若 Day 2 或 Day 3 天氣更好，隨時可往前對調。</div>`;
+        }
+
+        const spotBadges = day.spots.map(s => `<span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">${s}</span>`).join('');
+        const scheduleRows = day.schedule.map(item => `
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-3 border-b border-slate-100 last:border-0">
+            <div class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded w-fit whitespace-nowrap">${item.time}</div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-900 text-sm">${item.title}</div>
+              <div class="text-slate-600 text-xs md:text-sm mt-1 leading-relaxed">${item.desc}</div>
+            </div>
+          </div>
+        `).join('');
+
+        const cardHtml = `
+          <div class="day-card bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-900 text-white font-bold text-sm px-3 py-1.5 rounded-lg">Day ${day.dayNum}</span>
+                <div>
+                  <span class="text-sm font-bold text-blue-700">${dateLabel}</span>
+                  <h3 class="text-base md:text-lg font-bold text-slate-900">${day.title}</h3>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold ${day.badgeColor}">${day.badge}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${spotBadges}
+            </div>
+            ${specialNote}
+            <div class="mt-3 divide-y divide-slate-100">
+              ${scheduleRows}
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', cardHtml);
+      });
+    }
+
+    // Initialize on load
+    updateDates();
+  </script>
+</body>
+</html>
