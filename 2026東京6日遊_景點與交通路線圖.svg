@@ -67,17 +67,17 @@
   </g>
 
   <!-- ================= RAILWAY & BUS ROUTES ================= -->
-  <!-- Route 1: Shinjuku to Kawaguchiko (Day 4) -->
+  <!-- Route 1: Shinjuku to Kawaguchiko (Day 3) -->
   <path d="M 780,450 Q 520,450 325,380" fill="none" stroke="#7c3aed" stroke-width="6" stroke-dasharray="12,6"/>
-  <rect x="445" y="395" width="245" height="44" rx="22" fill="#7c3aed" filter="url(#cardShadow)"/>
-  <text x="567" y="415" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">🚆 JR富士回遊 / 🚌 高速巴士</text>
-  <text x="567" y="432" text-anchor="middle" fill="#ede9fe" font-size="12">新宿直達 約 1小時50分</text>
+  <rect x="440" y="395" width="255" height="44" rx="22" fill="#7c3aed" filter="url(#cardShadow)"/>
+  <text x="567" y="415" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">🚆 富士回遊(1-3車) / 備案:大月轉乘</text>
+  <text x="567" y="432" text-anchor="middle" fill="#ede9fe" font-size="11.5">新宿➔河口湖｜回程可從下吉田/富士山站搭</text>
 
-  <!-- Route 2: Shinjuku to Showa Kinen Park (Day 2) -->
-  <path d="M 780,435 Q 640,310 530,275" fill="none" stroke="#d97706" stroke-width="6"/>
-  <rect x="545" y="325" width="205" height="40" rx="20" fill="#d97706" filter="url(#cardShadow)"/>
-  <text x="647" y="344" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">🚃 JR 中央線快速（直達）</text>
-  <text x="647" y="359" text-anchor="middle" fill="#fef3c7" font-size="12">新宿 ➔ 西立川 約 30 分鐘</text>
+  <!-- Route 2: Shinjuku to Kichijoji & Showa Kinen Park (Day 2) -->
+  <path d="M 780,435 Q 640,350 530,305" fill="none" stroke="#d97706" stroke-width="6"/>
+  <rect x="520" y="335" width="235" height="40" rx="20" fill="#d97706" filter="url(#cardShadow)"/>
+  <text x="637" y="353" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold">🚃 JR 中央線快速（一路向西免轉車）</text>
+  <text x="637" y="368" text-anchor="middle" fill="#fef3c7" font-size="11.5">新宿➔吉祥寺(14分)➔西立川(18分)</text>
 
   <!-- Route 3: Shinjuku to Ichigaya Nihon Ki-in (Day 1) -->
   <path d="M 850,435 Q 960,350 1055,310" fill="none" stroke="#2563eb" stroke-width="6"/>
@@ -85,112 +85,132 @@
   <text x="987" y="352" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚃 JR中央總武線/都營新宿線</text>
   <text x="987" y="366" text-anchor="middle" fill="#dbeafe" font-size="11">新宿 ➔ 市ヶ谷 僅 7 分鐘！</text>
 
-  <!-- Route 4: Shinjuku to Shibuya (Day 5) -->
-  <path d="M 770,490 L 720,665" fill="none" stroke="#db2777" stroke-width="6"/>
-  <rect x="640" y="565" width="185" height="38" rx="19" fill="#db2777" filter="url(#cardShadow)"/>
-  <text x="732" y="582" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚃 JR 山手線 / 埼京線</text>
-  <text x="732" y="596" text-anchor="middle" fill="#fce7f3" font-size="11">新宿 ➔ 澀谷 僅 7 分鐘！</text>
+  <!-- Route 4: Shinjuku to Harajuku & Shibuya (Day 4 afternoon/evening) -->
+  <path d="M 770,490 L 710,645" fill="none" stroke="#db2777" stroke-width="6"/>
+  <rect x="630" y="555" width="195" height="38" rx="19" fill="#db2777" filter="url(#cardShadow)"/>
+  <text x="727" y="572" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚃 JR 山手線 / 千代田線</text>
+  <text x="727" y="586" text-anchor="middle" fill="#fce7f3" font-size="11">原宿(4分) / 澀谷(7分) 秒回新宿</text>
 
-  <!-- Route 5: Shinjuku to Odaiba (Day 3 return) -->
-  <path d="M 850,480 Q 980,620 1140,685" fill="none" stroke="#0891b2" stroke-width="5" stroke-dasharray="10,5"/>
-  <rect x="920" y="555" width="205" height="38" rx="19" fill="#0891b2" filter="url(#cardShadow)"/>
-  <text x="1022" y="572" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚃 埼京線直通臨海線</text>
-  <text x="1022" y="586" text-anchor="middle" fill="#cffafe" font-size="11">新宿 ⇄ 台場 直達 23 分鐘</text>
+  <!-- Route 5: Shinjuku / Iidabashi to Ikebukuro (Day 5) -->
+  <path d="M 860,460 Q 1030,545 1175,605" fill="none" stroke="#9333ea" stroke-width="6"/>
+  <rect x="915" y="505" width="215" height="38" rx="19" fill="#9333ea" filter="url(#cardShadow)"/>
+  <text x="1022" y="522" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚃 JR山手/埼京線・有樂町線</text>
+  <text x="1022" y="536" text-anchor="middle" fill="#f3e8ff" font-size="11">新宿➔池袋 5～8分｜飯田橋➔池袋 9分</text>
 
-  <!-- Route 6: Tozai Line to Urayasu Seiryu Shrine & down to Odaiba (Day 3) -->
-  <path d="M 1080,320 Q 1240,360 1375,420" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="6,6"/>
-  <path d="M 1390,490 Q 1340,600 1240,670" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="6,6"/>
+  <!-- Route 6: Tozai Line to Urayasu Seiryu Shrine & Chiyoda Line to Harajuku (Day 4) -->
+  <path d="M 1080,320 Q 1240,350 1375,380" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="6,6"/>
+  <path d="M 1245,445 Q 1010,560 885,660" fill="none" stroke="#0284c7" stroke-width="4" stroke-dasharray="6,6"/>
 
   <!-- Route 7: Shinjuku to Haneda Airport (Day 1 & Day 6) -->
   <path d="M 855,490 Q 980,740 1075,865" fill="none" stroke="#059669" stroke-width="5" stroke-dasharray="8,6"/>
-  <rect x="910" y="775" width="215" height="40" rx="20" fill="#059669" filter="url(#cardShadow)"/>
-  <text x="1017" y="793" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚌 機場利木津巴士（直達飯店）</text>
-  <text x="1017" y="808" text-anchor="middle" fill="#d1fae5" font-size="11">新宿南口 ⇄ 羽田T3 約 45 分鐘</text>
+  <rect x="895" y="790" width="215" height="40" rx="20" fill="#059669" filter="url(#cardShadow)"/>
+  <text x="1002" y="808" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">🚌 機場利木津巴士（直達飯店）</text>
+  <text x="1002" y="823" text-anchor="middle" fill="#d1fae5" font-size="11">新宿南口 ⇄ 羽田T3 約 45 分鐘</text>
 
 
   <!-- ================= CENTRAL HUB: SHINJUKU ================= -->
   <g transform="translate(680, 410)" filter="url(#hubShadow)">
-    <rect x="0" y="0" width="280" height="118" rx="16" fill="#dc2626" stroke="#ffffff" stroke-width="3"/>
-    <text x="140" y="28" text-anchor="middle" fill="#fef08a" font-size="15" font-weight="bold">⭐ 住宿核心基地：新宿南口</text>
-    <text x="140" y="52" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">JR 新宿站 / Busta 新宿</text>
-    <line x1="20" y1="62" x2="260" y2="62" stroke="#fca5a5" stroke-width="1"/>
-    <text x="140" y="82" text-anchor="middle" fill="#fee2e2" font-size="12">🏨 首選：JR九州飯店 Blossom 新宿</text>
-    <text x="140" y="102" text-anchor="middle" fill="#fee2e2" font-size="12">🏨 世紀南悅 / 燦路都廣場（皆步行3分）</text>
+    <rect x="0" y="0" width="290" height="122" rx="16" fill="#dc2626" stroke="#ffffff" stroke-width="3"/>
+    <text x="145" y="26" text-anchor="middle" fill="#fef08a" font-size="15" font-weight="bold">⭐ 住宿核心樞紐：新宿 / 飯田橋</text>
+    <text x="145" y="48" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">JR 新宿站 / Busta 新宿高速巴士站</text>
+    <line x1="16" y1="58" x2="274" y2="58" stroke="#fca5a5" stroke-width="1"/>
+    <text x="145" y="78" text-anchor="middle" fill="#fee2e2" font-size="12">🏨 舒適首選：JR九州 Blossom / 世紀南悅</text>
+    <text x="145" y="96" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="bold">♨️ 高CP值APA：西新宿五丁目塔 / 飯田橋站南</text>
+    <text x="145" y="113" text-anchor="middle" fill="#fee2e2" font-size="11">（APA 雙床房每晚省約 NT$3,500～4,500！）</text>
   </g>
 
 
-  <!-- ================= DAY 1: NIHON KI-IN (ICHIGAYA) ================= -->
-  <g transform="translate(1035, 195)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="315" height="125" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
-    <rect x="0" y="0" width="315" height="34" rx="12" fill="#2563eb"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 1｜市ヶ谷・圍棋文化朝聖</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">⚫ 日本棋院・圍棋殿堂資料館</text>
-    <text x="15" y="80" fill="#475569" font-size="12">・B1F 資料館免費參觀（11:00～17:00）</text>
-    <text x="15" y="98" fill="#dc2626" font-size="12" font-weight="bold">⚠️ 每週一休館！1F 賣店有棋士扇子與周邊</text>
-    <text x="15" y="115" fill="#475569" font-size="12">・傍晚順遊鄰近：神樂坂文青街區散策</text>
+  <!-- ================= DAY 1: NIHON KI-IN, TOKYO DAIJINGU & KAGURAZAKA ================= -->
+  <g transform="translate(1000, 130)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="390" height="196" rx="14" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+    <rect x="0" y="0" width="390" height="32" rx="12" fill="#2563eb"/>
+    <text x="14" y="22" fill="#ffffff" font-size="13.5" font-weight="bold">Day 1｜市ヶ谷 ➔ 東京大神宮 ➔ 神樂坂名店全攻略</text>
+    <text x="14" y="52" fill="#dc2626" font-size="12" font-weight="bold">1️⃣ 14:00 日本棋院・圍棋殿堂資料館（停留1hr，週一休）</text>
+    <text x="14" y="70" fill="#be185d" font-size="12" font-weight="bold">2️⃣ 15:15 東京大神宮（趁天亮參拜！買幸福鈴蘭御守）</text>
+    <text x="14" y="88" fill="#475569" font-size="11.5">3️⃣ 16:05 CANAL CAFE 水岸電車 ➔ 不二家牛奶妹燒</text>
+    <text x="14" y="106" fill="#b45309" font-size="11.5" font-weight="bold">4️⃣ 16:25 捉迷藏橫丁 ＆ 兵庫橫丁（冰庫橫丁）石板路</text>
+    <text x="14" y="124" fill="#047857" font-size="11.5" font-weight="bold">5️⃣ 17:00 善國寺/PAUL ➔ 大野屋牛肉店(炸肉餅) ➔ 梅花亭伴手禮</text>
+    <text x="14" y="142" fill="#be185d" font-size="11.5" font-weight="bold">6️⃣ 17:35 ACHO 布丁燒菓子（⚠️週六18:00打烊先買！）</text>
+    <text x="14" y="160" fill="#1e40af" font-size="11.5" font-weight="bold">7️⃣ 18:00 la kagū (AKOMEYA)、Aux Merveilleux、赤城神社</text>
+    <text x="14" y="178" fill="#475569" font-size="11.5">8️⃣ 19:15 Le Bretagne 法式蕎麥可麗餅晚餐（至22:00）</text>
   </g>
 
 
-  <!-- ================= DAY 2: SHOWA KINEN PARK ================= -->
-  <g transform="translate(425, 145)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="320" height="130" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
-    <rect x="0" y="0" width="320" height="34" rx="12" fill="#d97706"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 2｜西立川・冬日黃金銀杏大道</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">🍂 國營昭和紀念公園</text>
-    <text x="15" y="80" fill="#475569" font-size="12">・必拍：300公尺銀杏隧道＆運河銀杏並木</text>
-    <text x="15" y="98" fill="#b45309" font-size="12" font-weight="bold">🌟 2026 夜間點燈至 11/29（日）止！</text>
-    <text x="15" y="116" fill="#475569" font-size="12">・回程中央線可順遊：吉祥寺站北口商店街</text>
+  <!-- ================= DAY 2: KICHIJOJI & SHOWA KINEN PARK ================= -->
+  <g transform="translate(415, 130)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="370" height="182" rx="14" fill="#ffffff" stroke="#d97706" stroke-width="3"/>
+    <rect x="0" y="0" width="370" height="32" rx="12" fill="#d97706"/>
+    <text x="14" y="21" fill="#ffffff" font-size="13.5" font-weight="bold">Day 2｜早上吉祥寺散策 ➔ 傍晚昭和紀念公園點燈</text>
+    <text x="14" y="49" fill="#0f172a" font-size="12" font-weight="bold">1️⃣ 10:00 吉祥寺 Sun Road 商店街・炸牛肉餅・Petit貓村</text>
+    <text x="14" y="68" fill="#047857" font-size="12" font-weight="bold">2️⃣ 11:15 井之頭恩賜公園 ＆ 東京烤餅 Parks 井之頭天鵝店</text>
+    <text x="14" y="87" fill="#c2410c" font-size="12" font-weight="bold">3️⃣ 12:15 Iseya Koen 燒烤店（いせや公園店，⚠️12:00開）</text>
+    <text x="14" y="106" fill="#be185d" font-size="12" font-weight="bold">4️⃣ 13:15 Circus 巨無霸可麗餅（⚠️下午13:00才開門！）</text>
+    <text x="14" y="126" fill="#1e40af" font-size="12" font-weight="bold">5️⃣ 14:15 國營昭和紀念公園（吉祥寺搭中央線18分直達）</text>
+    <text x="14" y="145" fill="#475569" font-size="11.5">・14:15 趁陽光拍「運河銀杏」＆「300公尺銀杏黃金隧道」</text>
+    <text x="14" y="164" fill="#b45309" font-size="11.5" font-weight="bold">🌟 16:30–19:30 秋之夜散步：銀杏夜間點燈＆日本庭園夜楓！</text>
   </g>
 
 
-  <!-- ================= DAY 3: SEIRYU SHRINE & ODAIBA ================= -->
-  <!-- Spot 3A: Urayasu Seiryu Shrine -->
-  <g transform="translate(1255, 365)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="315" height="120" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
-    <rect x="0" y="0" width="315" height="34" rx="12" fill="#0284c7"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 3 上午｜千葉浦安（地鐵東西線）</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">⛩️ 浦安・清瀧神社</text>
-    <text x="15" y="80" fill="#475569" font-size="12">・海神神社、精美本殿木雕、登富士塚</text>
-    <text x="15" y="98" fill="#0369a1" font-size="12" font-weight="bold">・人氣海洋風御守＆季節御朱印 (09:00-16:30)</text>
-    <text x="15" y="114" fill="#475569" font-size="12">・順遊：浦安元町古街（舊宇田川家住宅）</text>
-  </g>
-
-  <!-- Spot 3B: Odaiba Marine Park -->
-  <g transform="translate(1135, 630)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="335" height="130" rx="14" fill="#ffffff" stroke="#0891b2" stroke-width="3"/>
-    <rect x="0" y="0" width="335" height="34" rx="12" fill="#0891b2"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 3 下午＆晚間｜東京灣岸浪漫海景</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">🗽 台場海濱公園 ＆ DiverCity</text>
-    <text x="15" y="80" fill="#475569" font-size="12">・海濱沙灘散步、自由女神像、彩虹大橋夕陽夜景</text>
-    <text x="15" y="98" fill="#475569" font-size="12">・DiverCity 青少年服飾逛街、實物大獨角獸鋼彈</text>
-    <text x="15" y="116" fill="#0e7490" font-size="12" font-weight="bold">・回程搭「臨海線直通埼京線」23分鐘直達新宿！</text>
+  <!-- ================= DAY 3: KAWAGUCHIKO & FUJIYOSHIDA ================= -->
+  <g transform="translate(32, 185)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="365" height="222" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+    <rect x="0" y="0" width="365" height="32" rx="12" fill="#7c3aed"/>
+    <text x="12" y="21" fill="#ffffff" font-size="13" font-weight="bold">Day 3｜河口湖・淺間神社遙拜所・日川時計店</text>
+    <text x="12" y="48" fill="#6d28d9" font-size="11.5" font-weight="bold">🚆 主方案：新宿搭「富士回遊(⚠️坐1-3號車)」直達河口湖</text>
+    <text x="12" y="65" fill="#475569" font-size="11">🔄 備案：新宿搭JR至「大月站」同站轉富士急行線普通車</text>
+    <text x="12" y="84" fill="#0f172a" font-size="11.5" font-weight="bold">1️⃣ 10:00 音樂盒之森美術館站下車（不進館・拍湖畔步道）</text>
+    <text x="12" y="102" fill="#b45309" font-size="11.5" font-weight="bold">2️⃣ 10:15 走去「河口淺間神社」➔ 走旁邊柏油路上「遙拜所」</text>
+    <text x="12" y="120" fill="#047857" font-size="11.5" font-weight="bold">3️⃣ 12:15 下山先經 Lawson河口湖町店 ➔ 餺飥不動(河口湖北本店)</text>
+    <text x="12" y="138" fill="#dc2626" font-size="11" font-weight="bold">🚌 13:46/14:50 河口湖美術館前站 搭富士急行巴士(17分)直達富士山站</text>
+    <text x="12" y="156" fill="#0f172a" font-size="11.5" font-weight="bold">4️⃣ 14:05/15:07 富士山站：拍「金鳥居」＋逛旁邊「Q-STA 百貨」</text>
+    <text x="12" y="174" fill="#be185d" font-size="11.5" font-weight="bold">5️⃣ 15:15/15:45 搭2站至「下吉田站」➔ 拍「日川時計店」(日落前!)</text>
+    <text x="12" y="192" fill="#1e40af" font-size="11" font-weight="bold">🚆 拍完直接從「下吉田站」搭富士回遊/普通車回東京（免回河口湖站）</text>
+    <text x="12" y="210" fill="#475569" font-size="10.5">（註：網紅藍屋頂富士山Lawson在「河口湖站前店」，早上下火車可先拍！）</text>
   </g>
 
 
-  <!-- ================= DAY 4: KAWAGUCHIKO ================= -->
-  <g transform="translate(45, 215)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="340" height="175" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
-    <rect x="0" y="0" width="340" height="34" rx="12" fill="#7c3aed"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 4｜富士山一日來回（可看天氣與Day5對調）</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">🗻 河口湖看富士山 一日全覽</text>
-    <text x="15" y="80" fill="#6d28d9" font-size="12" font-weight="bold">✅ 東京當天來回超輕鬆！11-12月能見度最高</text>
-    <text x="15" y="100" fill="#475569" font-size="12">① 天上山公園纜車 ＆ 河口湖遊覽船</text>
-    <text x="15" y="118" fill="#475569" font-size="12">② 大石公園（河口湖自然生活館）拍富士山</text>
-    <text x="15" y="136" fill="#475569" font-size="12">③ 新倉山淺間公園（忠靈塔）或吃餺飥麵</text>
-    <text x="15" y="156" fill="#dc2626" font-size="12" font-weight="bold">💡 秘訣：07:30/08:30早班車出發，上午最清晰！</text>
+  <!-- ================= DAY 4: SEIRYU SHRINE + HARAJUKU + CAT STREET + SHIBUYA ================= -->
+  <!-- Spot 4A: Urayasu Seiryu Shrine -->
+  <g transform="translate(1235, 345)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="340" height="145" rx="14" fill="#ffffff" stroke="#0284c7" stroke-width="3"/>
+    <rect x="0" y="0" width="340" height="32" rx="12" fill="#0284c7"/>
+    <text x="14" y="21" fill="#ffffff" font-size="13.5" font-weight="bold">Day 4 上午｜千葉浦安（地鐵東西線直達）</text>
+    <text x="14" y="50" fill="#0f172a" font-size="14.5" font-weight="bold">⛩️ 09:45 浦安・清瀧神社（海神神社）</text>
+    <text x="14" y="70" fill="#0369a1" font-size="11.5" font-weight="bold">・必買：季節限定鏤空剪紙御朱印＆海龜貝殼海洋御守</text>
+    <text x="14" y="88" fill="#475569" font-size="11.5">・必看：浦島太郎騎海龜與龍宮城木雕、登江戶富士塚</text>
+    <text x="14" y="106" fill="#475569" font-size="11.5">・順遊：舊宇田川家住宅（週二正常開館！社務所09:00-16:30）</text>
+    <text x="14" y="126" fill="#be185d" font-size="11.5" font-weight="bold">🚇 11:30 搭「東西線➔大手町轉千代田線」直達原宿！</text>
+  </g>
+
+  <!-- Spot 4B: Harajuku -> Cat Street -> Shibuya PARCO 6F -> SHIBUYA 109 -->
+  <g transform="translate(465, 620)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="420" height="190" rx="14" fill="#ffffff" stroke="#db2777" stroke-width="3"/>
+    <rect x="0" y="0" width="420" height="34" rx="12" fill="#db2777"/>
+    <text x="14" y="23" fill="#ffffff" font-size="13.5" font-weight="bold">Day 4 下午＆晚間｜原宿 ➔ 貓街(微下坡) ➔ 澀谷動漫治裝</text>
+    <text x="14" y="52" fill="#0f172a" font-size="13.5" font-weight="bold">1️⃣ 12:15 原宿（竹下通、表參道午餐、@cosme旗艦店）</text>
+    <text x="14" y="73" fill="#047857" font-size="12" font-weight="bold">2️⃣ 14:00 逛貓街 Cat Street（原宿往澀谷走一路微下坡超省力！）</text>
+    <text x="14" y="91" fill="#475569" font-size="11.5">　・潮牌選物店、古著、必買 NUMBER SUGAR 手工焦糖牛奶糖</text>
+    <text x="14" y="112" fill="#dc2626" font-size="12" font-weight="bold">3️⃣ 15:30 澀谷 PARCO 6F（🔥JUMP SHOP・寶可夢・任天堂・CAPCOM）</text>
+    <text x="14" y="133" fill="#be185d" font-size="12" font-weight="bold">4️⃣ 17:30 SHIBUYA 109 買衣服（排最後一站買完大包小包免提著走！）</text>
+    <text x="14" y="152" fill="#475569" font-size="11.5">　・順逛澀谷 LOFT / 唐吉訶德，走2分鐘進澀谷站搭山手線7分回新宿</text>
+    <text x="14" y="172" fill="#1e40af" font-size="11.5" font-weight="bold">✨ 完美合併：省去台場，從原宿一路逛下坡到澀谷完全不走回頭路！</text>
   </g>
 
 
-  <!-- ================= DAY 5: SHIBUYA SHOPPING ================= -->
-  <g transform="translate(485, 655)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="390" height="150" rx="14" fill="#ffffff" stroke="#db2777" stroke-width="3"/>
-    <rect x="0" y="0" width="390" height="34" rx="12" fill="#db2777"/>
-    <text x="15" y="23" fill="#ffffff" font-size="14" font-weight="bold">Day 5｜佳臻專屬治裝日（略過已去過的SHIBUYA SKY）</text>
-    <text x="15" y="58" fill="#0f172a" font-size="16" font-weight="bold">🛍️ 涉谷買衣服 ＆ 表參道聖誕燈飾</text>
-    <text x="15" y="80" fill="#be185d" font-size="12" font-weight="bold">・SHIBUYA 109（10:00開門，青少女日系服飾聖地）</text>
-    <text x="15" y="98" fill="#475569" font-size="12">・MIYASHITA PARK 宮下公園 ＆ Shibuya PARCO (6F動漫/寶可夢)</text>
-    <text x="15" y="116" fill="#475569" font-size="12">・傍晚逛貓街、表參道聖誕點燈、澀谷 LOFT / 唐吉訶德</text>
-    <text x="15" y="135" fill="#0f172a" font-size="12" font-weight="bold">🧳 當晚打包：所有退稅衣物藥妝集中放行李箱「最上層」</text>
+  <!-- ================= DAY 5: IKEBUKURO ANIME & OTOME ROAD ================= -->
+  <g transform="translate(1115, 555)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="460" height="220" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="3"/>
+    <rect x="0" y="0" width="460" height="34" rx="12" fill="#9333ea"/>
+    <text x="14" y="23" fill="#ffffff" font-size="13.5" font-weight="bold">Day 5｜池袋二次元動漫聖地＆年輕服飾一日全攻略</text>
+    <text x="14" y="52" fill="#dc2626" font-size="12.5" font-weight="bold">1️⃣ 11:00 池袋 PARCO 本館 B2F「JUMP SHOP 池袋店」</text>
+    <text x="14" y="70" fill="#475569" font-size="11.5">　・池袋站東口直通！B2F 同層還有 CAPCOM STORE，1-6F 逛年輕女裝</text>
+    <text x="14" y="90" fill="#1e40af" font-size="12.5" font-weight="bold">2️⃣ 12:30 安利美特池袋本店（全球最大 10 層樓動漫旗艦店！）</text>
+    <text x="14" y="110" fill="#be185d" font-size="12.5" font-weight="bold">3️⃣ 14:30 乙女街 Otome Road（走路4分！免盲抽直接挑推角！）</text>
+    <text x="14" y="128" fill="#7e22ce" font-size="11.5" font-weight="bold">　・必逛：🔥K-BOOKS 池袋ジャンプ館（專賣JUMP徽章立牌）、指南針、駿河屋</text>
+    <text x="14" y="148" fill="#047857" font-size="12.5" font-weight="bold">4️⃣ 16:30 Sunshine City 太陽城（過馬路2分即達室內巨型商場）</text>
+    <text x="14" y="166" fill="#475569" font-size="11.5">　・2F 寶可夢中心 MEGA 東京、3F 一番賞官方店＆世界最大 3,000 台扭蛋百貨</text>
+    <text x="14" y="185" fill="#0f172a" font-size="11.5" font-weight="bold">🍜 晚餐：池袋無敵家拉麵 / 敘敘苑燒肉</text>
+    <text x="14" y="204" fill="#b45309" font-size="11.5" font-weight="bold">🧳 當晚打包：所有退稅衣物、動漫周邊集中放行李箱「最上層」備驗！</text>
   </g>
 
 
@@ -210,9 +230,9 @@
     <rect x="0" y="0" width="465" height="155" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
     <text x="20" y="30" fill="#0f172a" font-size="15" font-weight="bold">📌 地圖圖例與行程排程彈性說明</text>
     <line x1="20" y1="42" x2="445" y2="42" stroke="#e2e8f0" stroke-width="1"/>
-    <text x="20" y="65" fill="#334155" font-size="13">・<tspan fill="#dc2626" font-weight="bold">紅框（新宿南口）</tspan>為住宿中心，放射狀直達各景點，免去拖行李換飯店。</text>
-    <text x="20" y="88" fill="#334155" font-size="13">・<tspan fill="#7c3aed" font-weight="bold">Day 4（河口湖）</tspan>與 <tspan fill="#db2777" font-weight="bold">Day 5（涉谷買衣服）</tspan>無門票時間綁定，可依</text>
-    <text x="32" y="108" fill="#334155" font-size="13">富士山晴天預報隨時互調！</text>
+    <text x="20" y="65" fill="#334155" font-size="13">・<tspan fill="#dc2626" font-weight="bold">紅框（新宿/飯田橋）</tspan>為住宿中心，放射狀直達各景點，免拖行李換飯店。</text>
+    <text x="20" y="88" fill="#334155" font-size="13">・<tspan fill="#db2777" font-weight="bold">Day 4（浦安＋原宿貓街澀谷）</tspan>與 <tspan fill="#9333ea" font-weight="bold">Day 5（池袋動漫乙女街）</tspan>兩大</text>
+    <text x="32" y="108" fill="#334155" font-size="13">JUMP SHOP 聖地一次滿足！若 <tspan fill="#7c3aed" font-weight="bold">Day 3 河口湖</tspan>遇雨亦可隨時與 Day 5 對調。</text>
     <text x="20" y="132" fill="#334155" font-size="13">・已同步產生 <tspan fill="#1e40af" font-weight="bold">.kml 匯入檔</tspan>，可一鍵匯入 Google Maps 手機導航使用。</text>
   </g>
 </svg>

@@ -87,127 +87,289 @@
         <styleUrl>#hotelStyle</styleUrl>
         <Point><coordinates>139.7005,35.6885,0</coordinates></Point>
       </Placemark>
+      <Placemark>
+        <name>♨️ 高CP值APA 1：APA飯店＆度假村〈西新宿五丁目站塔〉</name>
+        <description>雙床房約NT$3,500~4,800。附設免費露天大浴場「玄要之湯」，出站1分鐘、搭車4分鐘到新宿，近東京都廳免費光雕秀！</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6838,35.6897,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮 高CP值APA 2：APA飯店〈飯田橋站南〉</name>
+        <description>雙床房約NT$3,200~4,500。走路就到東京大神宮、神樂坂與日本棋院！搭東西線22分鐘免轉車直達浦安清瀧神社。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7445,35.7005,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>♨️ 高CP值APA 3：APA飯店〈新宿御苑前〉</name>
+        <description>雙床房約NT$3,800~5,200。附設免費大浴場，走路10分鐘到Busta新宿，正對新宿御苑綠地，遠離歌舞伎町。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7095,35.6886,0</coordinates></Point>
+      </Placemark>
     </Folder>
 
     <Folder>
-      <name>Day 1：日本棋院・圍棋殿堂資料館 ＆ 神樂坂</name>
+      <name>Day 1：日本棋院(1hr) ➔ 東京大神宮 ➔ 神樂坂名店與橫丁全攻略</name>
       <Placemark>
-        <name>【願望景點】日本棋院 東京本院・圍棋殿堂資料館</name>
-        <description>東京都千代田区五番町7-2（市ヶ谷站步行3分鐘）。B1F圍棋殿堂資料館開放時間11:00-17:00，週一休館！1F有賣店。</description>
+        <name>【願望景點】日本棋院 東京本院・圍棋殿堂資料館（停留約1小時）</name>
+        <description>東京都千代田区五番町7-2（市ヶ谷站步行3分鐘）。建議停留14:00-15:00（約1小時）。B1F圍棋殿堂資料館開放時間11:00-17:00，週一休館！1F有賣店。</description>
         <styleUrl>#day1Style</styleUrl>
         <Point><coordinates>139.7369,35.6908,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>神樂坂散策（赤城神社）</name>
-        <description>充滿日式文青氣息的坡道街區，適合傍晚散步與享用晚餐。</description>
+        <name>⛩️ 東京大神宮（東京伊勢神宮・幸福鈴蘭御守）</name>
+        <description>東京都千代田区富士見2-4-1（飯田橋站步行5分鐘）。建議15:15-16:00趁天亮參拜（社務所08:00-19:00）。超人氣幸福鈴蘭御守、戀愛繪馬與神籤！</description>
         <styleUrl>#day1Style</styleUrl>
-        <Point><coordinates>139.7385,35.7032,0</coordinates></Point>
+        <Point><coordinates>139.7470,35.7001,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚂 CANAL CAFE（神樂坂水岸電車咖啡廳）</name>
+        <description>飯田橋站西口外濠運河畔，可邊喝咖啡邊看JR總武線電車駛過河岸，日劇經典取景地。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7429,35.7013,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 不二家 Peko醬燒（神樂坂本店・全日本唯一）</name>
+        <description>神樂坂2-6（坡道入口），全日本唯一販售立體「牛奶妹Peko醬頭型大判燒（車輪餅）」的分店（旁有梅花亭ポルタ神樂坂店）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7418,35.7017,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮【必逛防漏】捉迷藏橫丁（かくれんぼ横丁）石板路</name>
+        <description>東京都新宿区神楽坂3-1。沿神樂坂通往上走還沒到善國寺前，由右手邊「神樂坂仲通り」轉入，即可走進江戶黑木板牆與歐洲石板路交織的秘密巷弄！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7408,35.7014,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏮【必逛防漏】兵庫橫丁（冰庫橫丁・石板路）</name>
+        <description>東京都新宿区神楽坂4-2周辺。與捉迷藏橫丁相連的古老鵝卵石坡道與黑木塀老料亭街景，老辣妹影片中介紹的「冰庫橫丁」即為此處！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7403,35.7024,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 Le Bretagne 神樂坂店（ル・ブルターニュ・法式蕎麥可麗餅）</name>
+        <description>東京都新宿区神楽坂4-2（兵庫橫丁入口旁）。東京第一家正宗法國布列塔尼蕎麥可麗餅（Galette）專門店，營業至22:00（週一休），極適合當神樂坂法式晚餐或下午茶！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7401,35.7023,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🐯 善國寺（毘沙門天・石老虎）</name>
+        <description>東京都新宿区神楽坂5-36。神樂坂通中段核心地標，門口有罕見的「石老虎（狛虎）」。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7397,35.7022,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥐 PAUL 神樂坂店（法式百年烘焙咖啡館）</name>
+        <description>東京都新宿区神楽坂5-1-4（善國寺正對面）。充滿巴黎街角風情的法式麵包烘焙坊，推薦可頌與蝴蝶酥（平日開至21:00，週末至20:00）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7399,35.7020,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥩 大野屋牛肉店（必吃松阪牛/和牛炸肉餅）</name>
+        <description>東京都新宿区神楽坂6-8（營業10:30-19:00）。昭和11年創業精肉老店，必吃現炸松阪牛/黑毛和牛炸肉餅（メンチカツ）與可樂餅，冷掉也酥脆多汁！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7378,35.7035,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎁 神樂坂 梅花亭 本店（買貓咪最中＆和菓子伴手禮）</name>
+        <description>東京都新宿区神楽坂6-15（營業10:00-19:00，週三休）。昭和10年創立和菓子名店！必買超可愛立體貓咪造型「福來貓最中（福来猫もなか）」、檸檬大福與神樂坂石疊點心。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7366,35.7042,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍮 ACHO kagurazaka（神樂坂人氣布丁＆燒菓子伴手禮）</name>
+        <description>東京都新宿区矢来町103（平日11:00-19:00、週六日11:00-18:00，週二休）。古民宅改建的布丁與法式常溫磅蛋糕名店，⚠️週六18:00打烊，請於17:35前抵達採買！</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7327,35.7047,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🛍️ la kagū（AKOMEYA TOKYO in la kagū・隈研吾設計選物店）</name>
+        <description>東京都新宿区矢来町67（神樂坂站2號出口正對面，營業至20:00）。由新潮社舊倉庫改建、建築大師隈研吾設計的木造大階梯複合空間，販售精緻日本文具、雜貨、餐具與伴手禮。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7339,35.7048,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>☁️ Aux Merveilleux de Fred（巴黎雲朵蛋白霜甜點名店）</name>
+        <description>東京都新宿区矢来町107（神樂坂站旁、赤城神社入口斜對面，營業至20:00）。全亞洲唯一分店！必吃如雲朵般入口即化的法式蛋白霜奶油蛋糕（Merveilleux）與現烤巧克力布里歐麵包。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7343,35.7051,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 赤城神社（隈研吾設計玻璃神社・鬼太郎御守）</name>
+        <description>東京都新宿区赤城元町1-10（神樂坂坡頂）。建築大師隈研吾設計的現代玻璃帷幕神社，夜間點燈極美，社務所至19:00（有可愛的鬼太郎背心御守與大眼仔御守）。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7346,35.7058,0</coordinates></Point>
       </Placemark>
     </Folder>
 
     <Folder>
-      <name>Day 2：國營昭和紀念公園（黃金銀杏大道）</name>
+      <name>Day 2：吉祥寺名店巡禮 ➔ 國營昭和紀念公園（銀杏大道＆夜間點燈）</name>
       <Placemark>
-        <name>【願望景點】國營昭和紀念公園（西立川口）</name>
-        <description>從新宿搭JR中央線快速30分鐘直達「西立川站」出站即達！2026秋之夜散步點燈至11/29止。</description>
+        <name>🛍️ 1. 吉祥寺 Sun Road 商店街（サンロード）＆ SATOU 炸牛肉餅</name>
+        <description>東京都武蔵野市吉祥寺本町1丁目（吉祥寺站北口出站即達）。全天候拱廊商店街，藥妝、鞋店、雜貨林立；10:30起可順買「吉祥寺 SATOU（さとう）」現炸松阪牛肉餅，並順遊童話貓咪城堡「吉祥寺 Petit 村（プティット村，10:00開）」！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5803,35.7044,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🌳 2. 井之頭恩賜公園（井の頭恩賜公園・深秋紅葉＆天鵝船）</name>
+        <description>東京都武蔵野市御殿山1-18-31（吉祥寺站南口步行5分鐘）。11月底湖畔楓紅與銀杏倒映水面極美，可踩天鵝船、參拜井之頭弁財天，並可順路去旁邊買吉卜力官方授權「白髭泡芙工坊」龍貓泡芙（11:00開）。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5746,35.6997,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍡 3. 東京烤餅：Parks 井之頭天鵝店（パークス 井の頭スワン店）</name>
+        <description>東京都三鷹市井の頭4-1-5（井之頭公園天鵝船碼頭旁，11~2月營業時間 10:00-17:00）。必買炭火現烤、印有可愛笑臉與天鵝圖案的「東京烤餅／烤麻糬團子（東京やきもち・顔つき団子）」！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5755,35.6980,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍢 4. Iseya Koen 燒烤店（いせや 公園店・百年炭火燒鳥名店）</name>
+        <description>東京都武蔵野市吉祥寺南町1-15-8（井之頭公園入口旁，⚠️12:00-22:00營業，週一公休）。昭和3年創業傳奇燒鳥老店，一串僅約¥100、必點炭火雞肉串與手工大燒賣，可內用午餐或外帶在公園吃！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5791,35.6997,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🥞 5. Circus 可麗餅（クレープハウス CIRCUS・巨無霸復古可麗餅）</name>
+        <description>東京都武蔵野市吉祥寺本町1-12-13（吉祥寺站北口西側巷內，⚠️下午13:00才開門～18:45賣完為止，週二公休）。吉祥寺40年排隊名店，份量超大、銅板價、滿滿鮮奶油與酥脆口感，吃完いせや燒烤走過來13:15剛好吃甜點！</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5786,35.7038,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍂 6.【願望景點】國營昭和紀念公園（西立川口・運河銀杏並木）</name>
+        <description>從吉祥寺搭JR中央線快速往西18分鐘直達「西立川站」，出站步行2分鐘即達！建議14:15入園先拍白天陽光下的「カナールイチョウ並木（運河噴泉銀杏）」。</description>
         <styleUrl>#day2Style</styleUrl>
         <Point><coordinates>139.3924,35.6997,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>昭和紀念公園：語らいのイチョウ並木（300公尺銀杏隧道）</name>
-        <description>98棵高大銀杏交織成的黃金隧道與落葉地毯，園區必拍核心景點。</description>
+        <name>🌟 7. 昭和紀念公園：語らいのイチョウ並木（300公尺銀杏隧道＆夜間點燈）</name>
+        <description>98棵高大銀杏交織成的黃金隧道與落葉地毯！16:30~20:30「秋の夜散歩」夜間金色燈光秀與日本庭園夜楓倒影（2026點燈預計至11/29週日止）。</description>
         <styleUrl>#day2Style</styleUrl>
         <Point><coordinates>139.3895,35.7082,0</coordinates></Point>
       </Placemark>
-      <Placemark>
-        <name>吉祥寺站北口商店街（回程順遊）</name>
-        <description>JR中央線回新宿途中可順遊，逛雜貨藥妝、吃SATOU炸牛肉餅。</description>
-        <styleUrl>#day2Style</styleUrl>
-        <Point><coordinates>139.5798,35.7031,0</coordinates></Point>
-      </Placemark>
     </Folder>
 
     <Folder>
-      <name>Day 3：浦安 清瀧神社 ＆ 台場海濱公園</name>
+      <name>Day 3：河口湖＆富士吉田全攻略（音樂盒之森下車➔淺間神社遙拜所➔不動茶屋➔美術館前站公車➔金鳥居Q-STA➔日川時計店）</name>
       <Placemark>
-        <name>【願望景點】浦安 清瀧神社</name>
-        <description>千葉県浦安市堀江4-1-5（地鐵東西線「浦安站」步行5分鐘）。社務所09:00-16:30，有精美木雕、富士塚與海洋風季節御朱印。</description>
+        <name>🚆 1. 河口湖站（富士回遊1-3號車直達／大月站轉乘備案）＆ 站前Lawson</name>
+        <description>主案：從新宿搭JR特急「富士回遊號」直達（⚠️務必坐第1~3號車廂，4~12車廂會在大月站分離往甲府！）；備案：搭JR中央線到大月站轉富士急行線普通車。出站斜對面即有最紅的「Lawson河口湖站前店」！</description>
         <styleUrl>#day3Style</styleUrl>
-        <Point><coordinates>139.8973,35.6593,0</coordinates></Point>
-      </Placemark>
-      <Placemark>
-        <name>【願望景點】台場海濱公園 ＆ 自由女神像</name>
-        <description>漫步海濱沙灘，欣賞彩虹大橋與東京鐵塔夕陽夜景。</description>
-        <styleUrl>#day3Style</styleUrl>
-        <Point><coordinates>139.7712,35.6279,0</coordinates></Point>
-      </Placemark>
-      <Placemark>
-        <name>DiverCity Tokyo Plaza（實物大獨角獸鋼彈）</name>
-        <description>青少年服飾品牌、多啦A夢未來百貨公司與戶外獨角獸鋼彈變身秀。回程搭臨海線直通埼京線23分鐘直達新宿。</description>
-        <styleUrl>#day3Style</styleUrl>
-        <Point><coordinates>139.7756,35.6251,0</coordinates></Point>
-      </Placemark>
-    </Folder>
-
-    <Folder>
-      <name>Day 4：河口湖富士山一日遊</name>
-      <Placemark>
-        <name>【願望景點】河口湖站 (Kawaguchiko Station)</name>
-        <description>從新宿搭JR特急富士回遊號或高速巴士約1小時50分直達。</description>
-        <styleUrl>#day4Style</styleUrl>
         <Point><coordinates>138.7686,35.4982,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>天上山公園 富士山全景纜車</name>
-        <description>登高俯瞰富士山與河口湖全景，旁有河口湖遊覽船碼頭。</description>
-        <styleUrl>#day4Style</styleUrl>
-        <Point><coordinates>138.7723,35.5042,0</coordinates></Point>
+        <name>🎻 2. 河口湖 音樂盒之森美術館站（下車起點・不入館拍免費湖畔富士山）</name>
+        <description>山梨県南都留郡富士河口湖町河口3077-20。搭紅線周遊巴士至第16站下車作為散步起點（不買票入館，立省1.5小時與¥3,100門票，可先在館外免費湖畔步道拍富士山！）。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7631,35.5228,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>大石公園（河口湖自然生活館）</name>
-        <description>河口湖搭配白頭富士山最經典的明信片拍攝地。</description>
-        <styleUrl>#day4Style</styleUrl>
-        <Point><coordinates>138.7458,35.5231,0</coordinates></Point>
+        <name>⛩️ 3. 河口淺間神社（千年七本杉神木）</name>
+        <description>山梨県南都留郡富士河口湖町河口1（從音樂盒之森美術館步行14分鐘）。超過1100年歷史的世界文化遺產構成資產，擁有樹齡逾1200年的壯觀「七本杉」巨木群，往遙拜所的柏油路起點就在神社右側後方！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7745,35.5303,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>新倉山淺間公園（忠靈塔）</name>
-        <description>五重塔與富士山同框經典視角（位於下吉田站）。</description>
-        <styleUrl>#day4Style</styleUrl>
-        <Point><coordinates>138.8005,35.5012,0</coordinates></Point>
+        <name>⛩️ 4. 河口淺間神社 遙拜所（天空の鳥居・柏油路直達）</name>
+        <description>山梨県南都留郡富士河口湖町河口1119-2（開放09:00-16:00，環境協力金¥100/人）。從河口淺間神社沿右側蜿蜒上山的柏油路步行約25~30分鐘即達，半山腰朱紅鳥居完美框住正對面的白頭富士山！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7782,35.5349,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏪 5. Lawson 河口湖町店（ローソン 河口湖町店・往不動茶屋必經）</name>
+        <description>山梨県南都留郡富士河口湖町河口732-1。從遙拜所與河口淺間神社下山後，沿707號縣道往餺飥不動河口湖北本店走的中途就會先經過這間北岸Lawson！（再往前走400m即達不動茶屋）。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7694,35.5269,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🍲 6. 餺飥不動茶屋 河口湖北本店（ほうとう不動 河口湖北本店）</name>
+        <description>山梨県南都留郡富士河口湖町河口707（營業11:00-20:00，麵售完為止）。古民家木造風格的北本店，必吃熱騰騰的鐵鍋南瓜野菜味噌餺飥麵（ほうとう）！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7662,35.5245,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚌 7. 河口湖美術館前站（搭13:46或14:50富士急行巴士17分鐘直達富士山站！）</name>
+        <description>吃完餺飥不動北本店往湖邊走約10分鐘至「河口湖美術館前（Kawaguchiko-bijutsukan-mae）」站牌，搭乘富士急行路線巴士「甲府線（往富士山駅）」13:46或14:50班次，車程僅17分鐘（¥440）免換車直達富士山站！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7665,35.5177,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⛩️ 8. 金鳥居（富士吉田・高9.7公尺富士山信仰聖門）</name>
+        <description>山梨県富士吉田市上吉田2-7（富士山站步行3分鐘）。橫跨本町通的巨大銅造鳥居，站在馬路人行道上即可拍到金鳥居框住街道盡頭富士山的震撼畫面！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7975,35.4855,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎁 9. 富士山站 ＆ Q-STA 百貨（キュースタ・買富士山紀念品＆頂樓展望台）</name>
+        <description>山梨県富士吉田市上吉田2-5-1（營業10:00-20:00）。與富士山站共構的商場，1F與B1F有極豐富的富士山限定伴手禮、信玄餅、富士山玻璃杯，6F還有免費屋頂展望台「富士山Deck」！逛完搭電車2站（4分鐘）到下吉田站。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.7952,35.4836,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>📸 10. 下吉田站 ＆ 日川時計店（天梯小鎮・本町二丁目商店街）</name>
+        <description>山梨県富士吉田市下吉田2-1-31（從富士山站搭富士急行線2站〔4分鐘〕至下吉田站，步行5分鐘）。⚠️務必在16:25日落天黑前抵達！拍完可直接從下吉田站搭富士回遊號（1~3號車）或普通車到大月轉JR回東京！</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>138.8035,35.4926,0</coordinates></Point>
       </Placemark>
     </Folder>
 
     <Folder>
-      <name>Day 5：涉谷買衣服 ＆ 表參道聖誕燈飾</name>
+      <name>Day 4：浦安清瀧神社 ➔ 原宿 ➔ 貓街 ➔ 澀谷 PARCO 6F (JUMP SHOP) ➔ SHIBUYA 109</name>
       <Placemark>
-        <name>【願望景點】SHIBUYA 109（涉谷買衣服首選）</name>
-        <description>日本青少女服飾聖地！10:00開門，整棟百間日系少女與潮流服飾品牌。</description>
-        <styleUrl>#day5Style</styleUrl>
-        <Point><coordinates>139.6987,35.6595,0</coordinates></Point>
+        <name>⛩️ 1.【願望景點】千葉浦安・清瀧神社（海洋風海龜御守＆剪紙御朱印）</name>
+        <description>千葉県浦安市堀江4-1-5（地鐵東西線「浦安站」步行5分鐘，社務所09:00-16:30）。800年海神神社，必看浦島太郎與龍宮本殿木雕、登富士塚，收藏季節限定鏤空剪紙御朱印與海龜貝殼御守，順遊旁側「舊宇田川家住宅（週二開館）」。參拜完從浦安站搭東西線至大手町轉千代田線直達原宿！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>139.8973,35.6593,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>Shibuya PARCO（潮牌、寶可夢中心、Nintendo TOKYO）</name>
-        <description>潮流設計服飾與6樓動漫電玩聖地（Pokemon Center、Nintendo、Jump Shop）。</description>
-        <styleUrl>#day5Style</styleUrl>
+        <name>🥞 2. 原宿（竹下通／明治神宮前〈原宿〉站／表參道）</name>
+        <description>東京都渋谷区神宮前1丁目。從浦安搭東西線轉千代田線直達「明治神宮前〈原宿〉站」！逛竹下通青少女飾品雜貨、拍日系大頭貼、吃原宿可麗餅與午餐。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>139.7039,35.6715,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🐾 3. 貓街（キャットストリート / Cat Street・原宿往澀谷微下坡散步）</name>
+        <description>東京都渋谷区神宮前5丁目～6丁目（舊澀川遊步道）。從原宿往澀谷走是一路緩下坡，走起來超省力！沿途匯集潮流服飾、運動品牌旗艦店、古著店、LUKE'S LOBSTER龍蝦堡與章魚燒，南端順接宮下公園（MIYASHITA PARK）。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>139.7064,35.6664,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>⚡ 4. 澀谷 PARCO 6F（JUMP SHOP 澀谷店 ＆ 寶可夢中心 ＆ Nintendo TOKYO）</name>
+        <description>東京都渋谷区宇田川町15-1（營業11:00-21:00）。貓街走到底過宮下公園先到澀谷 PARCO！直上6樓動漫電玩聖地「CYBERSPACE SHIBUYA」，一次逛齊「JUMP SHOP 澀谷店」、Pokémon Center SHIBUYA、Nintendo TOKYO 與 CAPCOM STORE！</description>
+        <styleUrl>#day4Style</styleUrl>
         <Point><coordinates>139.6988,35.6620,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>MIYASHITA PARK（宮下公園）</name>
-        <description>結合空中花園、潮流選物店與美食街的澀谷新地標。</description>
+        <name>👗 5.【願望景點】SHIBUYA 109（青少女流行服飾聖地・最後一站買衣服最省力）</name>
+        <description>東京都渋谷区道玄坂2-29-1（營業10:00-21:00）。從澀谷 PARCO 沿西班牙坂往下走4分鐘即達！B2F～8F集結上百家日本青少女最愛服飾與鞋包品牌，把最重的大袋冬衣戰利品留到最後一站買，買完下樓就是澀谷站，搭JR 7分鐘直達新宿！</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>139.6987,35.6595,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 5：池袋動漫與服飾全攻略（池袋 PARCO B2F JUMP SHOP ➔ 安利美特 ➔ 乙女街 ➔ 太陽城）</name>
+      <Placemark>
+        <name>⚡ 1. 池袋 PARCO 本館 B2F（JUMP SHOP 池袋PARCO店 ＆ 年輕女裝）</name>
+        <description>東京都豊島区南池袋1-28-2（池袋站東口出站直通，營業11:00-21:00）。直奔「池袋 PARCO 本館 B2F」逛「JUMP SHOP 池袋PARCO店」與同樓層的 CAPCOM STORE IKEBUKURO；1F～6F及旁邊 P'PARCO、LUMINE 則有超多年輕女生喜愛的日系服飾品牌！</description>
         <styleUrl>#day5Style</styleUrl>
-        <Point><coordinates>139.7019,35.6620,0</coordinates></Point>
+        <Point><coordinates>139.7119,35.7303,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>澀谷 LOFT ＆ MEGA 唐吉訶德</name>
-        <description>文具雜貨、美妝與伴手禮一次買齊。</description>
+        <name>📚 2. 安利美特池袋本店（Animate 池袋本店・金氏世界紀錄全球最大動漫店）</name>
+        <description>東京都豊島区東池袋1-20-7（從池袋 PARCO 步行5分鐘，營業11:00-21:00）。2023年擴建重開的全球最大動漫旗艦店（B2F～9F共11層樓），漫畫、畫集、最新動漫立牌徽章與1F Gratte角色印花拿鐵一應俱全！</description>
         <styleUrl>#day5Style</styleUrl>
-        <Point><coordinates>139.6997,35.6610,0</coordinates></Point>
+        <Point><coordinates>139.7155,35.7309,0</coordinates></Point>
       </Placemark>
       <Placemark>
-        <name>貓街 (Cat Street) ＆ 表參道冬季聖誕燈飾</name>
-        <description>從澀谷散步至原宿表參道，欣賞12月初浪漫的街道聖誕點燈。</description>
+        <name>💎 3. 乙女街／乙女之路（乙女ロード / Otome Road・K-BOOKS ジャンプ館挖寶）</name>
+        <description>東京都豊島区東池袋3丁目（從安利美特步行4分鐘、太陽城西側道路，約11:30-20:00）。全東京最強動漫絕版與限定周邊挖寶聖地！必逛「K-BOOKS ジャンプ館（JUMP作品專門館）」、「K-BOOKS アニメ館」、Lashinbang（指南針）、駿河屋乙女ロード店與 Swallowtail 執事咖啡廳！</description>
         <styleUrl>#day5Style</styleUrl>
-        <Point><coordinates>139.7064,35.6664,0</coordinates></Point>
+        <Point><coordinates>139.7176,35.7303,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🎡 4. Sunshine City 太陽城（寶可夢中心 MEGA TOKYO ＆ 3000台扭蛋百貨 ＆ 少女服飾）</name>
+        <description>東京都豊島区東池袋3-1（乙女街正對面，Alpa商場10:00-20:00）。2F有「Pokémon Center MEGA TOKYO」、皮卡丘甜點咖啡、Sanrio Cafe；3F有「萬代 Namco Cross Store（一番賞官方店、航海王卡牌店）」與超過3,000台扭蛋機的「Gashapon Department Store」；B1F～2F還有超多平價可愛的青少女服飾品牌！</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.7195,35.7289,0</coordinates></Point>
       </Placemark>
     </Folder>
 
