@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 冬・帶佳臻遊東京 6天5夜行程與飯店規劃</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .tab-btn.active {
+      background-color: #1e40af;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+    }
+    .day-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .day-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+    }
+    @media print {
+      .no-print { display: none !important; }
+      .tab-panel { display: block !important; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-16">
+
+  <!-- Hero Banner -->
+  <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-10 px-6 shadow-lg">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-400 text-slate-900">2026 台北市高職博覽會假期</span>
+        <span class="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/30 border border-blue-400/40 text-blue-100">長榮航空 松山 TSA ⇄ 羽田 HND</span>
+        <span class="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/30 border border-emerald-400/40 text-emerald-100">6天5夜 親子專屬規劃</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">❄️ 2026 冬・帶佳臻遊東京 6天5夜行程與飯店規劃</h1>
+      <p class="text-blue-100 text-sm md:text-base max-w-3xl">
+        可選假期區間：2026/11/28（六）～ 12/06（日）任選 6 天 ｜ 願望清單全收錄：河口湖富士山、日本棋院、清瀧神社、台場海濱、涉谷買衣服、昭和紀念公園銀杏
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 md:px-6 mt-8 space-y-8">
+
+    <!-- Top Navigation Tabs -->
+    <div class="flex flex-wrap gap-2 bg-white p-2 rounded-xl shadow-sm border border-slate-200 no-print">
+      <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗓️ 每日行程模擬
+      </button>
+      <button onclick="switchTab('map')" id="tab-map" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗺️ 景點地圖與導航
+      </button>
+      <button onclick="switchTab('kawaguchiko')" id="tab-kawaguchiko" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🗻 河口湖一日攻略
+      </button>
+      <button onclick="switchTab('hotels')" id="tab-hotels" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        🏨 推薦飯店分析
+      </button>
+      <button onclick="switchTab('checklist')" id="tab-checklist" class="tab-btn flex-1 min-w-[130px] py-2.5 px-3 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+        ✈️ 航班與退稅提醒
+      </button>
+    </div>
+
+    <!-- TAB 1: ITINERARY -->
+    <section id="panel-itinerary" class="tab-panel space-y-6">
+
+      <!-- Interactive Date Selector -->
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+              <span>🎯 選擇出發日期（自動換算星期與休館／點燈提醒）</span>
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">
+              在 11/28～12/06 的 9 天假期中，切換不同出發日可立即檢視每日對應日期與注意事項：
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <label for="startDateSelect" class="text-sm font-medium text-slate-700 whitespace-nowrap">出發日：</label>
+            <select id="startDateSelect" onchange="updateDates()" class="bg-blue-50 border border-blue-300 text-blue-900 text-sm font-semibold rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option value="2026-11-28" selected>方案 A：11/28 (六) ～ 12/03 (四) 【推薦！可看昭和公園夜間點燈】</option>
+              <option value="2026-11-29">方案 B：11/29 (日) ～ 12/04 (五) 【避開週六人潮】</option>
+              <option value="2026-11-30">方案 C：11/30 (一) ～ 12/05 (六) 【平日出遊為主】</option>
+              <option value="2026-12-01">方案 D：12/01 (二) ～ 12/06 (日) 【12月初冬行程】</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Alert Banner -->
+        <div id="dateAlertBanner" class="mt-4 p-3.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+        </div>
+      </div>
+
+      <!-- 6-Day Cards Container -->
+      <div id="daysContainer" class="space-y-5">
+        <!-- Rendered by JS -->
+      </div>
+
+    </section>
+
+    <!-- TAB MAP: INTERACTIVE MAP & GOOGLE MAPS LINKS -->
+    <section id="panel-map" class="tab-panel hidden space-y-6">
+
+      <!-- Section 1: High-Res Schematic Route Map Image -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div>
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100 text-blue-800">視覺化全覽圖</span>
+            <h2 class="text-xl font-bold text-slate-900 mt-1">🗺️ 2026 冬・帶佳臻遊東京 6天5夜 景點方位與直達交通路線圖</h2>
+            <p class="text-sm text-slate-600 mt-0.5">以「新宿南口」為中心，一眼看懂 6 天所有願望景點的相對方位、直達電車與車程時間：</p>
+          </div>
+          <div class="flex gap-2">
+            <a href="2026東京6日遊_景點與交通路線圖.png" target="_blank" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-slate-800 text-white hover:bg-slate-700 transition">
+              🖼️ 開啟高解析 PNG 圖片
+            </a>
+            <a href="2026東京6日遊_Google我的地圖匯入檔.kml" download class="px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 transition">
+              📥 下載 Google 我的地圖 (.KML)
+            </a>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50">
+          <img src="2026東京6日遊_景點與交通路線圖.png" alt="2026東京6日遊 景點與交通路線圖" class="w-full h-auto block" />
+        </div>
+      </div>
+
+      <!-- Section 2: Interactive Google Maps Viewer + One-Click Pin Selector -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="mb-4">
+          <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-100 text-indigo-800">互動式 Google Maps 預覽</span>
+          <h3 class="text-lg font-bold text-slate-900 mt-1">📍 點擊下方任一景點／飯店，立即切換 Google 地圖實景與導航</h3>
+          <p class="text-xs text-slate-600 mt-0.5">點擊左側清單可直接在右方地圖預覽位置；點選「開啟 Google Maps App」即可在手機直接導航。</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-5">
+          <!-- Left: Spot Selector List -->
+          <div class="lg:col-span-5 space-y-2 max-h-[480px] overflow-y-auto pr-1">
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1">🏨 住宿樞紐（新宿南口）</div>
+            <button onclick="selectMapSpot('JR九州ホテル ブラッサム新宿', 'JR九州飯店 Blossom 新宿（首選住宿基地）', '新宿南口步行 3 分鐘・Busta 新宿旁')" class="w-full text-left p-2.5 rounded-lg border border-blue-200 bg-blue-50/60 hover:bg-blue-100/70 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-blue-900">⭐ JR九州飯店 Blossom 新宿</div>
+                <div class="text-xs text-slate-600">新宿南口步行 3 分・Busta 新宿旁</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+            <button onclick="selectMapSpot('小田急ホテルセンチュリーサザンタワー', '小田急世紀南悅酒店', '新宿南口步行 3 分鐘・22~35樓高空景觀')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-semibold text-slate-800">🏨 小田急世紀南悅酒店</div>
+                <div class="text-xs text-slate-500">利木津巴士直達門口・高空景觀</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-1 pt-2">🗓️ 每日核心願望景點</div>
+            <button onclick="selectMapSpot('日本棋院 東京本院', 'Day 1：日本棋院 東京本院・圍棋殿堂資料館', 'JR 市ヶ谷站步行 3 分鐘（週一休館，11:00–17:00）')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-indigo-900">⚫ Day 1｜日本棋院・圍棋殿堂資料館</div>
+                <div class="text-xs text-slate-600">新宿搭總武線 7 分鐘直達市ヶ谷站</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('国営昭和記念公園 かたらいのイチョウ並木', 'Day 2：國營昭和紀念公園（黃金銀杏隧道）', 'JR 中央線快速直達「西立川站」步行 2 分鐘')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-amber-900">🍂 Day 2｜國營昭和紀念公園（銀杏大道）</div>
+                <div class="text-xs text-slate-600">新宿搭 JR 中央線直達西立川站 30 分鐘</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('清瀧神社 浦安市堀江4-1-5', 'Day 3 上午：千葉浦安・清瀧神社', '東西線「浦安站」步行 5 分鐘（社務所 09:00–16:30）')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-teal-900">⛩️ Day 3｜浦安・清瀧神社（海洋風御朱印）</div>
+                <div class="text-xs text-slate-600">東西線「浦安站」步行 5 分鐘</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('お台場海浜公園 自由の女神像', 'Day 3 下午：台場海濱公園 ＆ DiverCity 鋼彈', '臨海線直通埼京線 23 分鐘免轉車回新宿')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-cyan-900">🗽 Day 3｜台場海濱公園 ＆ 獨角獸鋼彈</div>
+                <div class="text-xs text-slate-600">沙灘夕陽、彩虹大橋、DiverCity 逛街</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('富士山パノラマロープウェイ 河口湖', 'Day 4：河口湖・天上山公園纜車', 'JR 富士回遊號 / 高速巴士直達河口湖站')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-blue-900">🗻 Day 4｜河口湖・天上山公園纜車</div>
+                <div class="text-xs text-slate-600">無遮蔽飽覽富士山與河口湖全景</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('大石公園 河口湖自然生活館', 'Day 4：河口湖・大石公園（經典明信片視角）', '河口湖周遊巴士紅線終點站')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-blue-900">🗻 Day 4｜河口湖・大石公園</div>
+                <div class="text-xs text-slate-600">河口湖北岸最美富士山湖畔視角</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('SHIBUYA 109 渋谷', 'Day 5：SHIBUYA 109 ＆ 涉谷買衣服巡禮', 'JR 山手線新宿 ➔ 澀谷僅 7 分鐘')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-pink-900">🛍️ Day 5｜SHIBUYA 109・宮下公園・PARCO</div>
+                <div class="text-xs text-slate-600">青少女服飾聖地、動漫周邊、表參道燈飾</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+
+            <button onclick="selectMapSpot('羽田空港 第3ターミナル', 'Day 6：羽田機場第 3 航廈（預留 3 小時退稅）', '09:20 抵達先刷退稅機台 Kiosk ➔ 再托運行李')" class="w-full text-left p-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition flex items-center justify-between gap-2">
+              <div>
+                <div class="text-sm font-bold text-emerald-900">✈️ Day 6｜羽田機場第 3 航廈（江戶小路）</div>
+                <div class="text-xs text-slate-600">先刷 Kiosk 退稅機台 ➔ 再托運行李</div>
+              </div>
+              <span class="text-xs font-semibold text-blue-700 whitespace-nowrap">預覽 ➔</span>
+            </button>
+          </div>
+
+          <!-- Right: Live Google Map Embed -->
+          <div class="lg:col-span-7 flex flex-col">
+            <div class="p-3 bg-slate-800 text-white rounded-t-xl flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <div id="mapSpotTitle" class="text-sm font-bold">⭐ JR九州飯店 Blossom 新宿（首選住宿基地）</div>
+                <div id="mapSpotDesc" class="text-xs text-slate-300">新宿南口步行 3 分鐘・Busta 新宿旁</div>
+              </div>
+              <a id="mapExternalLink" href="https://www.google.com/maps/search/?api=1&query=JR%E4%B9%9D%E5%B7%9E%E3%83%9B%E3%83%86%E3%83%AB+%E3%83%96%E3%83%A9%E3%83%83%E3%82%B5%E3%83%A0%E6%96%B0%E5%AE%BF" target="_blank" class="px-3 py-1.5 rounded-lg bg-blue-500 hover:bg-blue-400 text-white text-xs font-bold transition whitespace-nowrap">
+                📱 在 Google Maps 開啟導航 ↗
+              </a>
+            </div>
+            <iframe id="googleMapIframe" class="w-full h-[420px] rounded-b-xl border border-t-0 border-slate-300" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=JR%E4%B9%9D%E5%B7%9E%E3%83%9B%E3%83%86%E3%83%AB+%E3%83%96%E3%83%A9%E3%83%83%E3%82%B5%E3%83%A0%E6%96%B0%E5%AE%BF&hl=zh-TW&z=15&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Daily Multi-Stop Route Navigation Links & KML Guide -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-2">🧭 每日行程「多點串聯路線」一鍵開啟 Google Maps</h3>
+          <p class="text-xs text-slate-600 mb-3">在手機上點擊以下連結，可直接叫出當日從新宿出發的所有景點路線規劃：</p>
+          <div class="space-y-2 text-xs">
+            <a href="https://www.google.com/maps/dir/JR%E6%96%B0%E5%AE%BF%E9%A7%85/%E6%97%A5%E6%9C%AC%E6%A3%8B%E9%99%A2+%E6%9D%B1%E4%BA%AC%E6%9C%AC%E9%99%A2/%E7%A5%9E%E6%A5%BD%E5%9D%82/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-900 font-semibold transition">
+              <span>Day 1 路線：新宿 ➔ 日本棋院（市ヶ谷）➔ 神樂坂</span>
+              <span>開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/JR%E6%96%B0%E5%AE%BF%E9%A7%85/%E8%A5%BF%E7%AB%8B%E5%B7%9D%E9%A7%85/%E5%9B%BD%E5%96%B6%E6%98%AD%E5%92%8C%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-900 font-semibold transition">
+              <span>Day 2 路線：新宿 ➔ 西立川站 ➔ 國營昭和紀念公園</span>
+              <span>開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/JR%E6%96%B0%E5%AE%BF%E9%A7%85/%E6%B8%85%E7%80%A7%E7%A5%9E%E7%A4%BE+%E6%B5%A6%E5%AE%89/%E3%81%8A%E5%8F%B0%E5%A0%B4%E6%B5%B7%E6%B5%9C%E5%85%AC%E5%9C%92/%E3%83%80%E3%82%A4%E3%83%90%E3%83%BC%E3%82%B7%E3%83%86%E3%82%A3%E6%9D%B1%E4%BA%AC+%E3%83%97%E3%83%A9%E3%82%B6/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-900 font-semibold transition">
+              <span>Day 3 路線：新宿 ➔ 浦安・清瀧神社 ➔ 台場海濱公園 ➔ DiverCity</span>
+              <span>開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/%E3%83%90%E3%82%B9%E3%82%BF%E6%96%B0%E5%AE%BF/%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85/%E5%AF%8C%E5%A3%AB%E5%B1%B1%E3%83%91%E3%83%8E%E3%83%A9%E3%83%9E%E3%83%AD%E3%83%BC%E3%83%97%E3%82%A6%E3%82%A7%E3%82%A4/%E5%A4%A7%E7%9F%B3%E5%85%AC%E5%9C%92/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-900 font-semibold transition">
+              <span>Day 4 路線：新宿 ➔ 河口湖站 ➔ 天上山纜車 ➔ 大石公園</span>
+              <span>開啟路線 ↗</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/SHIBUYA+109/MIYASHITA+PARK/%E6%B8%8B%E8%B0%B7PARCO/%E8%A1%A8%E5%8F%82%E9%81%93/" target="_blank" class="flex items-center justify-between p-2.5 rounded-lg bg-pink-50 hover:bg-pink-100 text-pink-900 font-semibold transition">
+              <span>Day 5 路線：SHIBUYA 109 ➔ 宮下公園 ➔ 澀谷 PARCO ➔ 貓街/表參道</span>
+              <span>開啟路線 ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <h3 class="text-base font-bold text-slate-900 mb-2">📥 如何把專屬標記檔匯入您的「Google 我的地圖」？</h3>
+          <p class="text-xs text-slate-600 mb-3">
+            同目錄下已為您建立好包含<strong>所有 4 間推薦飯店＋Day 1～6 全部景點座標與備註</strong>的 <code class="bg-slate-100 px-1.5 py-0.5 rounded text-slate-800">2026東京6日遊_Google我的地圖匯入檔.kml</code>，只需 3 步驟即可同步到手機 Google Maps App：
+          </p>
+          <ol class="text-xs text-slate-700 space-y-2 list-decimal list-inside">
+            <li>電腦開啟 <a href="https://www.google.com/maps/d/" target="_blank" class="text-blue-600 font-semibold underline">Google 我的地圖 (Google My Maps)</a>，點選左上角<strong>「建立新地圖」</strong>。</li>
+            <li>在左側圖層點擊<strong>「匯入」</strong>，選擇目錄下的 <code class="bg-slate-100 px-1 py-0.5 rounded">2026東京6日遊_Google我的地圖匯入檔.kml</code> 上傳。</li>
+            <li>匯入後，所有景點會自動依 Day 1～Day 6 分類標記！打開手機版 <strong>Google Maps App ➔ 底部「已儲存」➔ 滑到最下方「地圖」</strong>，即可在東京街頭隨時看著標記走！</li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TAB 2: KAWAGUCHIKO -->
+    <section id="panel-kawaguchiko" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <div class="flex items-start justify-between flex-wrap gap-4 border-b border-slate-100 pb-4">
+          <div>
+            <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-blue-100 text-blue-800">核心問題解答</span>
+            <h2 class="text-xl font-bold text-slate-900 mt-2">Q：去河口湖有點遠，可以一天從東京來回嗎？</h2>
+          </div>
+          <span class="px-4 py-1.5 rounded-full text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+            ✅ 完全可以！單程約 1 小時 50 分鐘
+          </span>
+        </div>
+
+        <p class="text-slate-700 text-sm leading-relaxed mt-4">
+          從東京新宿前往河口湖非常成熟方便，<strong>超過 7 成的自由行旅客都是採「東京當天來回」</strong>。而且 <strong>11 月底至 12 月初是全年富士山能見度最高的季節（高達 70%～80%）</strong>，空氣乾燥清澈，加上山頭已經積雪、湖畔還有晚秋楓紅或枯枝冬景，非常適合一日遊！
+        </p>
+
+        <!-- Transport Comparison -->
+        <h3 class="text-base font-bold text-slate-800 mt-6 mb-3">🚆 新宿 ⇄ 河口湖 兩大直達交通方式比較</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="border border-blue-200 bg-blue-50/40 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-blue-900 text-base">方式一：JR 特急「富士回遊」號</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-blue-600 text-white rounded">最舒適・不塞車</span>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-1.5">
+              <li>・<strong>乘車地點</strong>：JR 新宿站（直達河口湖站，免轉車）</li>
+              <li>・<strong>車程時間</strong>：約 1 小時 53 分鐘</li>
+              <li>・<strong>票價參考</strong>：單程成人約 ¥4,130（全車指定席）</li>
+              <li>・<strong>建議班次</strong>：去程 07:30 或 08:30 新宿發車；回程 16:51 或 17:38 河口湖發車</li>
+              <li class="text-amber-800 font-medium">⚠️ 熱門車班務必於「出發前 1 個月（日本時間早上 10:00）」在 JR 東日本訂票網預訂！</li>
+            </ul>
+          </div>
+
+          <div class="border border-emerald-200 bg-emerald-50/40 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-bold text-emerald-900 text-base">方式二：高速巴士（Highway Bus）</span>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-emerald-600 text-white rounded">班次最密・高彈性</span>
+            </div>
+            <ul class="text-sm text-slate-700 space-y-1.5">
+              <li>・<strong>乘車地點</strong>：Busta 新宿（バスタ新宿，新宿南口 4 樓）</li>
+              <li>・<strong>車程時間</strong>：約 1 小時 45 分鐘（平日較少塞車）</li>
+              <li>・<strong>票價參考</strong>：單程成人約 ¥2,200</li>
+              <li>・<strong>優勢</strong>：每小時有多班次，若看天氣預報臨時決定換日子去，巴士比火車更好買票！</li>
+              <li>・<strong>小撇步</strong>：也可「去程搭早班高速巴士、回程搭 JR 富士回遊（不怕傍晚進東京塞車）」。</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Golden Rules for Mt. Fuji -->
+        <div class="mt-6 bg-slate-50 border border-slate-200 rounded-xl p-4">
+          <h4 class="font-bold text-slate-800 text-sm mb-2">💡 帶佳臻看富士山的 3 個成功秘訣：</h4>
+          <ol class="text-sm text-slate-700 space-y-1.5 list-decimal list-inside">
+            <li><strong>越早到越好（黃金時段 09:00～11:30）</strong>：富士山午後容易起雲霧（逆光＋水氣），早上抵達先衝景觀點拍照最美。</li>
+            <li><strong>保留「看天吃飯」對調彈性</strong>：飯店全部住同一間（新宿）的最大好處，就是出發前 2 天看富士山能見度預報網（富士見預報），哪天大晴天就把河口湖排哪天，跟「涉谷逛街日」互調即可！</li>
+            <li><strong>河口湖當地移動不費力</strong>：抵達河口湖站後，購買「河口湖周遊巴士紅線一日券」或直接搭計程車（2 人短程跳錶約 ¥1,000～¥2,000，冬天省去在寒風中等公車時間）。</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: HOTELS -->
+    <section id="panel-hotels" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900">🏨 為什麼「新宿南口／新南口」是這次行程的完美住宿基地？</h2>
+        <p class="text-sm text-slate-600 mt-2">
+          檢視佳臻列的 6 個願望清單，會發現<strong>其中 5 個景點從「新宿」出發都是直達免轉車</strong>，而且住在「新宿南口」可以完全避開北側歌舞伎町的複雜環境，街道寬敞安全、百貨林立：
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">🗻 往 河口湖</div>
+            <div class="text-slate-600 text-xs mt-1">JR 新宿站 / Busta 新宿巴士總站 直達（步行 3 分鐘上車）</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">🍂 往 昭和紀念公園</div>
+            <div class="text-slate-600 text-xs mt-1">JR 中央線快速直達「西立川站」約 30 分鐘</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">⚫ 往 日本棋院 (市ヶ谷)</div>
+            <div class="text-slate-600 text-xs mt-1">JR 中央總武線 / 都營新宿線直達「市ヶ谷站」僅 7 分鐘</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">🛍️ 往 涉谷買衣服</div>
+            <div class="text-slate-600 text-xs mt-1">JR 山手線 / 埼京線直達「澀谷站」僅 5～7 分鐘</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">🗽 往 台場海濱公園</div>
+            <div class="text-slate-600 text-xs mt-1">JR 埼京線直通臨海線，免下車直達「東京電訊站」23 分鐘</div>
+          </div>
+          <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 text-sm">
+            <div class="font-bold text-blue-900">✈️ 往返 羽田機場</div>
+            <div class="text-slate-600 text-xs mt-1">利木津巴士直達南口飯店門口 / Busta 新宿，不用扛行李上下樓梯</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hotel Cards -->
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- Hotel 1 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border-2 border-blue-600 relative">
+          <span class="absolute -top-3 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow">⭐ 首選推薦（綜合最優）</span>
+          <h3 class="text-lg font-bold text-slate-900">1. JR九州飯店 Blossom 新宿</h3>
+          <p class="text-xs text-slate-500 mb-3">JR Kyushu Hotel Blossom Shinjuku</p>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">Busta 新宿旁</span>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs font-medium">乾濕分離日式浴室</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：位於安靜安全的南口代代木方向，走去搭 JR 或河口湖高速巴士只要 3 分鐘，完全避開歌舞伎町。</li>
+            <li>・<strong>房間優勢</strong>：標準雙床房（Twin Room）約 22～25㎡，配有大面積落地窗與獨立淋浴泡澡空間（非傳統一體成型塑膠浴缸），父女入住非常舒適自在。</li>
+            <li>・<strong>周邊機能</strong>：巷口即有 Lawson、全家、星巴克、麥當勞與藥妝店。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">2. 小田急世紀南悅酒店</h3>
+              <p class="text-xs text-slate-500 mb-3">Hotel Century Southern Tower</p>
+            </div>
+            <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-1 rounded-full">高空景觀無敵</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-purple-50 text-purple-800 rounded text-xs font-medium">22～35樓高空景觀房</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">利木津巴士直達門口</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：就在 Busta 新宿正對面，沿著高島屋連通道走即可抵達。羽田機場利木津巴士直接停在飯店大廳樓下！</li>
+            <li>・<strong>房間優勢</strong>：大廳在 20 樓，客房全部在 22～35 樓，視野極佳，冬季晴天甚至有機會從高樓層遠眺富士山或東京夜景。</li>
+            <li>・<strong>周邊機能</strong>：緊鄰新宿高島屋、NEWoMan 百貨、藍瓶咖啡（Blue Bottle）。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 3 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">3. 新宿燦路都廣場大飯店</h3>
+              <p class="text-xs text-slate-500 mb-3">Hotel Sunroute Plaza Shinjuku</p>
+            </div>
+            <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold px-2.5 py-1 rounded-full">高 CP 值穩健選</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">新宿南口步行 3 分鐘</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">利木津巴士直達門口</span>
+            <span class="px-2 py-0.5 bg-slate-100 text-slate-800 rounded text-xs font-medium">地鐵大江戶線旁</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：就在 JR 九州 Blossom 飯店隔壁，共享完全相同的黃金地理位置，但房價通常更親民一些。</li>
+            <li>・<strong>房間優勢</strong>：羽田機場利木津巴士同樣直達飯店門口，雙床房乾淨隔音佳，大廳設有自助行李寄放櫃，服務成熟穩定。</li>
+          </ul>
+        </div>
+
+        <!-- Hotel 4 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">4. 三井花園飯店神宮外苑東京普米爾</h3>
+              <p class="text-xs text-slate-500 mb-3">Mitsui Garden Hotel Jingugaien Tokyo Premier</p>
+            </div>
+            <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-full">大浴場＋綠意陽台</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="px-2 py-0.5 bg-blue-50 text-blue-800 rounded text-xs font-medium">JR 千駄谷站步行 5 分</span>
+            <span class="px-2 py-0.5 bg-amber-50 text-amber-800 rounded text-xs font-medium">附設男女大浴場</span>
+            <span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded text-xs font-medium">每房皆有私人陽台</span>
+          </div>
+          <ul class="text-sm text-slate-700 space-y-1.5">
+            <li>・<strong>推薦原因</strong>：若不喜歡新宿大站的繁忙感，這間位於新宿往東 2 站的「千駄谷／信濃町」，往西 2 站到新宿、往東 2 站就到市ヶ谷（日本棋院）！</li>
+            <li>・<strong>房間優勢</strong>：2019 年底開幕，每間客房都有戶外陽台，樓下有超香的 R Baker 烘焙坊，且附設日式大浴場，冬天逛完街泡湯超享受。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: CHECKLIST & FLIGHTS -->
+    <section id="panel-checklist" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mb-4">✈️ 長榮航空「松山 TSA ⇄ 羽田 HND」航班建議</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-xs font-bold text-blue-700 uppercase">去程（台北松山 ➔ 東京羽田）</div>
+            <div class="mt-2 space-y-2 text-sm">
+              <div class="p-2.5 bg-white rounded-lg border border-blue-200">
+                <div class="font-bold text-slate-900">⭐ 首選早班機：BR192（07:20 起飛 ➔ 11:30 抵達）</div>
+                <div class="text-xs text-slate-600 mt-0.5">中午抵達羽田，下午 14:00 即可開始跑「日本棋院」行程，整整多玩半天！</div>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-slate-200">
+                <div class="font-semibold text-slate-700">備選午班機：BR190（16:20 起飛 ➔ 20:05 抵達）</div>
+                <div class="text-xs text-slate-500 mt-0.5">第一天不用早起，抵達後直接入住飯店休息（若選此班，Day 1 的日本棋院可移至 Day 2 上午）。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-xs font-bold text-emerald-700 uppercase">回程（東京羽田 ➔ 台北松山）</div>
+            <div class="mt-2 space-y-2 text-sm">
+              <div class="p-2.5 bg-white rounded-lg border border-emerald-200">
+                <div class="font-bold text-slate-900">⭐ 唯一首選午班機：BR191（12:40 起飛 ➔ 15:05 抵達）</div>
+                <div class="text-xs text-slate-600 mt-0.5">因應 2026/11/1 退稅新制需提早 3 小時到機場，選這班只要 08:30 從新宿出發、09:20 抵達羽田即可從容辦理退稅確認與托運！</div>
+              </div>
+              <div class="p-2.5 bg-white rounded-lg border border-slate-200">
+                <div class="font-semibold text-slate-700">不建議早班機：BR189（10:50 起飛 ➔ 13:30 抵達）</div>
+                <div class="text-xs text-slate-500 mt-0.5">若要預留退稅新制排隊時間（07:50 需到機場），早上 06:45 就得從新宿退房出發，帶小孩太趕。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border-2 border-rose-500">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <h2 class="text-xl font-bold text-rose-900">🚨 2026/11/1 日本退稅新制上路！時間預留與羽田實戰攻略</h2>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-800">新制首月必看重點</span>
+        </div>
+        <p class="text-sm text-slate-700 mb-4">
+          11/28～12/06 出發剛好遇上日本退稅新制（<strong>先付含稅價、機場確認後退稅 Refund Method</strong>）上路的第一個月！對行程時間有「一好一壞」的影響：
+        </p>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+            <div class="font-bold text-emerald-900 mb-1">✅ 好消息：涉谷逛街結帳變快！</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              取消「消耗品 50 萬上限」與「透明密封袋包裝」！在 SHIBUYA 109 或藥妝店購物時，<strong>先付 10% 含稅價</strong>，店員只需掃描護照將資料上傳雲端，不用再排隊等店員封袋，市區逛街反而更省時間。
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-rose-50 border border-rose-200">
+            <div class="font-bold text-rose-900 mb-1">⚠️ 關鍵：回程機場多留 1 小時！</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              抵達羽田機場第 3 航廈時，<strong>「絕對不能先去櫃台托運行李」</strong>！必須先推著行李去出發大廳的<strong>退稅機台（Kiosk）掃護照</strong>：亮<strong>綠燈</strong>可直接去托運；亮<strong>紅燈</strong>則需當場打開行李箱給海關檢查商品。因此 Day 6 已為您調整為<strong>起飛前 3 小時（09:20）抵達機場</strong>！
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
+            <div class="font-bold text-amber-900 mb-1">🧳 打包秘訣：退稅品放最上層</div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              雖然沒有透明密封袋，但退稅商品仍規定<strong>不可在日本境內拆封消耗</strong>，且須帶出境。Day 5 晚上打包時，請把<strong>所有退稅買的衣服、藥妝集中在同一咖行李箱的最上層</strong>，萬一機場抽中紅燈，拉開拉鍊 30 秒就能驗完！
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mb-4">📌 其他關鍵時間點與預約提醒</h2>
+        <div class="space-y-3 text-sm text-slate-700">
+          <div class="flex items-start gap-3 p-3 rounded-lg bg-amber-50 border border-amber-200">
+            <span class="text-lg">⚠️</span>
+            <div>
+              <strong>日本棋院「圍棋殿堂資料館」休館日與時間：</strong>
+              每週一休館（遇國定假日則週二休館），開放時間為 <strong>11:00 ～ 17:00</strong>（免費參觀）。排程時請務必避開星期一！
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-lg bg-blue-50 border border-blue-200">
+            <span class="text-lg">🍂</span>
+            <div>
+              <strong>昭和紀念公園「秋之夜散步（夜間銀杏點燈）」期限：</strong>
+              2026 年官方夜間點燈預計至 <strong>2026/11/29（日）結束</strong>。若想帶佳臻看夜間點燈，建議選擇 <strong>11/28（六）出發</strong>；若 12 月初前往，白天依然有超美的金黃銀杏大道與黃金落葉地毯（建議 15:30 前入園拍夕陽斜射）。
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-lg bg-emerald-50 border border-emerald-200">
+            <span class="text-lg">⛩️</span>
+            <div>
+              <strong>浦安「清瀧神社」社務所營業時間：</strong>
+              神社全天可參拜，但若要購買海洋風御守或領取季節限定御朱印，社務所開放時間為 <strong>09:00 ～ 16:30</strong>，建議安排在上午造訪，下午順遊台場海濱公園。
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-3 rounded-lg bg-purple-50 border border-purple-200">
+            <span class="text-lg">🧥</span>
+            <div>
+              <strong>11月底～12月初穿搭建議：</strong>
+              東京市區氣溫約 7°C ～ 15°C（室內與電車暖氣強，建議洋蔥式穿搭：發熱衣＋薄毛衣/大學T＋防風大衣或羽絨外套）；<strong>河口湖氣溫比東京低約 5°C～7°C（清晨約 0°C～3°C）</strong>，去河口湖當天務必戴毛帽、圍巾與手套！
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const weekdayNames = ['日', '一', '二', '三', '四', '五', '六'];
+
+    const baseItinerary = [
+      {
+        dayNum: 1,
+        title: '抵達東京・日本棋院圍棋朝聖 ＆ 神樂坂散策',
+        badge: '圍棋文化日',
+        badgeColor: 'bg-indigo-100 text-indigo-800',
+        checkMondayNihonKiin: true,
+        spots: ['松山機場 ➔ 羽田機場 (BR192)', '新宿飯店寄放行李', '市ヶ谷：日本棋院・圍棋殿堂資料館', '神樂坂老街 / 新宿晚餐'],
+        schedule: [
+          { time: '07:20 - 11:30', title: '搭乘長榮 BR192 飛往東京羽田', desc: '松山機場出發，11:30 抵達羽田機場第 3 航廈。搭乘利木津巴士或電車前往新宿南口飯店寄放行李。' },
+          { time: '14:00 - 16:30', title: '【願望景點】日本棋院 東京本院・圍棋殿堂資料館（市ヶ谷）', desc: '從新宿搭 JR 中央總武線僅 7 分鐘至「市ヶ谷站」步行 3 分鐘。參觀 B1F「圍棋殿堂資料館」（11:00–17:00，免費入館，展示千年圍棋歷史與名局棋譜）、1F 賣店選購棋士扇子與《棋靈王》/圍棋周邊、2F 參觀幽玄之間與對局大廳氛圍。' },
+          { time: '17:00 - 20:00', title: '神樂坂文青街區散策 或 新宿南口晚餐', desc: '從市ヶ谷可散步或搭一站至「飯田橋／神樂坂」，逛赤城神社與日式雜貨小店，晚上回新宿享用拉麵或燒肉，早點休息。' }
+        ]
+      },
+      {
+        dayNum: 2,
+        title: '黃金銀杏大道・國營昭和紀念公園 ＆ 吉祥寺/新宿',
+        badge: '冬日銀杏絕景',
+        badgeColor: 'bg-amber-100 text-amber-800',
+        checkShowaIllumination: true,
+        spots: ['新宿 ➔ 西立川站 (JR中央線直達)', '國營昭和紀念公園（兩大銀杏並木＋日本庭園）', '立川 LUMINE / 吉祥寺順遊'],
+        schedule: [
+          { time: '09:30 - 11:30', title: '悠閒早餐 ＆ 前往西立川（JR 中央線直達 30 分鐘）', desc: '從新宿搭乘 JR 中央線快速直達「西立川站」，出站步行 2 分鐘即達昭和紀念公園「西立川口」。' },
+          { time: '11:30 - 17:30', title: '【願望景點】國營昭和紀念公園（黃金銀杏隧道）', desc: '必拍兩大絕景：①「かたらいのイチョウ並木（98棵銀杏交織的300公尺黃金隧道）」、②「カナールイチョウ並木（運河噴泉銀杏大道）」與「日本庭園」晚秋楓紅。可租腳踏車或搭園區小火車輕鬆遊園。' },
+          { time: '18:00 - 20:30', title: '立川車站 Green Springs 或 吉祥寺晚餐', desc: '回程可在立川站旁新地標 Green Springs 用餐，或順路在中央線「吉祥寺站」下車逛商店街、吃炸牛肉餅。' }
+        ]
+      },
+      {
+        dayNum: 3,
+        title: '海神祈福與灣岸浪漫・清瀧神社 ＆ 台場海濱公園',
+        badge: '神社御朱印＋海景',
+        badgeColor: 'bg-cyan-100 text-cyan-800',
+        spots: ['浦安：清瀧神社（季節御朱印＆本殿木雕）', '台場海濱公園（沙灘、自由女神、彩虹大橋）', 'DiverCity 購物＆獨角獸鋼彈燈光秀'],
+        schedule: [
+          { time: '09:30 - 11:30', title: '【願望景點】千葉浦安・清瀧神社 ＆ 浦安元町散策', desc: '搭乘東京 Metro 東西線至「浦安站」步行 5 分鐘。參拜擁有 800 年歷史的海神神社「清瀧神社」（社務所 09:00–16:30），欣賞市指定有形文化財本殿木雕（浦島太郎與龍）、登富士塚，並收藏超美的海洋風御守與限定御朱印；順遊旁邊江戶時期老建築「舊宇田川家住宅」。' },
+          { time: '12:30 - 16:30', title: '【願望景點】台場海濱公園 ＆ AQUA CITY / DECKS', desc: '轉乘海鷗號（Yurikamome）或臨海線前往台場。先在景觀餐廳看著彩虹大橋吃午餐，接著到「台場海濱公園」沙灘散步、與自由女神像合影。' },
+          { time: '16:30 - 20:30', title: '台場夕陽夜景 ＆ DiverCity 青少年服飾逛街、實物大獨角獸鋼彈', desc: '16:30 欣賞東京灣絕美日落與彩虹大橋點燈，接著逛 DiverCity Tokyo Plaza（有許多適合佳臻年紀的品牌與雜貨、多啦A夢未來百貨公司），觀看整點獨角獸鋼彈變身燈光秀，最後搭「臨海線直通埼京線」23 分鐘免轉車直達新宿！' }
+        ]
+      },
+      {
+        dayNum: 4,
+        title: '富士山絕景一日來回・河口湖全覽之旅',
+        badge: '富士山一日遊（可依天氣與Day 5對調）',
+        badgeColor: 'bg-blue-100 text-blue-800',
+        spots: ['新宿 ➔ 河口湖（富士回遊號 / 高速巴士）', '天上山公園纜車', '大石公園 / 河口湖畔', '新倉山淺間公園 或 下吉田本町通'],
+        schedule: [
+          { time: '07:30 - 09:25', title: '新宿出發！搭乘 JR「富士回遊」或 Busta 新宿高速巴士直達河口湖', desc: '早上空氣最清澈、富士山最清楚！車程約 1 小時 50 分鐘，沿途接近山梨縣時就能在車窗看到巨大的白頭富士山。' },
+          { time: '09:40 - 12:00', title: '【願望景點】天上山公園纜車（Kachikachi山）＆ 河口湖遊覽船', desc: '搭乘纜車登上天上山展望台，無遮蔽飽覽富士山與河口湖全景，敲響天上之鐘、品嚐狸貓團子。中午品嚐河口湖名物「餺飥麵（ほうとう不動）」。' },
+          { time: '13:15 - 16:00', title: '大石公園（河口湖自然生活館）＆ 湖畔咖啡廳賞景', desc: '前往北岸的「大石公園」，這裡是河口湖搭配富士山最經典的明信片視角，可在湖畔享用草莓甜點或霜淇淋。（若體力充沛，亦可上午先去下吉田「新倉山淺間公園」拍五重塔與富士山）。' },
+          { time: '16:50 - 18:45', title: '搭乘直達列車或高速巴士返回新宿', desc: '在車上休息補眠，回到新宿享用熱騰騰的壽喜燒或涮涮鍋慶祝看到富士山！' }
+        ]
+      },
+      {
+        dayNum: 5,
+        title: '佳臻專屬治裝日・涉谷買衣服 ＆ 原宿表參道聖誕街景',
+        badge: '時尚血拼日（可與Day 4對調）',
+        badgeColor: 'bg-pink-100 text-pink-800',
+        spots: ['SHIBUYA 109（青少女服飾聖地）', 'MIYASHITA PARK 宮下公園', 'Shibuya PARCO（潮牌＆動漫周邊）', '貓街／表參道聖誕燈飾／澀谷LOFT'],
+        schedule: [
+          { time: '10:00 - 13:00', title: '【願望景點】SHIBUYA 109 ＆ 涉谷中央街買衣服', desc: '從新宿搭山手線 7 分鐘直達澀谷！10:00 準時開逛日本高中女生與年輕女孩的穿搭聖地「SHIBUYA 109」（2026/11 新制下結帳先付含稅價、掃護照即完成登錄，不用等封袋，逛街更順暢）。' },
+          { time: '13:00 - 16:30', title: 'MIYASHITA PARK（宮下公園）＆ Shibuya PARCO 潮流巡禮', desc: '在宮下公園享用午餐，接著逛 Shibuya PARCO（不僅有設計感服飾，6 樓還有寶可夢中心、Nintendo TOKYO、Jump Shop、吉伊卡哇/動漫快閃店）。' },
+          { time: '16:30 - 20:00', title: '貓街 ➔ 表參道冬季聖誕燈飾散步 ＆ 澀谷 LOFT / MEGA 唐吉訶德採買（略過已去過的 SHIBUYA SKY）', desc: '不用趕展望台預約時間！傍晚可沿著文青服飾聚集的「貓街（Cat Street）」散步至原宿、表參道欣賞 12 月初最浪漫的街道聖誕點燈，或留在澀谷逛 7 層樓的「澀谷 LOFT」與「MEGA 唐吉訶德」把美妝文具零食買齊。⚠️ 晚上回飯店打包時，記得把所有退稅商品放在行李箱最上層，方便隔天機場查驗！' }
+        ]
+      },
+      {
+        dayNum: 6,
+        title: '退稅新制從容通關・羽田機場江戶小路 ＆ 輕鬆返台',
+        badge: '賦歸日（預留3小時退稅）',
+        badgeColor: 'bg-emerald-100 text-emerald-800',
+        spots: ['08:30 新宿出發往羽田', '09:20 羽田T3：先刷退稅機台 ➔ 再托運行李', '江戶小路＆免稅店', '長榮 BR191 返抵台北松山'],
+        schedule: [
+          { time: '07:30 - 08:30', title: '飯店早餐、退房 ＆ 搭乘利木津巴士前往羽田機場', desc: '因應 2026/11/1 退稅新制剛上路，建議提早於 08:30 從新宿南口搭利木津巴士出發（約 45 分鐘直達羽田第 3 航廈）。' },
+          { time: '09:20 - 10:15', title: '🚨【退稅新制關鍵步驟】先去退稅機台（Kiosk）刷護照 ➔ 完成後再去長榮櫃台托運行李', desc: '切記絕對不能先托運行李！先推行李到出發大廳免稅確認機台掃描護照：亮「綠燈」即可直接去長榮櫃台托運；若抽中「紅燈」則推行李至海關櫃台開箱查驗後再托運。' },
+          { time: '10:15 - 12:10', title: '羽田機場江戶小路散策 ＆ 出境免稅店最後採買', desc: '完成退稅與托運後一身輕！可先逛 4 樓復古「江戶小路」，通過安檢出境後再買 NewYork Perfect Cheese、東京芭娜娜等伴手禮（機場禁區內免稅店依然直接免稅！）。' },
+          { time: '12:40 - 15:05', title: '搭乘長榮 BR191 返回台北松山機場', desc: '15:05 抵達松山機場，搭捷運或計程車迅速返家，完美結束父女冬日東京之旅！' }
+        ]
+      }
+    ];
+
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-panel').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('panel-' + tabName).classList.remove('hidden');
+      document.getElementById('tab-' + tabName).classList.add('active');
+    }
+
+    function selectMapSpot(query, title, desc) {
+      const encoded = encodeURIComponent(query);
+      document.getElementById('mapSpotTitle').textContent = title;
+      document.getElementById('mapSpotDesc').textContent = desc;
+      document.getElementById('googleMapIframe').src = `https://www.google.com/maps?q=${encoded}&hl=zh-TW&z=15&output=embed`;
+      document.getElementById('mapExternalLink').href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+    }
+
+    function formatDate(dateObj) {
+      const m = dateObj.getMonth() + 1;
+      const d = dateObj.getDate();
+      const w = weekdayNames[dateObj.getDay()];
+      return `${m}/${d < 10 ? '0' + d : d}（週${w}）`;
+    }
+
+    function updateDates() {
+      const startStr = document.getElementById('startDateSelect').value;
+      const [y, m, d] = startStr.split('-').map(Number);
+      const startDate = new Date(y, m - 1, d);
+
+      const container = document.getElementById('daysContainer');
+      const alertBanner = document.getElementById('dateAlertBanner');
+      container.innerHTML = '';
+
+      let alerts = [];
+      if (startStr === '2026-11-28') {
+        alerts.push('✨ <strong>黃金檔期優勢：</strong>11/28（六）出發，<strong>Day 2（11/29 週日）剛好趕上昭和紀念公園「2026 秋之夜散步」夜間銀杏點燈最後一天</strong>！且 Day 1（週六）日本棋院正常開館，Day 3（週一）去清瀧神社＋台場完全不受週一博物館休館影響。');
+      } else if (startStr === '2026-11-30') {
+        alerts.push('⚠️ <strong>週一休館自動提醒：</strong>若選擇 <strong>11/30（週一）</strong>出發，因為「日本棋院・圍棋殿堂資料館」每週一休館，建議將 <strong>Day 1 改去新宿/原宿或台場，並把「日本棋院」移至 Day 2（12/01 週二）或 Day 5</strong> 造訪！');
+      } else {
+        alerts.push('💡 <strong>排程提醒：</strong>此檔期各景點開館時間皆正常運作！昭和紀念公園夜間點燈雖於 11/29 結束，但 12 月初白天的金黃銀杏大道與滿地黃金銀杏地毯依然非常壯觀（建議 15:30 前入園）。');
+      }
+      alertBanner.innerHTML = alerts.join('<br>');
+
+      baseItinerary.forEach((day, idx) => {
+        const curDate = new Date(startDate);
+        curDate.setDate(startDate.getDate() + idx);
+        const dow = curDate.getDay();
+        const dateLabel = formatDate(curDate);
+
+        let specialNote = '';
+        if (day.checkMondayNihonKiin && dow === 1) {
+          specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-red-50 border border-red-200 text-red-800 text-xs font-semibold">⚠️ 注意：這天是星期一，日本棋院「圍棋殿堂資料館」週一休館！請將日本棋院與其他天的行程對調。</div>`;
+        }
+        if (day.checkShowaIllumination) {
+          const isBeforeNov29 = (curDate.getMonth() === 10 && curDate.getDate() <= 29);
+          if (isBeforeNov29) {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-amber-50 border border-amber-300 text-amber-900 text-xs font-semibold">🌟 季節限定加碼：這天（${dateLabel}）正好在 11/29 點燈期限內，16:30～20:30 可欣賞昭和紀念公園「秋之夜散步」銀杏夜間點燈！</div>`;
+          } else {
+            specialNote = `<div class="mt-2 p-2.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-900 text-xs">🍂 季節提示：12 月初夜間點燈已結束（公園開放至 16:30），建議中午前抵達，欣賞白天的金黃銀杏隧道與厚厚一層黃金落葉地毯！</div>`;
+          }
+        }
+
+        const spotBadges = day.spots.map(s => `<span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">${s}</span>`).join('');
+        const scheduleRows = day.schedule.map(item => `
+          <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 py-3 border-b border-slate-100 last:border-0">
+            <div class="text-xs font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded w-fit whitespace-nowrap">${item.time}</div>
+            <div class="flex-1">
+              <div class="font-bold text-slate-900 text-sm">${item.title}</div>
+              <div class="text-slate-600 text-xs md:text-sm mt-1 leading-relaxed">${item.desc}</div>
+            </div>
+          </div>
+        `).join('');
+
+        const cardHtml = `
+          <div class="day-card bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <span class="bg-blue-900 text-white font-bold text-sm px-3 py-1.5 rounded-lg">Day ${day.dayNum}</span>
+                <div>
+                  <span class="text-sm font-bold text-blue-700">${dateLabel}</span>
+                  <h3 class="text-base md:text-lg font-bold text-slate-900">${day.title}</h3>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold ${day.badgeColor}">${day.badge}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${spotBadges}
+            </div>
+            ${specialNote}
+            <div class="mt-3 divide-y divide-slate-100">
+              ${scheduleRows}
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', cardHtml);
+      });
+    }
+
+    // Initialize on load
+    updateDates();
+  </script>
+</body>
+</html>

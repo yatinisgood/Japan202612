@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>2026冬・帶佳臻遊東京 6天5夜景點與飯店地圖</name>
+    <description>2026/11/28～12/06 台北市高職博覽會假期｜東京6天5夜親子自由行（新宿基地、日本棋院、昭和紀念公園、浦安清瀧神社、台場、河口湖富士山、涉谷買衣服）</description>
+
+    <!-- Styles -->
+    <Style id="hotelStyle">
+      <IconStyle>
+        <color>ff0000d6</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day1Style">
+      <IconStyle>
+        <color>ffb53f30</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/1.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day2Style">
+      <IconStyle>
+        <color>ff00a5ff</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/2.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day3Style">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/3.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day4Style">
+      <IconStyle>
+        <color>ff7b1fa2</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/4.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day5Style">
+      <IconStyle>
+        <color>ff8140ec</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/5.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="day6Style">
+      <IconStyle>
+        <color>ff388e3c</color>
+        <scale>1.1</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/6.png</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <Folder>
+      <name>🏨 推薦住宿基地（新宿南口／神宮外苑）</name>
+      <Placemark>
+        <name>⭐ 首選飯店：JR九州飯店 Blossom 新宿</name>
+        <description>新宿南口步行3分鐘、Busta新宿旁，乾濕分離日式浴室。往河口湖、昭和紀念公園、日本棋院、涉谷、台場皆直達！</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6983,35.6877,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店2：小田急世紀南悅酒店 (Hotel Century Southern Tower)</name>
+        <description>Busta新宿正對面，22~35樓高空景觀房，羽田利木津巴士直達門口。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7007,35.6873,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店3：新宿燦路都廣場大飯店 (Hotel Sunroute Plaza Shinjuku)</name>
+        <description>JR九州Blossom隔壁，高CP值穩健之選，利木津巴士直達門口。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.6980,35.6872,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🏨 推薦飯店4：三井花園飯店神宮外苑東京普米爾</name>
+        <description>JR千駄谷站步行5分鐘，附設男女大浴場，每房皆有陽台。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7145,35.6798,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>🚌 Busta 新宿（高速巴士總站 / JR 新宿站南口）</name>
+        <description>搭乘河口湖高速巴士、JR特急富士回遊號、中央線、山手線、埼京線的核心樞紐。</description>
+        <styleUrl>#hotelStyle</styleUrl>
+        <Point><coordinates>139.7005,35.6885,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 1：日本棋院・圍棋殿堂資料館 ＆ 神樂坂</name>
+      <Placemark>
+        <name>【願望景點】日本棋院 東京本院・圍棋殿堂資料館</name>
+        <description>東京都千代田区五番町7-2（市ヶ谷站步行3分鐘）。B1F圍棋殿堂資料館開放時間11:00-17:00，週一休館！1F有賣店。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7369,35.6908,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>神樂坂散策（赤城神社）</name>
+        <description>充滿日式文青氣息的坡道街區，適合傍晚散步與享用晚餐。</description>
+        <styleUrl>#day1Style</styleUrl>
+        <Point><coordinates>139.7385,35.7032,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 2：國營昭和紀念公園（黃金銀杏大道）</name>
+      <Placemark>
+        <name>【願望景點】國營昭和紀念公園（西立川口）</name>
+        <description>從新宿搭JR中央線快速30分鐘直達「西立川站」出站即達！2026秋之夜散步點燈至11/29止。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.3924,35.6997,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>昭和紀念公園：語らいのイチョウ並木（300公尺銀杏隧道）</name>
+        <description>98棵高大銀杏交織成的黃金隧道與落葉地毯，園區必拍核心景點。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.3895,35.7082,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>吉祥寺站北口商店街（回程順遊）</name>
+        <description>JR中央線回新宿途中可順遊，逛雜貨藥妝、吃SATOU炸牛肉餅。</description>
+        <styleUrl>#day2Style</styleUrl>
+        <Point><coordinates>139.5798,35.7031,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 3：浦安 清瀧神社 ＆ 台場海濱公園</name>
+      <Placemark>
+        <name>【願望景點】浦安 清瀧神社</name>
+        <description>千葉県浦安市堀江4-1-5（地鐵東西線「浦安站」步行5分鐘）。社務所09:00-16:30，有精美木雕、富士塚與海洋風季節御朱印。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.8973,35.6593,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>【願望景點】台場海濱公園 ＆ 自由女神像</name>
+        <description>漫步海濱沙灘，欣賞彩虹大橋與東京鐵塔夕陽夜景。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7712,35.6279,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>DiverCity Tokyo Plaza（實物大獨角獸鋼彈）</name>
+        <description>青少年服飾品牌、多啦A夢未來百貨公司與戶外獨角獸鋼彈變身秀。回程搭臨海線直通埼京線23分鐘直達新宿。</description>
+        <styleUrl>#day3Style</styleUrl>
+        <Point><coordinates>139.7756,35.6251,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 4：河口湖富士山一日遊</name>
+      <Placemark>
+        <name>【願望景點】河口湖站 (Kawaguchiko Station)</name>
+        <description>從新宿搭JR特急富士回遊號或高速巴士約1小時50分直達。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7686,35.4982,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>天上山公園 富士山全景纜車</name>
+        <description>登高俯瞰富士山與河口湖全景，旁有河口湖遊覽船碼頭。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7723,35.5042,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>大石公園（河口湖自然生活館）</name>
+        <description>河口湖搭配白頭富士山最經典的明信片拍攝地。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.7458,35.5231,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>新倉山淺間公園（忠靈塔）</name>
+        <description>五重塔與富士山同框經典視角（位於下吉田站）。</description>
+        <styleUrl>#day4Style</styleUrl>
+        <Point><coordinates>138.8005,35.5012,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 5：涉谷買衣服 ＆ 表參道聖誕燈飾</name>
+      <Placemark>
+        <name>【願望景點】SHIBUYA 109（涉谷買衣服首選）</name>
+        <description>日本青少女服飾聖地！10:00開門，整棟百間日系少女與潮流服飾品牌。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.6987,35.6595,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Shibuya PARCO（潮牌、寶可夢中心、Nintendo TOKYO）</name>
+        <description>潮流設計服飾與6樓動漫電玩聖地（Pokemon Center、Nintendo、Jump Shop）。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.6988,35.6620,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>MIYASHITA PARK（宮下公園）</name>
+        <description>結合空中花園、潮流選物店與美食街的澀谷新地標。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.7019,35.6620,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>澀谷 LOFT ＆ MEGA 唐吉訶德</name>
+        <description>文具雜貨、美妝與伴手禮一次買齊。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.6997,35.6610,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>貓街 (Cat Street) ＆ 表參道冬季聖誕燈飾</name>
+        <description>從澀谷散步至原宿表參道，欣賞12月初浪漫的街道聖誕點燈。</description>
+        <styleUrl>#day5Style</styleUrl>
+        <Point><coordinates>139.7064,35.6664,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Day 6：羽田機場第3航廈（退稅新制查驗＆返台）</name>
+      <Placemark>
+        <name>✈️ 東京羽田機場 第3航廈 (Haneda Airport T3)</name>
+        <description>🚨 2026/11/1退稅新制：建議起飛前3小時（09:20）抵達！先推行李去退稅機台（Kiosk）掃護照，完成後再去長榮櫃台托運行李。</description>
+        <styleUrl>#day6Style</styleUrl>
+        <Point><coordinates>139.7685,35.5444,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
